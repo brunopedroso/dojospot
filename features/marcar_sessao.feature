@@ -9,4 +9,4 @@ Funcionalidade: Marcar Sessão
 		
 		Dado que eu estou na "página inicial"
 		Quando eu clico em "marcar uma nova sessão"
-		Então eu devo estar na página "Marcar nova sessão"
+		Então eu devo estar na página de nova sessão

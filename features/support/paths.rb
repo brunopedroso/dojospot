@@ -10,7 +10,11 @@ module NavigationHelpers
     
     when /página inicial/
       '/'
-    
+
+    when /página de nova sessão/
+      '/session/new'
+
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
