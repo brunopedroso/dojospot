@@ -12,6 +12,11 @@ Dado /^que eu estou na (.+)$/ do |page_name|
   Given %{I am on #{page_name}}
 end
 
+Dado /^eu estou na (.+)$/ do |page_name|
+  Given %{I am on #{page_name}}
+end
+
+
 Quando /^eu vou para (.+)$/ do |page_name|
   When %{I go to #{page_name}}
 end
