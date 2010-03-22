@@ -12,7 +12,7 @@ module NavigationHelpers
       '/'
 
     when /página de nova sessão/
-      '/session/new'
+      '/dojo_sessions/new'
 
 
     # Add more mappings here.

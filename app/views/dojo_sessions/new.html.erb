@@ -1,0 +1,13 @@
+
+<% form_for @dojo_session, :method=>:post do |f| %>
+
+	<%= f.label :title, 'Título' %>:<%= f.text_field 'title' %><br/>
+	<%= f.label :text, 'Texto' %>:<%= f.text_field 'text' %><br/>
+	<%= f.label :text, 'Local' %>:<%= f.text_field 'place' %><br/>
+	<%= f.label :text, 'Data' %>:<%= f.text_field 'date' %><br/>
+	<%= f.label :text, 'Horário' %>:<%= f.text_field 'time' %><br/>
+
+	<input type="submit" value="Propor esta sessão"/>
+<% end %>
+
+
