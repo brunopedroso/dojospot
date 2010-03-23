@@ -5,6 +5,8 @@ class DojoSessionsController < ApplicationController
 	end
 	
 	def create
+		dojo_session = DojoSession.new(params[:dojo_session])
+		dojo_session.save
 		redirect_to '/'
 	end
 	

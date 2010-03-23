@@ -9,7 +9,7 @@ Funcionalidade: Propor uma sessão de dojo
 		
 		Dado que não existem sessões marcadas
 		E que eu estou na "página inicial"
-		Então eu devo ver "Nenhuma sessão marcada" 
+		Então eu devo ver "Nenhuma sessão proposta no momento." 
 		
 	Cenário: Iniciando a marcação de uma nova sessão
 		

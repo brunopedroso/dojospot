@@ -1,2 +1,12 @@
-Nenhuma sessão marcada
+
+<% unless @dojo_sessions.empty? %>
+	<h1><%=@dojo_sessions[0].title %></h1>
+	<p><%=@dojo_sessions[0].text %></p>
+	<p><%=@dojo_sessions[0].place %></p>
+	<p><%=@dojo_sessions[0].date %></p>
+	<p><%=@dojo_sessions[0].time %></p>
+<% else %>
+	<p>Nenhuma sessão proposta no momento.</p>
+<% end %>
+
 <a href="/dojo_sessions/new">marcar uma nova sessão</a>
