@@ -21,7 +21,7 @@ Funcionalidade: Propor uma sessão de dojo
 	
 		Dado que não existem sessões marcadas
 		E eu estou na página de nova sessão
-		Quando eu preencho a proposta de sessão com título, texto, local, data, e horario
+		Quando eu preencho a proposta de sessão com título, texto, local, data, e horário
 		E eu aperto "Propor esta sessão"
 		Então eu devo estar na página inicial
-		E eu devo ver a sessão proposta com título, texto, local, data e horario informados
+		E eu devo ver a sessão proposta com título, texto, local, data e horário informados
