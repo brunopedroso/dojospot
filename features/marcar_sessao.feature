@@ -4,13 +4,7 @@ Funcionalidade: Propor uma sessão de dojo
 	Para poder convidar pessoas
 	Como um participante
 	Eu quero propor uma sessão de dojo
-	
-	Cenário: Não existem sessões marcadas
-		
-		Dado que não existem sessões marcadas
-		E que eu estou na "página inicial"
-		Então eu devo ver "Nenhuma sessão proposta no momento." 
-		
+			
 	Cenário: Iniciando a marcação de uma nova sessão
 		
 		Dado que eu estou na "página inicial"
