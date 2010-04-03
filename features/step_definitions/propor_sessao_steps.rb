@@ -23,3 +23,24 @@ Então /^eu devo ver a sessão proposta com título, texto, local, data e horár
 		assert_contain proposta_exemplo[:data].to_s
 		assert_contain proposta_exemplo[:horario]
 end
+
+Dado /^que existe uma sessão marcada$/ do
+  @dojo_session = Factory.create :dojo_session
+end
+
+Então /^eu devo ver os detalhes da sessão$/ do
+  assert_contain @dojo_session.title
+	assert_contain @dojo_session.text
+end
+
+Dado /^que existem três sessões marcada$/ do
+  @dojo_session1 = Factory.create :dojo_session
+	@dojo_session2 = Factory.create :dojo_session
+	@dojo_session3 = Factory.create :dojo_session
+end
+
+Então /^eu devo ver os detalhes das três sessões$/ do
+  assert_contain @dojo_session1.title
+	assert_contain @dojo_session2.title
+	assert_contain @dojo_session3.title
+end

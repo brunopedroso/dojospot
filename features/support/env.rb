@@ -26,7 +26,9 @@ Spork.prefork do
     config.open_error_files = false # Set to true if you want error pages to pop up in the browser
   end
   
-
+	require File.expand_path(File.dirname(__FILE__) + '../../../spec/factories.rb')
+	
+	
 end
  
 Spork.each_run do

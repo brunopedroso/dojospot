@@ -44,6 +44,21 @@ describe 'home page' do
 
 	end
 	
+	context 'with three proposed session' do
+		
+		before :each do 
+			assigns[:dojo_sessions] = [Factory.build(:dojo_session), Factory.build(:dojo_session), Factory.build(:dojo_session)]
+		end
+		
+		it 'should show the title of the three' do
+			render('home/index')
+			dojo_sessions = assigns[:dojo_sessions]
+			response.should have_tag('h1', dojo_sessions[0].title)
+			response.should have_tag('h1', dojo_sessions[1].title)
+			response.should have_tag('h1', dojo_sessions[2].title)
+		end
+
+	end
 	
 	
 end
