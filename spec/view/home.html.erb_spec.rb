@@ -20,7 +20,7 @@ describe 'home page' do
 			@dojo_session = stub_model(DojoSession, {:title=>"test title",
 																						 :text=>"test text",
 																						 :place=>"test place",
-																						 :date=>"23/03/2010",
+																						 :date=>Date.today,
 																						 :time=>"from 17:00 to 19:00"})
 
 			assigns[:dojo_sessions] = [@dojo_session]
@@ -32,9 +32,18 @@ describe 'home page' do
 			response.should have_tag('h1', @dojo_session.title)
 			response.should have_tag('p', @dojo_session.text)
 			response.should have_tag('p', @dojo_session.place)
-			response.should have_tag('p', @dojo_session.date)
+			response.should have_tag('p', @dojo_session.date.to_s_br)
 			response.should have_tag('p', @dojo_session.time)
 
+		end
+		
+		it 'should present date in brazilian format' do
+			render('home/index')
+
+			the_date = @dojo_session[:date]
+			formatted_date = "#{the_date.day.to_s.rjust(2,'0')}/#{the_date.month.to_s.rjust(2,'0')}/#{the_date.year}"
+			
+			response.should have_tag('p', formatted_date)
 		end
 		
 		it 'should not show the no-sessions message' do

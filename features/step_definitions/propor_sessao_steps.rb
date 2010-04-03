@@ -2,20 +2,23 @@ Dado /^que não existem sessões marcadas$/ do
   DojoSession.find_proposed_sessions.should be_empty
 end
 
-Quando /^eu preencho a proposta de sessão com título, texto, local, data, e horário$/ do
+Quando /^eu preencho a proposta de sessão com título, texto, local, data in dd\/MM\/yyyy, e horário$/ do
 		@proposta_exemplo = Factory.build :dojo_session
 		fill_in "dojo_session[title]", :with => @proposta_exemplo.title
 		fill_in "dojo_session[text]", :with => @proposta_exemplo.text
 		fill_in "dojo_session[place]", :with => @proposta_exemplo.place
-		fill_in "dojo_session[date]", :with => @proposta_exemplo.date
+		fill_in "dojo_session[date]", :with => @proposta_exemplo.date.strftime('%d/%m/%Y')
+		
+		puts @proposta_exemplo.date.strftime('%d/%m/%Y')
+		
 		fill_in "dojo_session[time]", :with => @proposta_exemplo.time
 end
 
-Então /^eu devo ver a sessão proposta com título, texto, local, data e horário informados$/ do
+Então /^eu devo ver a sessão proposta com título, texto, local, data in dd\/MM\/yyyy e horário informados$/ do
 	  assert_contain @proposta_exemplo.title
 		assert_contain @proposta_exemplo.text
 		assert_contain @proposta_exemplo.place
-		assert_contain @proposta_exemplo.date.to_s
+		assert_contain @proposta_exemplo.date.strftime('%d/%m/%Y')
 		assert_contain @proposta_exemplo.time
 end
 

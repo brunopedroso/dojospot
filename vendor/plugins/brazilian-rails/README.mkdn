@@ -1,0 +1,126 @@
+# Brazilian Rails
+
+## O que foi?
+
+O Brazilian Rails foi o plugin de internacionalização mais conhecido do Brasil e tinha como objetivo unir vários recursos de regras e traduções para o desenvolvedor brasileiro.
+
+## O que é?
+
+Brazilian Rails é um conjunto de gems para serem usadas com Ruby e com o Ruby on Rails e tem como objetivo unir alguns recursos úteis para os desenvolvedores brasileiros.
+
+## O que vem pela frente?
+
+Existem vários plugins espalhados, que são úteis a comunidade brasileira, e gostaria de convocar seus colaboradores a entrar em contato comigo para que juntos nós migremos para gems dentro do Brazilian Rails.
+
+## Já usava como plugin, o que eu tenho que fazer?
+
+_NADA!_ Essa gem foi cuidadosamente pensada permitir seu uso como plugin sem precisar fazer mais nada, preservando-se a mesma forma de instalação anterior.
+
+## Cade o SVN?
+
+Foi desativado por completo. Agora só teremos suporte GIT.
+
+## Quais as gems que compõe o Brazilian Rails?
+
+* brcep
+* brdata
+* brdinheiro
+* brhelper
+* brnumeros
+* brstring
+* brcpfcnpj
+* brI18n
+
+**OBS**: A gem brtraducao foi removida do Brazilian Rails devido a adição do suporte i18n do Rails. Ele continua podendo ser usada, porém não faz mais parte desse projeto. Clique [aqui][brtraducoes] para maiores detalhes.
+
+**OBS**: A gem brI18n foi criada para acomodar as traduções usando suporte i18n das versões mais recentes do Rails.
+
+## Suporte à Ruby 1.9 (experimental)
+
+As gems foram portadas para Ruby 1.9, porém o suporte ainda é experimental, e contamos com a comunidade para ajudar a melhorar o suporte. Todas as gems funcionam corretamente, mas caso decida usar a nova versão do Ruby, tome um cuidado especial com a gem brdata. O método Date#parse se comporta de maneira diferente nas versões 1.8 e 1.9 do Ruby, o que pode ocasionar alguns erros.
+
+## Como faço para instalar?
+
+É muito difícil...
+
+### Como plugin:
+
+        ruby script/plugin install git://github.com/tapajos/brazilian-rails.git
+
+Por padrão, a pluralização vem desabilitada, isso para não atrapalhar os projetos que já existem.
+
+### Como gem:
+
+        gem install brazilian-rails
+        
+Depois que todas as gems forem instaladas você pode utiliza-las individualmente ou carregando todas, como no trecho abaixo.
+
+        Rails::Initializer.run do |config|
+          config.gem 'brazilian-rails'
+        end
+
+### I18n
+
+Por padrão a gem não carrega o suporte de traduções do Rails, para usa-la você deve fazer o require abaixo:
+
+        require 'brI18n'
+
+## Como funciona ?
+
+Está tudo explicado na nossa [api][].
+
+## Achei um BUG, o que eu faço?
+
+Por favor, nos avise! Isso é fácil e rápido. Isso pode ser feito em:
+
+    http://github.com/tapajos/brazilian-rails/issues
+
+## Quem está por traz disso tudo?
+
+O [Marcos Tapajós][mt] tomou coragem para publicar todas as funcionalidades em um plugin, com testes unitários para garantir que tudo funcione conforme manda o figurino.
+
+Os loucos que mantém tudo funcionando são: [Celestino Gomes][tino], [André Luiz Kupkovski][andre], [A galera da Improve It][ii] e mais alguns que não se manifestaram para pagar esse mico...
+
+Alguns poucos já contribuiram, direta e indireramente, como:
+
+[Shairon Toledo][st], [Guilherme Garnier][gg], Bruno Iecker, [Sylvestre Mergulhão][sm], Eduardo Fiorezi, Rafael Cardoso, Edson César, [Kivanio Barbosa][kb], [Cássio Marques][cm] e [Fernando Luizão][fl]. Desculpe se esqueci de alguém
+
+## Algumas funcionalidades:
+
+* Date e Time no formato brasileiro
+* Números por Extenso
+* Dinheiro
+* Cpf e Cnpj
+* Feriado
+* Mensagens de erro traduzidas
+* Pluralização em português-Brasil-sil-sil
+* etc
+
+## Duvidas ?
+
+As duvidas podem ser enviadas diretamente a um dos desenvolvedores ou através da página do projeto no [RubyForge][rf]
+
+## Quem investe nesse plugin ?
+
+Este plugin é patrocinado pela [Improve It][ii].
+
+[![Improve It][logo]][ii]
+
+[rf]: http://rubyforge.org/projects/brazilian-rails/
+
+[api]: http://brazilian-rails.improveit.com.br
+
+[ii]: http://www.improveit.com.br
+[logo]: http://www.improveit.com.br/images/logo/logo_improve_it_screen.gif "Improve It"
+[tino]: http://tinogomes.wordpress.com
+[andre]: http://www.workingwithrails.com/person/9227-andr-luiz-kupkovski
+[st]: http://www.hashcode.eti.br/
+[rf]: http://rubyforge.org/projects/brazilian-rails
+[mt]: http://www.improveit.com.br/tapajos
+[vt]: http://www.improveit.com.br/vinicius
+[gg]: http://ggarnier.wordpress.com/
+[sm]: http://mergulhao.info/
+[kb]: http://www.kivanio.com.br/
+[cm]: http://cassiomarques.wordpress.com
+[fl]: http://fernandoluizao.wordpress.com
+[brtraducoes]: http://blog.improveit.com.br/articles/2009/02/13/o-brazilian-rails-e-o-suporte-i18n
