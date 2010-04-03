@@ -35,13 +35,19 @@ Então /^eu devo ver os detalhes da sessão$/ do
 end
 
 Dado /^que existem três sessões marcada$/ do
-  @dojo_session1 = Factory.create :dojo_session
-	@dojo_session2 = Factory.create :dojo_session
-	@dojo_session3 = Factory.create :dojo_session
+  @dojo_session1 = Factory.create :dojo_session, :date => Date.today
+	@dojo_session2 = Factory.create(:dojo_session, :date => (Date.today + 1))
+	@dojo_session3 = Factory.create(:dojo_session, :date => (Date.today + 1))
+
 end
 
-Então /^eu devo ver os detalhes das três sessões$/ do
-  assert_contain @dojo_session1.title
-	assert_contain @dojo_session2.title
-	assert_contain @dojo_session3.title
+Então /^eu devo ver os detalhes das três sessões ordenadas$/ do
+
+  doc = Nokogiri::HTML(response.body)
+	
+	titles = doc.search('h1')
+	
+	titles[0].content.should == @dojo_session1.title
+	titles[1].content.should == @dojo_session3.title
+	titles[2].content.should == @dojo_session2.title
 end

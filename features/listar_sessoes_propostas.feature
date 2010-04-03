@@ -27,4 +27,4 @@ Funcionalidade: Listar próximas sessões na tela inicial
 
 		Dado que existem três sessões marcada
 		E que eu estou na "página inicial"
-		Então eu devo ver os detalhes das três sessões
+		Então eu devo ver os detalhes das três sessões ordenadas

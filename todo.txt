@@ -1,0 +1,11 @@
+tarefas:
+- refact: Factory gera sessao default pra hoje
+- formato de data brasileiro
+- layout
+
+features:
+- confirmar presença
+- registrar retrospectiva
+- login
+	- autoriza: só pode propor ou confirmar se logado
+	- só quem participa pode retrospectar? 
