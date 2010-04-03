@@ -20,7 +20,13 @@ Então /^eu devo ver a sessão proposta com título, texto, local, data e horár
 end
 
 Dado /^que existe uma sessão marcada (.*)$/ do |qndo|
-  @dojo_session = Factory.create :dojo_session
+	if (qndo ==  'amanhã') 
+		@dojo_session = Factory.create :dojo_session, :date => (Date.today + 1)
+		
+	elsif (qndo == 'hoje')
+		@dojo_session = Factory.create :dojo_session, :date=>Date.today
+	end
+  
 end
 
 Então /^eu devo ver os detalhes da sessão$/ do

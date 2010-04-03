@@ -16,6 +16,12 @@ Funcionalidade: Listar próximas sessões na tela inicial
 		Dado que existe uma sessão marcada amanhã
 		E que eu estou na "página inicial"
 		Então eu devo ver os detalhes da sessão
+
+	Cenário: Uma sessão marcada hoje
+
+		Dado que existe uma sessão marcada hoje
+		E que eu estou na "página inicial"
+		Então eu devo ver os detalhes da sessão
 	
 	Cenário: Três sessões marcadas
 
