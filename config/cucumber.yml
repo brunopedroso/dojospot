@@ -4,7 +4,7 @@ rerun_opts = rerun.to_s.strip.empty? ? "--format progress features" : "--format 
 std_opts = "#{rerun_opts} --format rerun --out rerun.txt --strict --tags ~@wip"
 %>
 default_old: --drb <%= std_opts %>
-default: --drb --color --format pretty
+default: --drb --color --format progress
 wip: --drb --tags @wip:3 --wip features
 autotest: --drb --color --format progress
 autotest-all: --drb --color --format progress

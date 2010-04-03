@@ -11,9 +11,9 @@ Funcionalidade: Listar próximas sessões na tela inicial
 		E que eu estou na "página inicial"
 		Então eu devo ver "Nenhuma sessão proposta no momento." 
 	
-	Cenário: Uma sessão marcada
+	Cenário: Uma sessão marcada amanhã
 	
-		Dado que existe uma sessão marcada
+		Dado que existe uma sessão marcada amanhã
 		E que eu estou na "página inicial"
 		Então eu devo ver os detalhes da sessão
 	
