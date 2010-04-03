@@ -12,8 +12,17 @@ describe DojoSession do
 			proposed_sessions.length.should == 1 
 			
 		end
+
+		it  'should show a session proposed for today' do
+			
+			Factory.create :dojo_session, :date=>Date.today
+
+			proposed_sessions = DojoSession.find_proposed_sessions
+			proposed_sessions.length.should == 1 
+			
+		end
 		
-		it 'should not find a past session' do
+		it 'should not show a past session' do
 			
 			Factory.create :dojo_session, :date=>Date.today - 1
 
