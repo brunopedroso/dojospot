@@ -1,4 +1,8 @@
 
+h2 {
+	margin: 0px;
+}
+
 #header {
 	width:54%;
 	position:relative;
@@ -7,6 +11,7 @@
 	padding: 10px;
 	text-align: center;
 	font-size:50px;
+	margin-bottom: 20px;
 }
 
 
@@ -18,3 +23,8 @@
 	padding: 10px;
 }
 
+div.dojo_session {
+	background: #ccc;
+	margin: 10px;
+	padding: 2px 10px;
+}

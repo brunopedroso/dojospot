@@ -1,5 +1,5 @@
 
-<div id="name">
+
 
 	<h2> Próximas sessões: </h2>
 
@@ -7,12 +7,14 @@
 
 		<% for dojo_session in @dojo_sessions do %>
 
-			<h3><%= dojo_session.title %></h3>
-			<p><%= dojo_session.text %></p>
-			<p><%= dojo_session.place %></p>
-			<p><%= dojo_session.date.to_s_br %></p>
-			<p><%= dojo_session.time %></p>
-
+			<div class="dojo_session">
+				<h3><%= dojo_session.title %></h3>
+				<p><%= dojo_session.text %></p>
+				<p><%= dojo_session.place %></p>
+				<p><%= dojo_session.date.to_s_br %></p>
+				<p><%= dojo_session.time %></p>
+			</div>
+			
 		<% end %>
 
 	<% else %>
@@ -21,4 +23,4 @@
 
 	<a href="/dojo_sessions/new">marcar uma nova sessão</a>
 
-</div>
+
