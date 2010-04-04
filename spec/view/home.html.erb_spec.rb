@@ -39,11 +39,8 @@ describe 'home page' do
 		
 		it 'should present date in brazilian format' do
 			render('home/index')
-
-			the_date = @dojo_session[:date]
-			formatted_date = "#{the_date.day.to_s.rjust(2,'0')}/#{the_date.month.to_s.rjust(2,'0')}/#{the_date.year}"
-			
-			response.should have_tag('p', formatted_date)
+			the_date = @dojo_session[:date].to_s_br
+			response.should have_tag('p', the_date)
 		end
 		
 		it 'should not show the no-sessions message' do
