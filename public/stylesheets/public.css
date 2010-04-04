@@ -1,0 +1,20 @@
+
+#header {
+	width:54%;
+	position:relative;
+	left:25%;
+	background: #ccc;
+	padding: 10px;
+	text-align: center;
+	font-size:50px;
+}
+
+
+#central {
+	width:54%;
+	position:relative;
+	left:25%;
+	background: #eee;
+	padding: 10px;
+}
+

@@ -1,17 +1,37 @@
-<% unless @dojo_sessions.empty? %>
+<html>
 
-	<% for dojo_session in @dojo_sessions do %>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<%= stylesheet_link_tag "public" %>
+	</head>
 
-		<h1><%= dojo_session.title %></h1>
-		<p><%= dojo_session.text %></p>
-		<p><%= dojo_session.place %></p>
-		<p><%= dojo_session.date.to_s_br %></p>
-		<p><%= dojo_session.time %></p>
+	<body>
+
+		<div id="header">
+			Nome do Dojo
+		</div>
+
+		<div id="central">
 	
-	<% end %>
-	
-<% else %>
-	<p>Nenhuma sessão proposta no momento.</p>
-<% end %>
+			<% unless @dojo_sessions.empty? %>
 
-<a href="/dojo_sessions/new">marcar uma nova sessão</a>
+				<% for dojo_session in @dojo_sessions do %>
+
+					<h1><%= dojo_session.title %></h1>
+					<p><%= dojo_session.text %></p>
+					<p><%= dojo_session.place %></p>
+					<p><%= dojo_session.date.to_s_br %></p>
+					<p><%= dojo_session.time %></p>
+	
+				<% end %>
+	
+			<% else %>
+				<p>Nenhuma sessão proposta no momento.</p>
+			<% end %>
+
+			<a href="/dojo_sessions/new">marcar uma nova sessão</a>
+	
+		</div>
+
+	</body>
+</html>

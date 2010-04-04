@@ -1,5 +1,9 @@
 tarefas:
 - layout
+	- centralizado
+- text area para a descrição
+- formatação na descrição
+- data menor error-prone
 
 features:
 - confirmar presença
