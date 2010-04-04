@@ -1,15 +1,13 @@
 tarefas:
-- layout
-	- centralizado
-- text area para a descrição
 - formatação na descrição
-- data menor error-prone
+- data menos error-prone (calendário jquery ui)
+- apresentar data mais legível (proxima quarta, depois de amanhã...)
 
 - bug: não grava a data qndo submete do safari...
 
 features:
-- confirmar presença
-- registrar retrospectiva
 - login
 	- autoriza: só pode propor ou confirmar se logado
-	- só quem participa pode retrospectar? 
+	- só quem participa pode retrospectar?
+- confirmar presença
+- registrar retrospectiva
