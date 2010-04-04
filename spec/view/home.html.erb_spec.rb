@@ -29,7 +29,7 @@ describe 'home page' do
 		it 'should show the next proposed session' do
 			render('home/index')
 
-			response.should have_tag('h1', @dojo_session.title)
+			response.should have_tag('h3', @dojo_session.title)
 			response.should have_tag('p', @dojo_session.text)
 			response.should have_tag('p', @dojo_session.place)
 			response.should have_tag('p', @dojo_session.date.to_s_br)
@@ -59,9 +59,9 @@ describe 'home page' do
 		it 'should show the title of the three' do
 			render('home/index')
 			dojo_sessions = assigns[:dojo_sessions]
-			response.should have_tag('h1', dojo_sessions[0].title)
-			response.should have_tag('h1', dojo_sessions[1].title)
-			response.should have_tag('h1', dojo_sessions[2].title)
+			response.should have_tag('h3', dojo_sessions[0].title)
+			response.should have_tag('h3', dojo_sessions[1].title)
+			response.should have_tag('h3', dojo_sessions[2].title)
 		end
 
 	end

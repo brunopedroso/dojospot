@@ -45,7 +45,7 @@ Então /^eu devo ver os detalhes das três sessões ordenadas$/ do
 
   doc = Nokogiri::HTML(response.body)
 	
-	titles = doc.search('h1')
+	titles = doc.search('h3')
 	
 	titles[0].content.should == @dojo_session1.title
 	titles[1].content.should == @dojo_session3.title
