@@ -1,6 +1,4 @@
 tarefas:
-- formato de data brasileiro
-- refact dados exemplo na spec do controler de session
 - layout
 
 features:

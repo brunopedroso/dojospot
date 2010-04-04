@@ -21,11 +21,7 @@ describe DojoSessionsController do
 		
 		it 'should redirect to home page' do
 			
-			post :create, {:title=>"um título",
-										 :text=>"um texto",
-										 :place=>"um local",
-										 :date=>"03/04/2010",
-										 :time=>"das 17:00 às 19:00"}
+			post :create, Factory.attributes_for(:dojo_session)
 			
 			response.should redirect_to('/')
 			
@@ -36,11 +32,7 @@ describe DojoSessionsController do
 			new_session = mock_model(DojoSession)
 			new_session.should_receive(:save)
 			
-			args = {"title"=>"um título",
-						  "text"=>"um texto",
-						  "place"=>"um local",
-						  "date"=>"03/04/2010",
-						  "time"=>"das 17:00 às 19:00"}
+			args = Factory.attributes_for(:dojo_session).stringify_keys
 			
 			DojoSession.should_receive(:new).with(args).and_return(new_session)
 			
