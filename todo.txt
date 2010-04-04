@@ -5,6 +5,8 @@ tarefas:
 - formatação na descrição
 - data menor error-prone
 
+- bug: não grava a data qndo submete do safari...
+
 features:
 - confirmar presença
 - registrar retrospectiva

@@ -1,13 +1,41 @@
 
+<h2 style="position:relative;left:20px">Propor uma nova sessão</h2>
+
 <% form_for @dojo_session, :method=>:post do |f| %>
 
-	<%= f.label :title, 'Título' %>:<%= f.text_field 'title' %><br/>
-	<%= f.label :text, 'Texto' %>:<%= f.text_field 'text' %><br/>
-	<%= f.label :text, 'Local' %>:<%= f.text_field 'place' %><br/>
-	<%= f.label :text, 'Data' %>:<%= f.text_field 'date' %><br/>
-	<%= f.label :text, 'Horário' %>:<%= f.text_field 'time' %><br/>
+	<table border="0" cellspacing="5" cellpadding="5">
+		<tr>
+			<td align="right"><%= f.label :title, 'Título' %>:</td>
+			<td><%= f.text_field 'title', :size=>45 %></td>
+		</tr>
 
-	<input type="submit" value="Propor esta sessão"/>
+		<tr>
+			<td align="right" valign="top"><%= f.label :text, 'Texto' %>:</td>
+			<td><%= f.text_area 'text', :cols=>45 %></td>
+		</tr>
+
+		<tr>
+			<td align="right"><%= f.label :text, 'Local' %>:</td>
+			<td><%= f.text_field 'place', :size=>45 %></td>
+		</tr>
+
+		<tr>
+			<td align="right"><%= f.label :text, 'Data' %>:</td>
+			<td><%= f.text_field 'date', :size=>10 %></td>
+		</tr>
+
+		<tr>
+			<td align="right"><%= f.label :text, 'Horário' %>:</td>
+			<td><%= f.text_field 'time', :size=>10 %></td>
+		</tr>
+
+		<tr>
+			<td align="right"></td>
+			<td><input type="button" onClick="" value="Cancelar"/> <input type="submit" value="Propor esta sessão"/></td>
+		</tr>
+
+	</table>
+	
 <% end %>
 
 
