@@ -17,9 +17,11 @@ label {
 }
 
 #header {
-	width:54%;
+	width:700px;
 	position:relative;
-	left:25%;
+	margin:auto;
+	height:150px;
+	line-height:150px; /* alinha o titulo no meio do div, verticalmente */
 	background: #ccc;
 	padding: 10px;
 	text-align: center;
@@ -31,9 +33,10 @@ label {
 }
 
 #central {
-	width:54%;
+	width:700px;
+	min-height: 500px ;
 	position:relative;
-	left:25%;
+	margin:auto;
 	background: #eee;
 	padding: 10px;
 	-moz-border-radius: 10px;
