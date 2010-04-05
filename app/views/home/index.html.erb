@@ -1,33 +1,33 @@
 
-	<h2 class="page_title"> Próximas sessões </h2>
+<h2 class="page_title"> Próximas sessões </h2>
 
-	<% unless @dojo_sessions.empty? %>
+<% unless @dojo_sessions.empty? %>
 
-		<% for dojo_session in @dojo_sessions do %>
+	<% for dojo_session in @dojo_sessions do %>
 
-			<div class="dojo_session">
-				<h3><%= dojo_session.title %></h3>
+		<div class="dojo_session">
+			<h3><%= dojo_session.title %></h3>
 
-				<p><%= dojo_session.text %></p>
+			<p><%= dojo_session.text %></p>
 
-				<table border="0" width="100%">
-					<tr>
-						<td width="60%"><b>Onde:</b> <%= dojo_session.place %></td>
-						<td width="40%">
-							<b>Quando:</b> <%= l dojo_session.date, :format=>"pretty" %><br/>
-							<b>Que horas:</b> <%= dojo_session.time %>
-						</td>
-					</tr>
-				</table>
-				
-			</div>
+			<table border="0" width="100%">
+				<tr>
+					<td width="60%"><b>Onde:</b> <%= dojo_session.place %></td>
+					<td width="40%">
+						<b>Quando:</b> <%= l dojo_session.date, :format=>"pretty" %><br/>
+						<b>Que horas:</b> <%= dojo_session.time %>
+					</td>
+				</tr>
+			</table>
 			
-		<% end %>
-
-	<% else %>
-		<p>Nenhuma sessão proposta no momento.</p>
+		</div>
+		
 	<% end %>
 
-	<a href="/dojo_sessions/new">marcar uma nova sessão</a>
+<% else %>
+	<p>Nenhuma sessão proposta no momento.</p>
+<% end %>
+
+<a href="/dojo_sessions/new">marcar uma nova sessão</a>
 
 
