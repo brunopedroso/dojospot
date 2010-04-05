@@ -2,7 +2,9 @@ próximas tarefas:
 
 features:
 - login
-	- autoriza: só pode propor ou confirmar se logado
-	- só quem participa pode retrospectar?
+	- autoriza: só pode propor se logado (associa o cara)
+	- nome, usuário, senha, email (gravatar), site (link nas fotos)
 - confirmar presença
+	- só se estiver logado
 - registrar retrospectiva
+	- só se estiver logado
