@@ -69,3 +69,9 @@ div.dojo_session table tr td {
 .field_hint {
 	color:#aaa;
 }
+
+.page_title {
+	position:relative;
+/*	left:20px;*/
+	color:#999;
+}
