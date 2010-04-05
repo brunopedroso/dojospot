@@ -14,7 +14,7 @@
 					<tr>
 						<td width="60%"><b>Onde:</b> <%= dojo_session.place %></td>
 						<td width="40%">
-							<b>Quando:</b> <%= dojo_session.date.to_s_br %><br/>
+							<b>Quando:</b> <%= l dojo_session.date, :format=>"pretty" %><br/>
 							<b>Que horas:</b> <%= dojo_session.time %>
 						</td>
 					</tr>

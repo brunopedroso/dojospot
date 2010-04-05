@@ -1,9 +1,6 @@
 tarefas:
 - formatação na descrição
 - data menos error-prone (calendário jquery ui)
-- apresentar data mais legível (proxima quarta, depois de amanhã...)
-
-- bug: não grava a data qndo submete do safari...
 
 features:
 - login

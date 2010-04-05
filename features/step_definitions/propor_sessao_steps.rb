@@ -11,11 +11,11 @@ Quando /^eu preencho a proposta de sessão com título, texto, local, data in dd
 		fill_in "dojo_session[time]", :with => @proposta_exemplo.time
 end
 
-Então /^eu devo ver a sessão proposta com título, texto, local, data in dd\/MM\/yyyy e horário informados$/ do
+Então /^eu devo ver a sessão proposta com título, texto, local, data localizada e horário informados$/ do
 	  assert_contain @proposta_exemplo.title
 		assert_contain @proposta_exemplo.text
 		assert_contain @proposta_exemplo.place
-		assert_contain @proposta_exemplo.date.to_s_br
+		assert_contain I18n.l @proposta_exemplo.date, :format=>"pretty"
 		assert_contain @proposta_exemplo.time
 end
 
