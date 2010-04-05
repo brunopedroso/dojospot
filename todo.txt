@@ -1,5 +1,4 @@
-tarefas:
-- botão de cancelar
+próximas tarefas:
 
 features:
 - login
