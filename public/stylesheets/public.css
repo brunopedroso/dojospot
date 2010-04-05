@@ -65,3 +65,7 @@ div.dojo_session table tr td {
 	vertical-align:text-top;
 	text-align:justify;
 }
+
+.field_hint {
+	color:#aaa;
+}

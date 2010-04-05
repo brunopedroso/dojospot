@@ -1,6 +1,5 @@
 tarefas:
-- formatação na descrição
-- data menos error-prone (calendário jquery ui)
+- botão de cancelar
 
 features:
 - login

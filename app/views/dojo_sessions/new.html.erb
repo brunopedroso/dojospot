@@ -11,7 +11,10 @@
 
 		<tr>
 			<td align="right" valign="top"><%= f.label :text, 'Texto' %>:</td>
-			<td><%= f.text_area 'text', :cols=>45 %></td>
+			<td>
+				<%= f.text_area 'text', :cols=>45, :rows=>10 %></br>
+				<span class="field_hint">(Use código HTML para formatar)</span>
+			</td>
 		</tr>
 
 		<tr>
@@ -21,12 +24,18 @@
 
 		<tr>
 			<td align="right"><%= f.label :text, 'Data' %>:</td>
-			<td><%= f.text_field 'date', :size=>10 %></td>
+			<td>
+				<%= f.text_field 'date', :size=>10 %>
+				<span class="field_hint">(Use formato dd/mm/yyyy)</span>
+			</td>
 		</tr>
 
 		<tr>
 			<td align="right"><%= f.label :text, 'Horário' %>:</td>
-			<td><%= f.text_field 'time', :size=>10 %></td>
+			<td>
+				<%= f.text_field 'time', :size=>10 %>
+				<span class="field_hint">(Texto livre)</span>
+			</td>
 		</tr>
 
 		<tr>
