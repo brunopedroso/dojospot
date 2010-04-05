@@ -3,7 +3,7 @@ Dado /^que não existem sessões marcadas$/ do
 end
 
 Quando /^eu preencho a proposta de sessão com título, texto, local, data in dd\/MM\/yyyy, e horário$/ do
-		@proposta_exemplo = Factory.build :dojo_session
+		@proposta_exemplo = Factory.build :dojo_session		
 		fill_in "dojo_session[title]", :with => @proposta_exemplo.title
 		fill_in "dojo_session[text]", :with => @proposta_exemplo.text
 		fill_in "dojo_session[place]", :with => @proposta_exemplo.place

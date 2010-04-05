@@ -21,7 +21,7 @@ describe 'new session page' do
 		response.should have_tag('form input[type=?][name=?]', 'text', 'dojo_session[title]')
 		
 		response.should have_tag('form label', 'Texto')
-		response.should have_tag('form input[type=?][name=?]', 'text', 'dojo_session[text]')
+		response.should have_tag('form textarea[name=?]', 'dojo_session[text]')
 		
 		response.should have_tag('form label', 'Local')
 		response.should have_tag('form input[type=?][name=?]', 'text', 'dojo_session[place]')

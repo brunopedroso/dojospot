@@ -31,16 +31,16 @@ describe 'home page' do
 
 			response.should have_tag('h3', @dojo_session.title)
 			response.should have_tag('p', @dojo_session.text)
-			response.should have_tag('p', @dojo_session.place)
-			response.should have_tag('p', @dojo_session.date.to_s_br)
-			response.should have_tag('p', @dojo_session.time)
+			response.should include_text(@dojo_session.place)
+			response.should include_text(@dojo_session.date.to_s_br)
+			response.should include_text(@dojo_session.time)
 
 		end
 		
 		it 'should present date in brazilian format' do
 			render('home/index')
 			the_date = @dojo_session[:date].to_s_br
-			response.should have_tag('p', the_date)
+			response.should include_text(the_date)
 		end
 		
 		it 'should not show the no-sessions message' do
