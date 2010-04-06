@@ -1,8 +1,4 @@
 
-Bem vindo, <%= current_user.username if logged_in? %>
-<a href="/sessions/new">Log in</a>
-<a href="/logout">Log out</a>
-
 <h2 class="page_title"> Próximas sessões </h2>
 
 <% unless @dojo_sessions.empty? %>

@@ -7,6 +7,15 @@
 
 	<body>
 
+		<div id="logon_menu">
+			<% if logged_in? %>
+				Bem vindo, <%= current_user.username %>
+				<a href="/logout">Log out</a>
+			<% else %>
+				<a href="/sessions/new">Log in</a>
+			<% end %>
+		</div>
+
 		<div id="header">
 			Nome do Dojo
 		</div>
