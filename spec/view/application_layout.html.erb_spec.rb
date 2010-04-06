@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'application layout' do
 
-	context 'not logged in' do
+	context 'when not logged in' do
 			
 			it 'should show a login link' do
 				render('layouts/application')
@@ -16,7 +16,7 @@ describe 'application layout' do
 			
 	end
 	
-	context 'logged in' do
+	context 'when logged in' do
 
 			before :each do
 				u = Factory.create :user
@@ -25,7 +25,7 @@ describe 'application layout' do
 
 			it 'should show the user name' do
 				render('layouts/application')
-				response.should include_text('Bem vindo, foo')
+				response.should have_text(/Bem vindo,(.*) foo/)
 			end
 
 			it 'should show logout link' do

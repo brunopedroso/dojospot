@@ -28,7 +28,9 @@
 	<p>Nenhuma sessão proposta no momento.</p>
 <% end %>
 
-<div style="text-align:right; margin-right:10px"><a href="/dojo_sessions/new">marcar uma nova sessão</a></div>
+<% if logged_in? %>
+	<div style="text-align:right; margin-right:10px"><a href="/dojo_sessions/new">Propor uma nova sessão</a></div>
+<% end%>
 
 
 

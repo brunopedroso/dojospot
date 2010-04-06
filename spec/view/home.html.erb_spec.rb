@@ -68,4 +68,16 @@ describe 'home page' do
 	end
 	
 	
+	it 'should not show link to propose session when not logged in' do
+		render('home/index')
+		response.should_not have_tag('a[href=?]','/dojo_sessions/new')
+	end
+
+	it 'should show link to propose session when logged in' do
+		session[:user_id] = Factory.create(:user).id
+		render('home/index')
+		response.should have_tag('a[href=?]','/dojo_sessions/new','Propor uma nova sessão')
+	end
+
+	
 end

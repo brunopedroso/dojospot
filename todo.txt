@@ -2,8 +2,7 @@ próximas tarefas:
 - refact dado teste home thml spec
 
 features:
-- login
-	- autoriza: só pode propor se logado (associa o cara)
+	- associa o proponente à sessão
 	- nome, usuário, senha, email (gravatar), site (link nas fotos)
 - confirmar presença
 	- só se estiver logado
