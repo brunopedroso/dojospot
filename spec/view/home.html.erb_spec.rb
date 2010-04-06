@@ -87,6 +87,12 @@ describe 'home page' do
 				render('home/index')
 				response.should include_text('Bem vindo, foo')
 			end
+
+			it 'should show logout link' do
+				render('home/index')
+				response.should have_tag('a[href=?]', '/logout', 'Log out')
+			end
+
 			
 			# it 'should not show a login link' do
 			# 	render('home/index')
