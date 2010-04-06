@@ -156,3 +156,11 @@ Então /^eu devo ver um link "([^\"]*)"$/ do |text|
     assert_contain 'a', text
   end
 end
+
+Então /^eu não devo ver um link "([^\"]*)"$/ do |text|
+  if defined?(Spec::Rails::Matchers)
+    response.should_not have_tag('a', text)
+  else
+    assert_not_contain 'a', text
+  end
+end

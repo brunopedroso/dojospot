@@ -23,6 +23,7 @@ Funcionalidade: Fazer login
 		Então eu devo estar na "página inicial"
 		E eu devo ver "foo"
 		E eu devo ver um link "Log out"
+		E eu não devo ver um link "Log in"
 		
 	Cenário: Login incorreto
 		
