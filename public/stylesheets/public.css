@@ -16,29 +16,33 @@ label {
 	font-size: 20px;
 }
 
-#header {
+#container {
 	width:700px;
 	position:relative;
 	margin:auto;
+}
+
+#logon_menu {
+	text-align: right;
+	margin-bottom:7px;
+}
+
+#header {
 	height:150px;
 	line-height:150px; /* alinha o titulo no meio do div, verticalmente */
 	background: #ccc;
-	padding: 10px;
 	text-align: center;
 	font-size:50px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 
 }
 
 #central {
-	width:700px;
 	min-height: 500px ;
-	position:relative;
-	margin:auto;
 	background: #eee;
-	padding: 10px;
+	padding:10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 
@@ -46,7 +50,7 @@ label {
 
 div.dojo_session {
 	background: #ccc;
-	margin: 10px 0;
+	margin-bottom: 10px;
 	padding: 2px 13px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
