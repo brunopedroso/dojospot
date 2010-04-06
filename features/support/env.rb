@@ -66,6 +66,4 @@ Spork.each_run do
     end
   end
 
-	Fixtures.create_fixtures("spec/fixtures", "users")
-
 end

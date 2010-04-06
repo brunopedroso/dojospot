@@ -16,6 +16,7 @@ Funcionalidade: Fazer login
 	Cenário: Login correto
 
 		Dado que eu estou na "página de login"
+		E que existe um usuário "foo" com senha "secret"
 		Quando eu preencho "login" com "foo"
 		E eu preencho "password" com "secret"
 		E eu aperto "Log in"

@@ -12,3 +12,8 @@ Factory.define DojoSession do |s|
 		s.time "17:00 às 19:00"
 end
 
+Factory.define User do |u|
+		u.username 'foo'
+	  u.email 'foo@example.com'
+		u.password 'secret'
+end

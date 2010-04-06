@@ -76,5 +76,19 @@ describe 'home page' do
 			
 	end
 	
+	context 'logged in' do
+			
+			before :each do
+				u = Factory.create :user
+				session[:user_id] = u.id
+			end
+			
+			it 'should show the user name' do
+				render('home/index')
+				response.should include_text('bem vindo, foo')
+			end
+			
+	end
+	
 	
 end
