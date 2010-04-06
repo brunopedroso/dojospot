@@ -2,10 +2,11 @@ require 'spec_helper'
 
 describe 'home page' do
 	
+	before :each do 
+		assigns[:dojo_sessions] = []
+	end
+	
 	context 'without proposed sessions' do
-		before :each do 
-			assigns[:dojo_sessions] = []
-		end
 		
 		it 'should show no-sessions message' do 
 			render('home/index')
