@@ -85,8 +85,13 @@ describe 'home page' do
 			
 			it 'should show the user name' do
 				render('home/index')
-				response.should include_text('bem vindo, foo')
+				response.should include_text('Bem vindo, foo')
 			end
+			
+			# it 'should not show a login link' do
+			# 	render('home/index')
+			# 	response.should_not include_text('Log in')
+			# end
 			
 	end
 	

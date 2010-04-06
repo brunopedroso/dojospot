@@ -21,8 +21,8 @@ Funcionalidade: Fazer login
 		E eu preencho "password" com "secret"
 		E eu aperto "Log in"
 		Então eu devo estar na "página inicial"
-		E eu devo ver "usuario_teste"
-		E eu devo ver um link "logout"
+		E eu devo ver "foo"
+		E eu devo ver um link "Log out"
 		
 	Cenário: Login incorreto
 		
