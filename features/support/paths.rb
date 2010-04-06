@@ -12,7 +12,7 @@ module NavigationHelpers
       '/'
 
     when /página de login/
-      '/sessions/new'
+      '/login'
 
     when /página de nova sessão/
       '/dojo_sessions/new'

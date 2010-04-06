@@ -1,10 +1,8 @@
 class DojoSessionsController < ApplicationController
 
+	before_filter :login_required
+
 	def new
-		unless logged_in?
-			redirect_to '/' 
-			return
-		end
 		@dojo_session = DojoSession.new
 	end
 	

@@ -18,10 +18,10 @@ describe DojoSessionsController do
 			assigns[:dojo_session].should == dojo_session
 		end
 
-		it 'should redirect to home when not logged in' do
+		it 'should redirect to login when not logged in' do
 		 	session[:user_id] = nil
 			get :new
-			response.should redirect_to('/')
+			response.should redirect_to('/login')
 		end
 		
 	end
@@ -47,6 +47,15 @@ describe DojoSessionsController do
 			
 		end
 		
+		it 'should not create and redirect to login when not logged in' do
+		 	session[:user_id] = nil
+			args = Factory.attributes_for(:dojo_session).stringify_keys
+			
+			DojoSession.should_not_receive(:new)
+			
+			post :create, :dojo_session=>args
+			response.should redirect_to('/login')
+		end
 		
 	end
 	

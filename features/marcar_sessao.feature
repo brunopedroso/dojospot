@@ -15,7 +15,7 @@ Funcionalidade: Propor uma sessão de dojo
 	
 		Dado que eu não estou logado no sistema
 		Quando eu vou para "página de nova sessão"
-		Então eu devo estar na "página inicial"
+		Então eu devo estar na "página de login"
 
 	Cenário: Iniciando a marcação de uma nova sessão
 		

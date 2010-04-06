@@ -1,7 +1,6 @@
 próximas tarefas:
 - refact dado teste home thml spec
 
-- não permitir acesso sem login às actions new e create dojo_Session
 - associa o proponente à sessão
 - nome, usuário, senha, email (gravatar), site (link nas fotos)
 

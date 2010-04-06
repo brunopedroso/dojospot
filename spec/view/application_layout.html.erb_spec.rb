@@ -6,7 +6,7 @@ describe 'application layout' do
 			
 			it 'should show a login link' do
 				render('layouts/application')
-				response.should have_tag('a[href=?]', '/sessions/new', 'Log in')
+				response.should have_tag('a[href=?]', '/login', 'Log in')
 			end
 
 			it 'should show a logout link' do
