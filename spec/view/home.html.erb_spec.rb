@@ -32,7 +32,7 @@ describe 'home page' do
 			response.should have_tag('h3', @dojo_session.title)
 			response.should have_tag('p', @dojo_session.text)
 			response.should include_text(@dojo_session.place)
-			response.should include_text(I18n.l @dojo_session.date, :format=>"pretty")
+			response.should include_text(I18n.l(@dojo_session.date, :format=>"pretty"))
 			response.should include_text(@dojo_session.time)
 
 		end
