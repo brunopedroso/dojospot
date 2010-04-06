@@ -148,3 +148,11 @@ end
 Então /^mostre-me a página$/ do
   Then %{show me the page}
 end
+
+Então /^eu devo ver um link "([^\"]*)"$/ do |text|
+  if defined?(Spec::Rails::Matchers)
+    response.should have_tag('a', text)
+  else
+    assert_contain 'a', text
+  end
+end
