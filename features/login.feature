@@ -7,6 +7,7 @@ Funcionalidade: Fazer login
 	Eu quero apresentar minhas credenciais e ser reconhecido no sistema
 
 	Cenário: Link de log-out não deve aparecer se eu não estiver logado
+
 		Dado que eu não estou logado no sistema
 		E que eu estou na "página inicial"
 		Então eu não devo ver um link "Log out"
@@ -20,7 +21,8 @@ Funcionalidade: Fazer login
 
 	Cenário: Login correto volta pra home, mostrando nome do usuário e link de log-out
 
-		Dado que eu estou na "página de login"
+		Dado que eu não estou logado no sistema
+		E que eu estou na "página de login"
 		E que existe um usuário "foo" com senha "secret"
 		Quando eu preencho "login" com "foo"
 		E eu preencho "password" com "secret"
@@ -31,4 +33,6 @@ Funcionalidade: Fazer login
 		E eu não devo ver um link "Log in"
 		
 	Cenário: Login incorreto
+	Cenário: Criação de conta
+		# Não vou especificar esses, herdo as specs do nifty_auth
 		
