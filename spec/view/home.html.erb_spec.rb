@@ -71,7 +71,7 @@ describe 'home page' do
 			
 			it 'should show a login link' do
 				render('home/index')
-				response.should have_tag('a[href=?]', '/sessions/new', 'login')
+				response.should have_tag('a[href=?]', '/sessions/new', 'Log in')
 			end
 			
 	end

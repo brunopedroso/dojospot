@@ -11,6 +11,9 @@ module NavigationHelpers
     when /página inicial/
       '/'
 
+    when /página de login/
+      '/sessions/new'
+
     when /página de nova sessão/
       '/dojo_sessions/new'
 

@@ -9,4 +9,19 @@ Funcionalidade: Fazer login
 	Cenário: Não logado
 	
 		Dado que eu não estou logado no sistema
-		Então eu devo ver um link "login"
+		E que eu estou na "página inicial"
+		Quando eu clico em "Log in"
+		Então eu devo estar na "página de login"
+
+	Cenário: Login correto
+
+		Dado que eu estou na "página de login"
+		Quando eu preencho "login" com "foo"
+		E eu preencho "password" com "secret"
+		E eu aperto "Log in"
+		Então eu devo estar na "página inicial"
+		E eu devo ver "usuario_teste"
+		E eu devo ver um link "logout"
+		
+	Cenário: Login incorreto
+		
