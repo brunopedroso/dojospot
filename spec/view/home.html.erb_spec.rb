@@ -66,5 +66,14 @@ describe 'home page' do
 
 	end
 	
+	context 'not logged in' do
+			
+			it 'should show a login link' do
+				render('home/index')
+				response.should have_tag('a', 'login')
+			end
+			
+	end
+	
 	
 end

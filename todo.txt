@@ -1,4 +1,5 @@
 próximas tarefas:
+- refact dado teste home thml spec
 
 features:
 - login
