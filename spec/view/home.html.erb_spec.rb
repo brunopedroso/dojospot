@@ -18,7 +18,7 @@ describe 'home page' do
 	context 'with one proposed session' do
 		
 		before :each do 
-			@dojo_session = Factory.build(:dojo_session)
+			@dojo_session = Factory.create(:dojo_session)
 			assigns[:dojo_sessions] = [@dojo_session]
 		end
 		
@@ -49,7 +49,7 @@ describe 'home page' do
 	context 'with three proposed session' do
 		
 		before :each do 
-			assigns[:dojo_sessions] = [Factory.build(:dojo_session), Factory.build(:dojo_session), Factory.build(:dojo_session)]
+			assigns[:dojo_sessions] = [Factory.create(:dojo_session), Factory.create(:dojo_session), Factory.create(:dojo_session)]
 		end
 		
 		it 'should show the title of the three' do
@@ -72,6 +72,24 @@ describe 'home page' do
 		session[:user_id] = Factory.create(:user).id
 		render('home/index')
 		response.should have_tag('a[href=?]','/dojo_sessions/new','Propor uma nova sessão')
+	end
+
+	context 'when logged in' do
+		
+		it 'should show a link to confirm presence in the session' do
+			
+			@dojo_session = Factory.create(:dojo_session)
+			assigns[:dojo_sessions] = [@dojo_session]
+			
+			user = Factory.create(:user)
+			session[:user_id] = user.id
+			
+			render('home/index')
+			
+			response.should have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/confirm_presence", 'confirmar presença')
+			
+		end
+
 	end
 
 	

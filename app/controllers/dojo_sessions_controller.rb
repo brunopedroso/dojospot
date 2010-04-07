@@ -11,5 +11,9 @@ class DojoSessionsController < ApplicationController
 		dojo_session.save
 		redirect_to '/'
 	end
+
+	def confirm_presence
+		redirect_to '/'
+	end
 	
 end

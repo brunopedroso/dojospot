@@ -1,5 +1,5 @@
 Tarefas:
-- renomear propor_sessoes.steps para sessoes apenas
+
 
 Features:
 	
