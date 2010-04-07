@@ -67,6 +67,21 @@ describe DojoSessionsController do
 			response.should redirect_to('/')
 		end
 		
+		it 'should associate the current user with the dojo_session, as a confirmed user' do
+			dojo_session = mock_model(DojoSession)
+
+			id = 123
+			dojo_session.stub!(:id).and_return(id)
+			DojoSession.should_receive(:find).with(id).and_return(dojo_session)
+			
+			users=[]
+			dojo_session.should_receive(:confirmed_users).and_return(users)
+			dojo_session.should_receive(:save)
+			
+			get :confirm_presence, :id=>dojo_session.id
+			#users[0].should == @user # deve ter adicionado o usuário atual na lista
+		end
+		
 	end
 	
 	

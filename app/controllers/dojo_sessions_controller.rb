@@ -13,6 +13,9 @@ class DojoSessionsController < ApplicationController
 	end
 
 	def confirm_presence
+		dojo_session = DojoSession.find params[:id].to_i
+		dojo_session.confirmed_users << current_user
+		dojo_session.save
 		redirect_to '/'
 	end
 	
