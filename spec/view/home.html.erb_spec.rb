@@ -18,12 +18,7 @@ describe 'home page' do
 	context 'with one proposed session' do
 		
 		before :each do 
-			@dojo_session = stub_model(DojoSession, {:title=>"test title",
-																						 :text=>"test text",
-																						 :place=>"test place",
-																						 :date=>Date.today,
-																						 :time=>"from 17:00 to 19:00"})
-
+			@dojo_session = Factory.build(:dojo_session)
 			assigns[:dojo_sessions] = [@dojo_session]
 		end
 		

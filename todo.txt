@@ -1,12 +1,22 @@
-próximas tarefas:
-- refact dado teste home thml spec
+Tarefas:
 
-- associa o proponente à sessão
-- nome, usuário, senha, email (gravatar), site (link nas fotos)
 
-features:
+Features:
 	
 - confirmar presença
-	- só se estiver logado
-- registrar retrospectiva
-	- só se estiver logado
+	log-in required
+	associa
+	mostrar confirmados na tela inicial
+	quem propos já vem confirmado	
+	
+- registrar retrospectiva (log-in required)
+	- quem participou 
+		associa
+		só quem confirmou
+
+- desconfirmar
+- associa o proponente à sessão
+
+Futuro?
+	- (gravatar), site (link nas fotos)
+	- só pode propor quem tem pelo menos uma presença (trust)
