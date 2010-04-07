@@ -63,7 +63,7 @@ describe DojoSessionsController do
 		
 		it 'should redirect to home page' do
 			dojo_session = Factory.create :dojo_session
-			get confirm_presence_dojo_session_path(dojo_session.id)
+			get :confirm_presence, :id=>dojo_session.id
 			response.should redirect_to('/')
 		end
 		
