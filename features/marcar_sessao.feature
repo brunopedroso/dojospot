@@ -9,7 +9,7 @@ Funcionalidade: Propor uma sessão de dojo
 	
 		Dado que eu não estou logado no sistema
 		E que eu estou na "página inicial"
-		Então eu não devo ver um link "Porpor nova sessão"
+		Então eu não devo ver o link "Porpor nova sessão"
 
 	Cenário: Não deve permitir acesso ao formulário de nova sessão sem login
 	

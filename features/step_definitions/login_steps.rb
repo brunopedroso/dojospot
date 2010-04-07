@@ -1,6 +1,10 @@
 
 Dado /^que eu estou logado no sistema$/ do
-  user = Factory.create :user
+	Dado %{que eu estou logado no sistema como "foo"}
+end
+
+Dado /^que eu estou logado no sistema como "([^\"]*)"$/ do |nome|
+  user = Factory.create :user, :username=>nome, :email=>"#{nome}@example.com"
 	visit '/sessions/new'
 	fill_in "login", :with => user.username
 	fill_in "password", :with => user.password

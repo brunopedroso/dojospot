@@ -51,3 +51,7 @@ Então /^eu devo ver os detalhes das três sessões ordenadas$/ do
 	titles[1].content.should == @dojo_session3.title
 	titles[2].content.should == @dojo_session2.title
 end
+
+Então /^eu devo ver "([^\"]*)" na lista de nomes confirmados$/ do |arg1|
+  pending # express the regexp above with the code you wish you had
+end

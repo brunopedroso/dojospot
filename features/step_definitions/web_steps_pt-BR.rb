@@ -157,7 +157,7 @@ Então /^eu devo ver um link "([^\"]*)"$/ do |text|
   end
 end
 
-Então /^eu não devo ver um link "([^\"]*)"$/ do |text|
+Então /^eu não devo ver o link "([^\"]*)"$/ do |text|
   if defined?(Spec::Rails::Matchers)
     response.should_not have_tag('a', text)
   else

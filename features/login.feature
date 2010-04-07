@@ -10,7 +10,7 @@ Funcionalidade: Fazer login
 
 		Dado que eu não estou logado no sistema
 		E que eu estou na "página inicial"
-		Então eu não devo ver um link "Log out"
+		Então eu não devo ver o link "Log out"
 
 	Cenário: Link de log-in leva à página de login
 	
@@ -30,7 +30,7 @@ Funcionalidade: Fazer login
 		Então eu devo estar na "página inicial"
 		E eu devo ver "foo"
 		E eu devo ver um link "Log out"
-		E eu não devo ver um link "Log in"
+		E eu não devo ver o link "Log in"
 		
 	Cenário: Login incorreto
 	Cenário: Criação de conta
