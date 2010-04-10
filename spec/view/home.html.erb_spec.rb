@@ -75,14 +75,16 @@ describe 'home page' do
 	end
 
 	context 'when logged in' do
+
+		before :each do
+			@user = Factory.create(:user)
+			session[:user_id] = @user.id			
+		end
 		
-		it 'should show a link to confirm presence in the session' do
+		it 'should show a link to confirm presence in the session if there is nobody confirmed' do
 			
 			@dojo_session = Factory.create(:dojo_session)
 			assigns[:dojo_sessions] = [@dojo_session]
-			
-			user = Factory.create(:user)
-			session[:user_id] = user.id
 			
 			render('home/index')
 			
@@ -90,6 +92,28 @@ describe 'home page' do
 			
 		end
 
+		it 'should show a link to confirm presence in the session if i am not one of the confirmed users' do
+			
+			@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[Factory.create(:user)])
+			assigns[:dojo_sessions] = [@dojo_session]
+			
+			render('home/index')
+			
+			response.should have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/confirm_presence", 'confirmar presença')
+			
+		end
+
+		it 'should not show a link to confirm presence if i am already a confirmed user' do
+			
+			@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[@user])
+			assigns[:dojo_sessions] = [@dojo_session]
+			
+			render('home/index')
+			
+			response.should_not have_tag('a', 'confirmar presença')
+			
+		end
+		
 	end
 
 	

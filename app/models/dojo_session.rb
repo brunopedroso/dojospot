@@ -5,7 +5,11 @@ class DojoSession < ActiveRecord::Base
 	end
 	
 	def confirmed_users
-		[]
+		@confirmed_users || []
+	end
+	
+	def confirmed_users=(users_array)
+		@confirmed_users = users_array
 	end
 	
 end

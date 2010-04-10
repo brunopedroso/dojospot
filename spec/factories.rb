@@ -12,8 +12,17 @@ Factory.define DojoSession do |s|
 		s.time "17:00 às 19:00"
 end
 
+Factory.sequence :user_name do |n|
+	"foo#{n}"
+end
+
+Factory.sequence :user_email do |n|
+	"foo#{n}@example.com"
+end
+
+
 Factory.define User do |u|
-		u.username 'foo'
-	  u.email 'foo@example.com'
+		u.username {Factory.next :user_name}
+	  u.email {Factory.next :user_email}
 		u.password 'secret'
 end

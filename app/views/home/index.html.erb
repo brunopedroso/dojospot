@@ -20,7 +20,9 @@
 				</tr>
 			</table>
 			
-			<a href="<%= confirm_presence_dojo_session_path(dojo_session.id)%>">confirmar presença</a>
+			<% if !dojo_session.confirmed_users.include?(current_user) %>
+				<a href="<%= confirm_presence_dojo_session_path(dojo_session.id)%>">confirmar presença</a>
+			<% end %>
 			
 		</div>
 		
