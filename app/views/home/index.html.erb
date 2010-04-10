@@ -5,7 +5,7 @@
 
 	<% for dojo_session in @dojo_sessions do %>
 
-		<div class="dojo_session">
+		<div class="dojo_session" id="dojo_session_<%=dojo_session.id%>">
 			<h3><%= dojo_session.title %></h3>
 
 			<p><%= dojo_session.text %></p>
@@ -20,9 +20,30 @@
 				</tr>
 			</table>
 			
-			<% if !dojo_session.confirmed_users.include?(current_user) %>
-				<a href="<%= confirm_presence_dojo_session_path(dojo_session.id)%>">confirmar presença</a>
-			<% end %>
+			<div id="confirmations">
+
+				<% if dojo_session.confirmed_users.empty? %>
+				
+					<p>Ninguém confirmou ainda</p>
+					
+				<% else %>
+
+					<p>Confirmados até agora:</p>
+					<ul>
+						<li>Ciclano</li>
+						<li>Fulano</li>
+						<% for user in dojo_session.confirmed_users do %>
+							<li><%=user.username%></li>
+						<% end %>
+					</ul>
+				
+				<% end %>
+
+				<% if !dojo_session.confirmed_users.include?(current_user) %>
+					<a href="<%= confirm_presence_dojo_session_path(dojo_session.id)%>">Confirmar minha presença</a>
+				<% end %>
+				
+			</div>
 			
 		</div>
 		
