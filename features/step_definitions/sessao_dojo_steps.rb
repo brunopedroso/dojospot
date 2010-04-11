@@ -52,6 +52,13 @@ Então /^eu devo ver os detalhes das três sessões ordenadas$/ do
 	titles[2].content.should == @dojo_session2.title
 end
 
-Então /^eu devo ver "([^\"]*)" na lista de nomes confirmados$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+Então /^eu devo ver "([^\"]*)" na lista de nomes confirmados$/ do |username|
+	within("div.dojo_session") do |div|
+		assert_contain "Confirmados"
+  	assert_contain username
+		assert_not_contain "Confirmar"
+		assert_not_have_tag "a"
+	end
 end
+
+

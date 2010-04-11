@@ -5,8 +5,6 @@ Features:
 	
 - confirmar presença
 	log-in required
-	associa
-	mostrar confirmados na tela inicial
 	quem propos já vem confirmado	
 	
 - registrar retrospectiva (log-in required)

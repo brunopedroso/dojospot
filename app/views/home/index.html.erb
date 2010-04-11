@@ -30,8 +30,6 @@
 
 					<p>Confirmados até agora:</p>
 					<ul>
-						<li>Ciclano</li>
-						<li>Fulano</li>
 						<% for user in dojo_session.confirmed_users do %>
 							<li><%=user.username%></li>
 						<% end %>
