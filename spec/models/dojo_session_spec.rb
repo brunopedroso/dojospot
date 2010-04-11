@@ -2,6 +2,8 @@ require 'spec_helper'
 
 describe DojoSession do
 
+	should_have_and_belong_to_many :confirmed_users, :class_name=>"User"
+
 	describe 'find_proposed_sessions' do
 		
 		it 'should show a future session' do 

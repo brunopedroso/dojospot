@@ -17,7 +17,7 @@ Funcionalidade: Confirmar presença em sessão de dojo
 		Dado que eu estou logado no sistema como "bruno"
 		E que existe uma sessão marcada amanhã
 		E que eu estou na "página inicial"
-		Quando eu clico em "confirmar presença"
+		Quando eu clico em "Confirmar minha presença"
 		Então eu devo estar na "página inicial"
 		E eu não devo ver o link "confirmar presença"
 		E eu devo ver "bruno" na lista de nomes confirmados
