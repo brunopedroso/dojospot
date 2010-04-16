@@ -115,6 +115,19 @@ describe 'home page' do
 				response.should_not have_tag('a', 'Confirmar minha presença')
 
 			end
+			
+			it 'should not show a link to confirm presence if i am not logged in' do
+				
+				session[:user_id] = nil
+				@dojo_session = Factory.create(:dojo_session)
+				assigns[:dojo_sessions] = [@dojo_session]
+
+				render('home/index')
+
+				response.should_not have_tag('a', 'Confirmar minha presença')
+
+			end
+			
 		end
 		
 		
@@ -131,7 +144,7 @@ describe 'home page' do
 
 			end
 
-			it 'should not show nowbody-confirmed-message if there is nobody confirmed' do
+			it 'should not show nobody-confirmed-message if there is someone confirmed' do
 
 				@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[Factory.create(:user)])
 				assigns[:dojo_sessions] = [@dojo_session]

@@ -56,8 +56,6 @@ Então /^eu devo ver "([^\"]*)" na lista de nomes confirmados$/ do |username|
 	within("div.dojo_session") do |div|
 		assert_contain "Confirmados"
   	assert_contain username
-		assert_not_contain "Confirmar"
-		assert_not_have_tag "a"
 	end
 end
 

@@ -37,7 +37,7 @@
 				
 				<% end %>
 
-				<% if !dojo_session.confirmed_users.include?(current_user) %>
+				<% if logged_in? && !dojo_session.confirmed_users.include?(current_user) %>
 					<a href="<%= confirm_presence_dojo_session_path(dojo_session.id)%>">Confirmar minha presença</a>
 				<% end %>
 				

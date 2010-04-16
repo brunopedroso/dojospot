@@ -9,8 +9,9 @@ Funcionalidade: Confirmar presença em sessão de dojo
 	Cenário: Não pode confirmar sessão se não estiver logado
 	
 		Dado que eu não estou logado no sistema
+		E que existe uma sessão marcada amanhã
 		E que eu estou na "página inicial"
-		Então eu não devo ver o link "confirmar presença"
+		Então eu não devo ver o link "Confirmar minha presença"
 		
 	Cenário: Confirmar presença
 	
@@ -21,3 +22,4 @@ Funcionalidade: Confirmar presença em sessão de dojo
 		Então eu devo estar na "página inicial"
 		E eu não devo ver o link "confirmar presença"
 		E eu devo ver "bruno" na lista de nomes confirmados
+		
