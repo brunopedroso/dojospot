@@ -14,6 +14,9 @@ Features:
 		associa
 		só quem confirmou
 
+- sign up não precisa pedir email a princípio (mínimo possível)
+	- podemos pedir só na hora que o cara pedir pra ser notificado
+
 - desconfirmar
 - associa o proponente à sessão
 

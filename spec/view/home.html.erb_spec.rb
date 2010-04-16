@@ -116,7 +116,9 @@ describe 'home page' do
 
 			end
 			
-			it 'should not show a link to confirm presence if i am not logged in' do
+			it 'should show a link to confirm presence even if i am not logged in' do
+				
+				# a idéia é que caia na página de login, mas isso deve ser testado no controller, não aqui.
 				
 				session[:user_id] = nil
 				@dojo_session = Factory.create(:dojo_session)
@@ -124,7 +126,7 @@ describe 'home page' do
 
 				render('home/index')
 
-				response.should_not have_tag('a', 'Confirmar minha presença')
+				response.should have_tag('a', 'Confirmar minha presença')
 
 			end
 			

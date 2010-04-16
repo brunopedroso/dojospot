@@ -6,12 +6,14 @@ Funcionalidade: Confirmar presença em sessão de dojo
 	Como um participante
 	Eu quero confirmar minha presença em uma sessão de dojo proposta
 	
-	Cenário: Não pode confirmar sessão se não estiver logado
+	Cenário: Confirmação exige que se faça login
 	
 		Dado que eu não estou logado no sistema
 		E que existe uma sessão marcada amanhã
 		E que eu estou na "página inicial"
-		Então eu não devo ver o link "Confirmar minha presença"
+		Quando eu clico em "Confirmar minha presença"
+		Então eu devo estar na "página de login"
+		# TODO: quando faz login, cai na index, já confirmado (se não quiser ele desconfirma)	
 		
 	Cenário: Confirmar presença
 	
@@ -23,3 +25,5 @@ Funcionalidade: Confirmar presença em sessão de dojo
 		E eu não devo ver o link "confirmar presença"
 		E eu devo ver "bruno" na lista de nomes confirmados
 		
+		
+	Cenário: Desconfirmam presença
