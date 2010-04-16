@@ -10,10 +10,14 @@ Funcionalidade: Confirmar presença em sessão de dojo
 	
 		Dado que eu não estou logado no sistema
 		E que existe uma sessão marcada amanhã
+		E que existe um usuário "foo" com senha "secret"
 		E que eu estou na "página inicial"
 		Quando eu clico em "Confirmar minha presença"
-		Então eu devo estar na "página de login"
-		# TODO: quando faz login, cai na index, já confirmado (se não quiser ele desconfirma)	
+		E eu preencho "login" com "foo"
+		E eu preencho "senha" com "secret"
+		E eu aperto "Log in"
+		Então eu devo estar na "página inicial"
+		E eu devo ver "foo" na lista de nomes confirmados
 		
 	Cenário: Confirmar presença
 	
