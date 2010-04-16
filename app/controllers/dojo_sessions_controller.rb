@@ -14,8 +14,10 @@ class DojoSessionsController < ApplicationController
 
 	def confirm_presence
 		dojo_session = DojoSession.find params[:id].to_i
-		dojo_session.confirmed_users << current_user
-		dojo_session.save
+		unless dojo_session.confirmed_users.include?(current_user)
+			dojo_session.confirmed_users << current_user
+			dojo_session.save
+		end
 		redirect_to '/'
 	end
 	

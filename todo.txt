@@ -1,7 +1,7 @@
 Tarefas:
-- confirmar duas vezes?
 - foco no campo de login
 - link para desconfirmar
+- link no título pra home
 
 Features:
 	

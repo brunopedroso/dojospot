@@ -75,11 +75,33 @@ describe DojoSessionsController do
 			DojoSession.should_receive(:find).with(id).and_return(dojo_session)
 			
 			users=[]
-			dojo_session.should_receive(:confirmed_users).and_return(users)
+			dojo_session.stub!(:confirmed_users).and_return(users)
 			dojo_session.should_receive(:save)
 			
 			get :confirm_presence, :id=>dojo_session.id
-			#users[0].should == @user # deve ter adicionado o usuário atual na lista
+			users[0].should == @user # deve ter adicionado o usuário atual na lista
+		end
+		
+		it 'should not re-associate the user if he is already confirmed' do
+			
+			# coloquei um uniq no model - faz ele ignorar as linhas duplicadas
+			#   mas esse teste garante que não se criam mais linhas a toa na tabela de relacionamento
+			
+			dojo_session = mock_model(DojoSession)
+		
+			id = 123
+			users=[@user]
+			
+			dojo_session.stub!(:id).and_return(id)
+			dojo_session.stub!(:confirmed_users).and_return(users)
+			DojoSession.should_receive(:find).with(id).and_return(dojo_session)
+			
+			dojo_session.stub!(:confirmed_users).and_return(users)
+			
+			get :confirm_presence, :id=>dojo_session.id
+		
+			users.length.should == 1
+			users[0].should == @user # deve ter mantido só o usuário atual na lista
 		end
 		
 	end
