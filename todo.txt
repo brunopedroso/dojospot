@@ -1,21 +1,18 @@
 Tarefas:
 
-
 Features:
 	
 - confirmar presença
-	quem propos já vem confirmado	
-	
-- registrar retrospectiva (log-in required)
-	- quem participou 
-		associa
-		só quem confirmou
+	- quem propos já vem confirmado	
+	- desconfirmar
 
 - sign up não precisa pedir email a princípio (mínimo possível)
 	- podemos pedir só na hora que o cara pedir pra ser notificado
 
-- desconfirmar
-- associa o proponente à sessão
+- registrar retrospectiva (log-in required)
+	- quem participou 
+		associa
+		só quem confirmou
 
 Futuro?
 	- (gravatar), site (link nas fotos)
