@@ -3,6 +3,7 @@
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 		<%= stylesheet_link_tag "public" %>
+		<%= javascript_include_tag 'jquery' %>
 	</head>
 
 	<body>
@@ -19,7 +20,7 @@
 			</div>
 
 			<div id="header">
-				Nome do Dojo
+				<%= link_to "Nome do Dojo", "/" %>
 			</div>
 
 			<div id="central">

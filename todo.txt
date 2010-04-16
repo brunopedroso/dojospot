@@ -1,12 +1,9 @@
 Tarefas:
-- foco no campo de login
-- link para desconfirmar
-- link no título pra home
+
 
 Features:
 	
 - confirmar presença
-	log-in required
 	quem propos já vem confirmado	
 	
 - registrar retrospectiva (log-in required)

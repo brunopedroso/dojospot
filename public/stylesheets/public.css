@@ -39,6 +39,11 @@ label {
 
 }
 
+#header a {
+	text-decoration:none;
+	color: black;
+}
+
 #central {
 	min-height: 500px ;
 	background: #eee;
