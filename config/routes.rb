@@ -34,7 +34,7 @@ ActionController::Routing::Routes.draw do |map|
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
   map.root :controller => "home"
 	
-	map.resources :dojo_sessions, :member => { :confirm_presence => :get }
+	map.resources :dojo_sessions, :member => { :confirm_presence => :get, :unconfirm_presence => :get }
 	
   map.resources :sessions
 	map.signup 'signup', :controller => 'users', :action => 'new'

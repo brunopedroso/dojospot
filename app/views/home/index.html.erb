@@ -31,15 +31,28 @@
 					<p>Confirmados até agora:</p>
 					<ul>
 						<% for user in dojo_session.confirmed_users do %>
-							<li><%=user.username%></li>
+							<li>
+							
+								<%=user.username%>
+								
+								<% if user == current_user %>
+									(você) &nbsp; 
+									<a class="small_link" href="<%= unconfirm_presence_dojo_session_path(dojo_session.id) %>">desconfirmar</a>
+								<% end %>
+								
+							</li>
 						<% end %>
 					</ul>
 				
 				<% end %>
 
 				<% if !dojo_session.confirmed_users.include?(current_user) %>
+					<ul><li>
 					<a href="<%= confirm_presence_dojo_session_path(dojo_session.id)%>">Confirmar minha presença</a>
+					</li></ul>
 				<% end %>
+				
+				
 				
 			</div>
 			

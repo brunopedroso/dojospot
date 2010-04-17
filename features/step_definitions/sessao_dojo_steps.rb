@@ -20,13 +20,26 @@ Então /^eu devo ver a sessão proposta com título, texto, local, data localiza
 end
 
 Dado /^que existe uma sessão marcada (.*)$/ do |qndo|
+	Dado %{que existe uma sessão com título "qualquer um" marcada #{qndo}}
+end
+
+Dado /^que existe uma sessão com título "(.*)" marcada (.*)$/ do |titulo, qndo|
 	if (qndo ==  'amanhã') 
-		@dojo_session = Factory.create :dojo_session, :date => (Date.today + 1)
+		date = (Date.today + 1)
 		
 	elsif (qndo == 'hoje')
-		@dojo_session = Factory.create :dojo_session, :date=>Date.today
+		date = Date.today
+		
 	end
+	
+	@dojo_session = Factory.create :dojo_session, :title=> titulo, :date=>date
   
+end
+
+Dado /^que eu estou confirmado na sessão "([^\"]*)"$/ do |title|
+  visit path_to('página inicial')
+	id = DojoSession.find_by_title(title).id
+	click_link_within "#dojo_session_#{id}", "Confirmar minha presença"
 end
 
 Então /^eu devo ver os detalhes da sessão$/ do
@@ -54,9 +67,16 @@ end
 
 Então /^eu devo ver "([^\"]*)" na lista de nomes confirmados$/ do |username|
 	within("div.dojo_session") do |div|
-		assert_contain "Confirmados"
-  	assert_contain username
+			assert_contain "Confirmados"
+  		assert_contain username
 	end
+end
+
+Então /^eu não devo ver "([^\"]*)" na lista de nomes confirmados$/ do |username|	
+	doc = Nokogiri::HTML(response.body)
+	dojo = doc.search('div.dojo_session #confirmations')
+	dojo.should_not contain(username)
+	dojo.should contain('Confirmar minha presença')
 end
 
 

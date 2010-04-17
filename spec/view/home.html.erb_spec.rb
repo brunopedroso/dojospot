@@ -79,7 +79,7 @@ describe 'home page' do
 
 		before :each do
 			@user = Factory.create(:user)
-			session[:user_id] = @user.id			
+			session[:user_id] = @user.id
 		end
 		
 		context 'link to confirm' do
@@ -133,7 +133,8 @@ describe 'home page' do
 		end
 		
 		
-		context 'confirmed users' do 
+		context 'confirmed users list' do 
+			
 			it 'should show nowbody-confirmed-message if there is nobody confirmed' do
 
 				@dojo_session = Factory.create(:dojo_session)
@@ -171,6 +172,40 @@ describe 'home page' do
 				response.should have_tag('div[id=?]', "dojo_session_#{@dojo_session.id}", :text=>/.*#{user2.username}.*/)
 
 			end
+			
+			it 'should show a link to unconfirm, if the current_user is already confirmed' do
+				@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[@user])
+				assigns[:dojo_sessions] = [@dojo_session]
+				
+				render('home/index')
+				
+				response.should have_tag('div[id=?] a[href=?]', "dojo_session_#{@dojo_session.id}", unconfirm_presence_dojo_session_path(@dojo_session.id),:text=>/.*desconfirmar.*/)
+				
+			 end
+
+			it 'should show a link to unconfirm, if i am not confirmed' do
+				user1 = Factory.create(:user)
+				@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[user1])
+				assigns[:dojo_sessions] = [@dojo_session]
+
+				render('home/index')
+
+				response.should_not have_tag('div[id=?] a[href=?]', "dojo_session_#{@dojo_session.id}", unconfirm_presence_dojo_session_path(@dojo_session.id))
+
+			 end
+
+			it 'should show a link to unconfirm, if i am not logged in' do
+				@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[@user])
+				assigns[:dojo_sessions] = [@dojo_session]
+				session[:user_id] = nil
+
+				render('home/index')
+
+				response.should_not have_tag('div[id=?] a[href=?]', "dojo_session_#{@dojo_session.id}", unconfirm_presence_dojo_session_path(@dojo_session.id))
+
+			 end
+
+			
 		end
 
 	

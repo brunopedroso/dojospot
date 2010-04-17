@@ -31,3 +31,12 @@ Funcionalidade: Confirmar presença em sessão de dojo
 		
 		
 	Cenário: Desconfirmam presença
+	
+		Dado que eu estou logado no sistema como "bruno"
+		E que existe uma sessão com título "minha sessão" marcada amanhã
+		E que eu estou confirmado na sessão "minha sessão"
+		E que eu estou na "página inicial"
+		Quando eu clico em "desconfirmar"
+		Então  eu devo estar na "página inicial"
+		E eu não devo ver "bruno" na lista de nomes confirmados
+		

@@ -1,10 +1,13 @@
 Tarefas:
 
+
 Features:
 	
 - confirmar presença
 	- quem propos já vem confirmado	
-	- desconfirmar
+
+
+- quantidade de vagas
 
 - sign up não precisa pedir email a princípio (mínimo possível)
 	- podemos pedir só na hora que o cara pedir pra ser notificado

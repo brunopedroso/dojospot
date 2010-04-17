@@ -106,6 +106,32 @@ describe DojoSessionsController do
 		
 	end
 	
+	context 'get to unconfirm presence' do
+		
+		it 'should redirect to home page' do
+			dojo_session = Factory.create :dojo_session
+			get :unconfirm_presence, :id=>dojo_session.id
+			response.should redirect_to('/')
+		end
+		
+		it 'should remove the current user from the confirmed users' do
+			
+			dojo_session = mock_model(DojoSession)
+
+			id = 123
+			dojo_session.stub!(:id).and_return(id)
+			DojoSession.should_receive(:find).with(id).and_return(dojo_session)
+			
+			users = mock(Array)
+			users.should_receive(:delete).with(@user)
+			
+			dojo_session.stub!(:confirmed_users).and_return(users)
+			dojo_session.should_receive(:save)
+			
+			get :unconfirm_presence, :id=>dojo_session.id
+			
+		end
 	
+	end
 	
 end

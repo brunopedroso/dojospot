@@ -84,3 +84,7 @@ div.dojo_session table tr td {
 /*	left:20px;*/
 	color:#999;
 }
+
+.small_link {
+	font-size: small;
+}
