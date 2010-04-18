@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + '/../spec_helper'
 describe User do
   def new_user(attributes = {})
     attributes[:username] ||= 'foo'
-    attributes[:email] ||= 'foo@example.com'
+    # attributes[:email] ||= 'foo@example.com'
     attributes[:password] ||= 'abc123'
     attributes[:password_confirmation] ||= attributes[:password]
     User.new(attributes)
@@ -27,6 +27,11 @@ describe User do
   
   it "should require well formed email" do
     new_user(:email => 'foo@bar@example.com').should have(1).error_on(:email)
+  end
+
+  it "should not require email" do
+    new_user(:email => nil).should be_valid
+		new_user(:email => "").should be_valid
   end
   
   it "should validate uniqueness of email" do

@@ -36,7 +36,7 @@
 								<%=user.username%>
 								
 								<% if user == current_user %>
-									(você) &nbsp; 
+									<span class="field_hint">(você) &nbsp; </span>
 									<a class="small_link" href="<%= unconfirm_presence_dojo_session_path(dojo_session.id) %>">desconfirmar</a>
 								<% end %>
 								
