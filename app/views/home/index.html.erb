@@ -9,6 +9,10 @@
 		<div class="dojo_session" id="dojo_session_<%=dojo_session.id%>">
 			
 			<h3 style="margin-bottom: 5px"><%= dojo_session.title %></h3>
+			<% if logged_in? %>
+				<%= link_to 'editar', edit_dojo_session_path(dojo_session) %>
+			<% end%>
+			
 			
 			<span class="claro" style="margin-left:20px"> 
 				( <%= l dojo_session.date, :format=>"pretty" %>, 

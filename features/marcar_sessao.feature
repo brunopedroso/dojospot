@@ -34,3 +34,18 @@ Funcionalidade: Propor uma sessão de dojo
 		Então eu devo estar na página inicial
 		E eu devo ver a sessão proposta com título, texto, local, data localizada e horário informados
 		E eu devo ver "bruno" na lista de nomes confirmados
+		
+	Cenário: Editando uma sessão
+	
+		Dado que eu estou logado no sistema
+		E que existe uma sessão marcada amanhã
+		E que eu estou na "página inicial"
+		Quando eu clico em "editar"
+		E eu preencho a proposta de sessão com "título", "texto", "local", "amanhã", e "12:00"
+		E eu aperto "Salvar"
+		Então eu devo estar na página inicial
+		E eu devo ver a sessão proposta com "título", "texto", "local", "amanhã", e "12:00"
+		
+		
+		
+		

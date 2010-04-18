@@ -31,5 +31,9 @@ class DojoSessionsController < ApplicationController
 		dojo_session.save
 		redirect_to '/'
 	end
+
+	def edit
+		@dojo_session = DojoSession.find(params[:id].to_i)
+	end
 	
 end

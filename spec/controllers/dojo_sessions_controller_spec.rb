@@ -86,6 +86,30 @@ describe DojoSessionsController do
 		
 	end
 	
+	context 'get the edit page' do
+		
+		it 'should render the edit page' do
+			
+			dojo_session = mock_model(DojoSession)
+			DojoSession.stub!(:find).and_return(dojo_session)
+			
+			get :edit
+			response.should render_template('edit')
+		end
+		
+		it 'should assign the session' do
+			
+			id = 33
+			
+			dojo_session = mock_model(DojoSession)
+			DojoSession.should_receive(:find).with(id).and_return(dojo_session)
+			
+			get :edit, :id=>id
+			assigns[:dojo_session].should == dojo_session
+		end
+		
+	end
+	
 	context 'get to confirm presence' do
 		
 		it 'should redirect to home page' do

@@ -40,7 +40,20 @@ describe 'home page' do
 				render('home/index')
 				response.should_not have_tag('p', 'Nenhuma sessão proposta no momento.')
 			end
+			
+			it 'should show a link to edit when i am logged in' do
+				session[:user_id] = Factory.create(:user).id
+				render('home/index')
+				response.should have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/edit", 'editar')
+			end
 
+			it 'should not show a link to edit if i am NOT logged in' do
+				session[:user_id] = nil
+				render('home/index')
+				response.should_not have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/edit", 'editar')
+
+			end
+			
 		end
 
 

@@ -11,7 +11,6 @@ describe 'new session page' do
 	it 'should have a form that posts to dojo_sessions' do
 		render('dojo_sessions/new.html')
 		response.should have_tag('form[action=?][method=?]','/dojo_sessions', 'post')
-
 	end
 
 	it 'should have fields for title, text, place, date and time' do
