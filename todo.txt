@@ -1,17 +1,15 @@
 Tarefas:
- - quem propos pode editar
-	- edição
-	- associa o proponente
 
 
 Features v0:
 
-	- layout
+	- quem propos pode editar
+		- edição
+		- associa o proponente
 
 	- algumas páginas de texto
 		- o que é dojo
 		
-
 	- deploy
 		- tirar nome hub
 			- aplicar dojosea
