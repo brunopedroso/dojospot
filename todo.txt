@@ -1,19 +1,38 @@
 Tarefas:
 	
 
+
 Features v0:
 
-- registrar retrospectiva (log-in required)
-	- quem participou 
-		associa
-		só quem confirmou
-		+ adicionar alguém q não havia confirmado
+	- layout
 
-- layout
+	- algumas páginas de texto
+		- o que é dojo
+		
 
-- algumas páginas de texto
+	- deploy
+		- tirar nome hub
+			- aplicar dojosea
+		- colocar no github
+		- maquina na sea
+		- capistrano
 
-Futuro?
+
+Backlog
+
+	- registrar retrospectiva (log-in required)
+		- quem participou 
+			associa
+			só quem confirmou
+			+ adicionar alguém q não havia confirmado
+
+
 	- (gravatar), site (link nas fotos)
 	- só pode propor quem tem pelo menos uma presença (trust)
 	- quantidade de vagas
+	- tags
+	- páginas das pessoas
+		- tagcloud das sessoes q participou
+		- qtde sessões
+		
+	
