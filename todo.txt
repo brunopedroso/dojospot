@@ -1,5 +1,7 @@
 Tarefas:
-	
+ - quem propos pode editar
+	- edição
+	- associa o proponente
 
 
 Features v0:

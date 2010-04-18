@@ -1,25 +1,25 @@
 
 <h2 class="page_title"> Próximas sessões </h2>
 
+
 <% unless @dojo_sessions.empty? %>
 
 	<% for dojo_session in @dojo_sessions do %>
 
 		<div class="dojo_session" id="dojo_session_<%=dojo_session.id%>">
-			<h3><%= dojo_session.title %></h3>
+			
+			<h3 style="margin-bottom: 5px"><%= dojo_session.title %></h3>
+			
+			<span class="claro" style="margin-left:20px"> 
+				( <%= l dojo_session.date, :format=>"pretty" %>, 
+			 	  <%= dojo_session.time %>, 
+			      <%= dojo_session.place %> )
+			</span>
+			
+			<br/>
 
 			<p><%= dojo_session.text %></p>
 
-			<table border="0" width="100%">
-				<tr>
-					<td width="60%"><b>Onde:</b> <%= dojo_session.place %></td>
-					<td width="40%">
-						<b>Quando:</b> <%= l dojo_session.date, :format=>"pretty" %><br/>
-						<b>Que horas:</b> <%= dojo_session.time %>
-					</td>
-				</tr>
-			</table>
-			
 			<div id="confirmations">
 
 				<% if dojo_session.confirmed_users.empty? %>
@@ -28,15 +28,15 @@
 					
 				<% else %>
 
-					<p>Confirmados até agora:</p>
-					<ul>
+					<span><b>Confirmados até agora:</b></span>
+					<ul style="margin-top:5px">
 						<% for user in dojo_session.confirmed_users do %>
 							<li>
 							
 								<%=user.username%>
 								
 								<% if user == current_user %>
-									<span class="field_hint">(você) &nbsp; </span>
+									<span class="claro">(você) &nbsp; </span>
 									<a class="small_link" href="<%= unconfirm_presence_dojo_session_path(dojo_session.id) %>">desconfirmar</a>
 								<% end %>
 								
@@ -51,8 +51,6 @@
 					<a href="<%= confirm_presence_dojo_session_path(dojo_session.id)%>">Confirmar minha presença</a>
 					</li></ul>
 				<% end %>
-				
-				
 				
 			</div>
 			

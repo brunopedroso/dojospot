@@ -8,20 +8,25 @@
 
 	<body>
 
+
+		<div id="logon_menu">
+			<% if logged_in? %>
+				Bem vindo, <b> <%= current_user.username %> </b> /
+				<a href="/logout">Log out</a>
+			<% else %>
+				<a href="/login">Log in</a>
+			<% end %>
+			&nbsp;
+		</div>
+
+		<div id="header">
+			<img src="/images/teto.png"/>
+			<%= link_to "DojoSEA", "/" %>
+			<img src="/images/arvore.png"/ style="float: right; margin-right:20px">
+		</div>
+
+
 		<div id="container">
-
-			<div id="logon_menu">
-				<% if logged_in? %>
-					<span style="color:#aaa">Bem vindo, </span> <%= current_user.username %> /
-					<a href="/logout">Log out</a>
-				<% else %>
-					<a href="/login">Log in</a>
-				<% end %>
-			</div>
-
-			<div id="header">
-				<%= link_to "Nome do Dojo", "/" %>
-			</div>
 
 			<div id="central">
 

@@ -1,4 +1,13 @@
 
+a {
+	color:#FF8800;
+}
+
+body {
+	margin: 0;
+	font-family: arial;
+}
+
 h2 {
 	margin: 10px 5px;
 }
@@ -24,29 +33,41 @@ label {
 
 #logon_menu {
 	text-align: right;
-	margin-bottom:7px;
+	background: #fc710b;
+}
+
+#logon_menu a {
+	color:#fedfcd;
 }
 
 #header {
-	height:150px;
-	line-height:150px; /* alinha o titulo no meio do div, verticalmente */
-	background: #ccc;
-	text-align: center;
-	font-size:50px;
-	margin-bottom: 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-
+	height:140px;
+	line-height:180px; /* alinha o titulo no meio do div, verticalmente */
+	background: #fc710b;
+	margin: 0;
+	text-align: right;
 }
 
 #header a {
 	text-decoration:none;
-	color: black;
+	color: #fedfcd;
+	font-family: "Courier";
+	font-size: 70px;
+	position: relative;
+	margin-right: 7%;
+	z-index:10; 
+}
+
+#header img {
+	position: relative; 
+	float: left;
+	height: 135;
+	margin-top: 6px;
+	margin-left: 20px;
 }
 
 #central {
 	min-height: 500px ;
-	background: #eee;
 	padding:10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -54,9 +75,9 @@ label {
 }
 
 div.dojo_session {
-	background: #ccc;
+	background: #fedfcd;
 	margin-bottom: 10px;
-	padding: 2px 13px;
+	padding: 2px 20px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 }
@@ -75,16 +96,17 @@ div.dojo_session table tr td {
 	text-align:justify;
 }
 
-.field_hint {
-	color:#777;
-}
-
 .page_title {
 	position:relative;
 /*	left:20px;*/
-	color:#999;
+	color:#fc710b;
 }
 
 .small_link {
 	font-size: small;
+}
+
+.claro {
+/*		   #fedfcd*/
+	color: #ff7700;
 }
