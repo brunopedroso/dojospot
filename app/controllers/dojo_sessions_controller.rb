@@ -8,6 +8,10 @@ class DojoSessionsController < ApplicationController
 	
 	def create
 		dojo_session = DojoSession.new(params[:dojo_session])
+		
+		# já associa como confirmado
+		dojo_session.confirmed_users << current_user
+		
 		dojo_session.save
 		redirect_to '/'
 	end

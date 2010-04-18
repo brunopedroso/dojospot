@@ -38,6 +38,7 @@ describe DojoSessionsController do
 			
 			new_session = mock_model(DojoSession)
 			new_session.should_receive(:save)
+			new_session.stub!(:confirmed_users).and_return([])
 			
 			args = Factory.attributes_for(:dojo_session).stringify_keys
 			
@@ -46,6 +47,23 @@ describe DojoSessionsController do
 			post :create, :dojo_session=>args
 			
 		end
+
+		it 'should associate current_user as confirmed' do 
+			
+			new_session = mock_model(DojoSession)
+			confirmed_users = mock(Array)
+			new_session.should_receive(:save)
+			
+			args = Factory.attributes_for(:dojo_session).stringify_keys
+			
+			DojoSession.should_receive(:new).with(args).and_return(new_session)
+			new_session.should_receive(:confirmed_users).and_return(confirmed_users)
+			confirmed_users.should_receive(:<<).with(@user)
+			
+			post :create, :dojo_session=>args
+			
+		end
+
 		
 		context 'when not logged in' do
 
