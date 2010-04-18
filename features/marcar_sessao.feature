@@ -26,10 +26,11 @@ Funcionalidade: Propor uma sessão de dojo
 		
 	Cenário: Propondo uma sessão
 	
-		Dado que eu estou logado no sistema
+		Dado que eu estou logado no sistema como "bruno"
 		E que não existem sessões marcadas
 		E eu estou na página de nova sessão
 		Quando eu preencho a proposta de sessão com título, texto, local, data in dd/MM/yyyy, e horário
 		E eu aperto "Propor esta sessão"
 		Então eu devo estar na página inicial
 		E eu devo ver a sessão proposta com título, texto, local, data localizada e horário informados
+		E eu devo ver "bruno" na lista de nomes confirmados

@@ -1,20 +1,24 @@
 Tarefas:
+	
+2T
+	- confirmar presença 
+		- quem propos já vem confirmado
+
+	- sign up não precisa pedir email a princípio (mínimo possível)
+		- podemos pedir só na hora que o cara pedir pra ser notificado
 
 
 Features v0:
-	
-- confirmar presença
-	- quem propos já vem confirmado	
-
-- sign up não precisa pedir email a princípio (mínimo possível)
-	- podemos pedir só na hora que o cara pedir pra ser notificado
 
 - registrar retrospectiva (log-in required)
 	- quem participou 
 		associa
 		só quem confirmou
+		+ adicionar alguém q não havia confirmado
 
 - layout
+
+- algumas páginas de texto
 
 Futuro?
 	- (gravatar), site (link nas fotos)

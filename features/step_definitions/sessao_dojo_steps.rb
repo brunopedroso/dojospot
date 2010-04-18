@@ -15,7 +15,7 @@ Então /^eu devo ver a sessão proposta com título, texto, local, data localiza
 	  assert_contain @proposta_exemplo.title
 		assert_contain @proposta_exemplo.text
 		assert_contain @proposta_exemplo.place
-		assert_contain I18n.l @proposta_exemplo.date, :format=>"pretty"
+		assert_contain I18n.l(@proposta_exemplo.date, :format=>"pretty")
 		assert_contain @proposta_exemplo.time
 end
 
