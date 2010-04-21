@@ -7,12 +7,12 @@
 	<% for dojo_session in @dojo_sessions do %>
 
 		<div class="dojo_session" id="dojo_session_<%=dojo_session.id%>">
-			
-			<h3 style="margin-bottom: 5px"><%= dojo_session.title %></h3>
+
 			<% if logged_in? %>
-				<%= link_to 'editar', edit_dojo_session_path(dojo_session) %>
+				<%= link_to 'editar', edit_dojo_session_path(dojo_session), :class => 'link_northeast' %>
 			<% end%>
 			
+			<h3 style="margin-bottom: 5px;"><%= dojo_session.title %></h3>
 			
 			<span class="claro" style="margin-left:20px"> 
 				( <%= l dojo_session.date, :format=>"pretty" %>, 

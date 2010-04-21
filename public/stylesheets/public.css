@@ -110,3 +110,9 @@ div.dojo_session table tr td {
 /*		   #fedfcd*/
 	color: #ff7700;
 }
+
+.link_northeast {
+	position: relative;
+	float: right;
+	margin-top: 20px;
+}
