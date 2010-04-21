@@ -54,8 +54,8 @@ describe DojoSession do
 	describe 'new session' do
 		
 			it 'should parse date in brazilian format' do 
-				
-				s = DojoSession.new(Factory.attributes_for(:dojo_session, :date=>"11/04/2010"))
+				attrs = Factory.attributes_for(:dojo_session, :date=>"11/04/2010")
+				s = DojoSession.new(attrs)
 				'13/04/2010'.to_date.month.should == 4
 				s.date.month.should == 4
 				

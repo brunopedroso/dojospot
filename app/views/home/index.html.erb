@@ -8,7 +8,7 @@
 
 		<div class="dojo_session" id="dojo_session_<%=dojo_session.id%>">
 
-			<% if logged_in? %>
+			<% if logged_in? && dojo_session.confirmed_users.include?(current_user) %>
 				<%= link_to 'editar', edit_dojo_session_path(dojo_session), :class => 'link_northeast' %>
 			<% end%>
 			

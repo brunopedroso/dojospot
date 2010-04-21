@@ -15,7 +15,7 @@ describe 'home page' do
 		context 'details' do
 
 			before :each do 
-				@dojo_session = Factory.create(:dojo_session)
+				@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[Factory.create(:user)])
 				assigns[:dojo_sessions] = [@dojo_session]
 			end
 
@@ -41,17 +41,22 @@ describe 'home page' do
 				response.should_not have_tag('p', 'Nenhuma sessão proposta no momento.')
 			end
 			
-			it 'should show a link to edit when i am logged in' do
-				session[:user_id] = Factory.create(:user).id
-				render('home/index')
-				response.should have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/edit", 'editar')
-			end
-
 			it 'should not show a link to edit if i am NOT logged in' do
 				session[:user_id] = nil
 				render('home/index')
 				response.should_not have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/edit", 'editar')
+			end
 
+			it 'should show a link to edit when i am logged in one of the confirmed users ' do				
+				session[:user_id] = @dojo_session.confirmed_users[0].id
+				render('home/index')
+				response.should have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/edit", 'editar')
+			end
+
+			it 'should not show a link to edit if i am NOT a confirmed user' do
+				session[:user_id] = Factory.create(:user).id
+				render('home/index')
+				response.should_not have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/edit", 'editar')
 			end
 			
 		end
@@ -150,7 +155,7 @@ describe 'home page' do
 			
 			it 'should show nowbody-confirmed-message if there is nobody confirmed' do
 
-				@dojo_session = Factory.create(:dojo_session)
+				@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[])
 				assigns[:dojo_sessions] = [@dojo_session]
 
 				render('home/index')

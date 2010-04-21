@@ -1,9 +1,8 @@
 Tarefas:
 
+
 Features v0:
 
-	- quem propos pode editar
-		- associa o proponente - só ele pode editar. ou só quem confirmou?
 
 	- algumas páginas de texto
 		- o que é dojo

@@ -35,17 +35,37 @@ Funcionalidade: Propor uma sessão de dojo
 		E eu devo ver a sessão proposta com "título", "texto", "local", "amanhã", e "12:00"
 		E eu devo ver "bruno" na lista de nomes confirmados
 		
-	Cenário: Editando uma sessão
-	
+	Cenário: Só pode editar se estiver logado
+
+		Dado que eu não estou logado no sistema
+		E que existe uma sessão marcada amanhã
+		E que eu estou na "página inicial"
+		Então eu não devo ver o link "editar"
+
+	Cenário: Não pode editar se não estiver confirmado
+
 		Dado que eu estou logado no sistema
 		E que existe uma sessão marcada amanhã
 		E que eu estou na "página inicial"
-		Quando eu clico em "editar"
+		Então eu não devo ver o link "editar"
+
+	Cenário: Só pode editar se estiver confirmado
+
+		Dado que eu estou logado no sistema
+		E que existe uma sessão marcada amanhã
+		E que eu estou na "página inicial"
+		Quando eu clico em "Confirmar minha presença"
+		Então eu devo ver o link "editar"
+
+	Cenário: Editando uma sessão
+
+		Dado que eu estou logado no sistema
+		E que existe uma sessão marcada amanhã
+		E que eu estou na "página inicial"
+		Quando eu clico em "Confirmar minha presença"
+		E eu clico em "editar"
 		E eu preencho a proposta de sessão com "título", "texto", "local", "amanhã", e "12:00"
 		E eu aperto "Salvar"
 		Então eu devo estar na página inicial
 		E eu devo ver a sessão proposta com "título", "texto", "local", "amanhã", e "12:00"
-		
-		
-		
-		
+
