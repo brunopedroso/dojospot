@@ -8,14 +8,15 @@ Features v0:
 		- o que é dojo
 		
 	- deploy
-		- tirar nome hub
-			- aplicar dojosea
-		- colocar no github
 		- maquina na sea
+		- tirar nome hub
+		- colocar no github
 		- capistrano
 
 
 Backlog
+
+	- refactoring?: uma feature a  parte 'soh quem estiver confirmado pode editar'
 
 	- registrar retrospectiva (log-in required)
 		- quem participou 
