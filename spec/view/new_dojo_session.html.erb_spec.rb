@@ -35,7 +35,7 @@ describe 'new session page' do
 	
 	it 'should have a submit for proposing a dojo session' do 
 		render('dojo_sessions/new.html')
-		response.should have_tag('form input[type=?][value=?]', 'submit', 'Propor esta sessão')
+		response.should have_tag('form input[type=?][value=?]', 'submit', 'Salvar')
 	end
 	
 	

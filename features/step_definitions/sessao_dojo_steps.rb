@@ -19,6 +19,36 @@ Então /^eu devo ver a sessão proposta com título, texto, local, data localiza
 		assert_contain @proposta_exemplo.time
 end
 
+# TODO Refactoring!! Duplicação aqui!
+Quando /^eu preencho a proposta de sessão com "([^\"]*)", "([^\"]*)", "([^\"]*)", "([^\"]*)", e "([^\"]*)"$/ do |title, text, place, date, time|
+	fill_in "dojo_session[title]", :with => title
+	fill_in "dojo_session[text]", :with => text
+	fill_in "dojo_session[place]", :with => place
+	
+	if date == 'amanhã'
+		date = Date.today + 1
+	end
+	
+	fill_in "dojo_session[date]", :with => date.to_s_br
+	fill_in "dojo_session[time]", :with => time
+end
+
+Então /^eu devo ver a sessão proposta com "([^\"]*)", "([^\"]*)", "([^\"]*)", "([^\"]*)", e "([^\"]*)"$/ do |title, text, place, date, time|
+  assert_contain title
+	assert_contain text
+	assert_contain place
+	assert_contain I18n.l(date, :format=>"pretty")
+	assert_contain time
+end
+
+
+
+
+
+
+
+
+
 Dado /^que existe uma sessão marcada (.*)$/ do |qndo|
 	Dado %{que existe uma sessão com título "qualquer um" marcada #{qndo}}
 end
@@ -78,5 +108,4 @@ Então /^eu não devo ver "([^\"]*)" na lista de nomes confirmados$/ do |usernam
 	dojo.should_not contain(username)
 	dojo.should contain('Confirmar minha presença')
 end
-
 
