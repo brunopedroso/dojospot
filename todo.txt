@@ -1,5 +1,4 @@
 Tarefas:
-- refatorar dojo_steps: steps duplicados
 
 
 Features v0:

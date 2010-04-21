@@ -29,10 +29,10 @@ Funcionalidade: Propor uma sessão de dojo
 		Dado que eu estou logado no sistema como "bruno"
 		E que não existem sessões marcadas
 		E eu estou na página de nova sessão
-		Quando eu preencho a proposta de sessão com título, texto, local, data in dd/MM/yyyy, e horário
+		Quando eu preencho a proposta de sessão com "título", "texto", "local", "amanhã", e "12:00"
 		E eu aperto "Salvar"
 		Então eu devo estar na página inicial
-		E eu devo ver a sessão proposta com título, texto, local, data localizada e horário informados
+		E eu devo ver a sessão proposta com "título", "texto", "local", "amanhã", e "12:00"
 		E eu devo ver "bruno" na lista de nomes confirmados
 		
 	Cenário: Editando uma sessão
