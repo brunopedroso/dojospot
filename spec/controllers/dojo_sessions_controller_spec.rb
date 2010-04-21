@@ -110,6 +110,42 @@ describe DojoSessionsController do
 		
 	end
 	
+	context 'put to edit the session' do
+		
+		it 'should update the sessions atributes' do
+			attrs = Factory.attributes_for(:dojo_session)
+			id = 33
+			
+			dojo_session = mock_model(DojoSession)
+			DojoSession.should_receive(:find).with(id).and_return(dojo_session)
+			dojo_session.should_receive(:update_attributes).with(attrs.stringify_keys)
+			dojo_session.should_receive(:save)
+			
+			post :update, :id=>id, :dojo_session=>attrs.stringify_keys
+		end
+		
+		it 'should redirect to the main page' do 
+			
+			attrs = Factory.attributes_for(:dojo_session)
+			id = 33
+			
+			dojo_session = mock_model(DojoSession)
+			DojoSession.stub!(:find).and_return(dojo_session)
+			dojo_session.stub!(:update_attributes)
+			dojo_session.stub!(:save)
+			
+			post :update, :id=>id, :dojo_session=>attrs.stringify_keys
+			
+			response.should redirect_to('/')
+			
+		end
+		
+		
+		# TODO 'should it validate any field?'
+		
+	end
+	
+	
 	context 'get to confirm presence' do
 		
 		it 'should redirect to home page' do

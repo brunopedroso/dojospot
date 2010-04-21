@@ -13,9 +13,6 @@ describe 'edit session page' do
 			f.should have_tag('input[type=?][name=?][value=?]', 'hidden', '_method', 'put')
 		end
 		
-	end
-
-
-	
+	end	
 	
 end

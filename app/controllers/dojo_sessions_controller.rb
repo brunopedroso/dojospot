@@ -36,4 +36,11 @@ class DojoSessionsController < ApplicationController
 		@dojo_session = DojoSession.find(params[:id].to_i)
 	end
 	
+	def update
+		session = DojoSession.find params[:id].to_i
+		session.update_attributes(params[:dojo_session])
+		session.save
+		redirect_to '/'
+	end
+	
 end

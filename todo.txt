@@ -1,11 +1,9 @@
 Tarefas:
 
-
 Features v0:
 
 	- quem propos pode editar
-		- edição
-		- associa o proponente
+		- associa o proponente - só ele pode editar. ou só quem confirmou?
 
 	- algumas páginas de texto
 		- o que é dojo
@@ -26,6 +24,12 @@ Backlog
 			só quem confirmou
 			+ adicionar alguém q não havia confirmado
 
+	- perfil da figura
+		- de quantas/quais sessoes ele participou
+		- quais sessoes ele propos
+		
+		- quantas ele confirmou e não foi?
+		- quantas ele foi sem confirmar?
 
 	- (gravatar), site (link nas fotos)
 	- só pode propor quem tem pelo menos uma presença (trust)
