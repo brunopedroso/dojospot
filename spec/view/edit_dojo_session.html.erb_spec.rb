@@ -9,11 +9,13 @@ describe 'edit session page' do
 		
 		render('/dojo_sessions/edit.html')
 		
-		puts response.body
-		
-		response.should have_tag('form[action=?][method=?]','/dojo_sessions', 'put')
+		response.should have_tag('form[action=?]',"/dojo_sessions/#{dojo_session.id}") do |f|
+			f.should have_tag('input[type=?][name=?][value=?]', 'hidden', '_method', 'put')
+		end
 		
 	end
+
+
 	
 	
 end
