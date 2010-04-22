@@ -6,6 +6,7 @@ Features v0:
 
 	- algumas páginas de texto
 		- o que é dojo
+		- páginas estáticas - um controller q lê arquivos? mantém layout
 		
 	- deploy
 		- maquina na sea
@@ -18,6 +19,17 @@ Backlog
 
 	- refactoring?: uma feature a  parte 'soh quem estiver confirmado pode editar'
 
+	- notificações
+		- rss
+		- email
+		- twitter
+
+	- comentários
+	- página de detalhes das sessões
+	- sessões passadas
+	
+	- posts de blog
+	
 	- registrar retrospectiva (log-in required)
 		- quem participou 
 			associa
