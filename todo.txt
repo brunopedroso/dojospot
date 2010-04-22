@@ -4,13 +4,12 @@ Tarefas:
 Features v0:
 
 
-	- algumas páginas de texto
+	- páginas
 		- o que é dojo
 		- páginas estáticas - um controller q lê arquivos? mantém layout
 		
 	- deploy
 		- maquina na sea
-		- tirar nome hub
 		- colocar no github
 		- capistrano
 
@@ -19,36 +18,42 @@ Backlog
 
 	- refactoring?: uma feature a  parte 'soh quem estiver confirmado pode editar'
 
-	- notificações
-		- rss
-		- email
-		- twitter
-
-	- comentários
-	- página de detalhes das sessões
-	- sessões passadas
-	
-	- posts de blog
-	
 	- registrar retrospectiva (log-in required)
 		- quem participou 
 			associa
 			só quem confirmou
 			+ adicionar alguém q não havia confirmado
 
+	- (gravatar), site (link nas fotos)
+	- quantidade de vagas
+	- tags
+
+	- notificações
+		- rss
+		- email
+		- twitter
+
+	- sessões passadas
+	- página de detalhes das sessões
+	
+	- comentários nas seções (antes ou depois)
+	
+	- posts de blog
+		+ comentário
+	
 	- perfil da figura
+		- tagcloud das sessoes q participou
+		- qtde sessões
 		- de quantas/quais sessoes ele participou
 		- quais sessoes ele propos
 		
 		- quantas ele confirmou e não foi?
 		- quantas ele foi sem confirmar?
 
-	- (gravatar), site (link nas fotos)
-	- só pode propor quem tem pelo menos uma presença (trust)
-	- quantidade de vagas
-	- tags
-	- páginas das pessoas
-		- tagcloud das sessoes q participou
-		- qtde sessões
+
+		- só pode propor quem tem pelo menos uma presença (trust)	
+		- convite?: já define um mérito...
+
+	
 		
 	
