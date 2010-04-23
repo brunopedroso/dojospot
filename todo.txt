@@ -5,7 +5,17 @@ Features v0:
 
 
 	- páginas
-		- o que é dojo
+		* o que é o dojo-sea?
+			* porque a sea mantém um dojo? 
+		* o que é coding-dojo?
+			* onde achar mais informações
+	    * o que praticamos no dojo?
+	    * regras básicas do dojo
+		
+		* quem somos?
+	    * como participar?
+	    
+	    
 		- páginas estáticas - um controller q lê arquivos? mantém layout
 		
 	- deploy
