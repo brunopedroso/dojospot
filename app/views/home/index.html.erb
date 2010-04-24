@@ -1,34 +1,75 @@
 
-<div class="box" id="next_sessions">
+<table>
+
+	<tr>
 	
-	<h2>Próximas sessões</h2>	
-
-	<% unless @dojo_sessions.empty? %>
-
-		<ul>
-
-			<% for dojo_session in @dojo_sessions do %>
-
-					<li>
-					
-						<strong><%= dojo_session.title %></strong><br/>
-					
-						<span class="claro" style="font-size: small; margin:20px"> 
-							(<%= l dojo_session.date, :format=>"pretty" %>)
-						</span>
+		<td width="40%" rowspan="2" valign="top">
 			
-					</li>
-					
-			<% end %>
-		
-		</ul>
-		
-		<div style="text-align: right">
-			<%= link_to("mais detalhes >>", dojo_sessions_path) %>
-		</div>
-
-	<% else %>
-		<p>Nenhuma sessão proposta no momento.</p>
-	<% end %>
+			<div class="picture_frame" style="margin-bottom:5px">
+				
+				<%= link_to(image_tag("http://farm3.static.flickr.com/2078/2077871613_f7cddbdfaf.jpg", :height=>"350px", :border=>0), "http://www.flickr.com/photos/davisayer/2077871613/") %>
+				
+			</div>
+							
+		</td>
 	
-</div>
+	
+		<td valign="middle" style="padding-top:30px; font-size: large">
+			
+			<ul>
+				<li><%= link_to "O que é coding-dojo?", "#" %></li>
+				<li><%= link_to "Algum outro conteúdo", "#" %></li>
+				<li><%= link_to "Mais um outro", "#" %></li>
+				<li><%= link_to "outro mais", "#" %></li>
+			</ul>
+			
+		</td>
+		
+		
+	</tr>
+	
+	
+	<tr>
+		
+		<td valign="bottom">
+		
+			<div class="box" id="next_sessions" style="margin-bottom: 5px">
+
+				<h2>Próximas sessões</h2>	
+
+				<% unless @dojo_sessions.empty? %>
+
+					<ul>
+
+						<% for dojo_session in @dojo_sessions do %>
+
+								<li>
+
+									<strong><%= dojo_session.title %></strong><br/>
+
+									<span class="claro" style="font-size: small; margin:20px"> 
+										(<%= l dojo_session.date, :format=>"pretty" %>)
+									</span>
+
+								</li>
+
+						<% end %>
+
+					</ul>
+
+					<div style="text-align: right">
+						<%= link_to("mais detalhes >>", dojo_sessions_path) %>
+					</div>
+
+				<% else %>
+					<p>Nenhuma sessão proposta no momento.</p>
+				<% end %>
+
+			</div>
+		
+		</td>
+		
+	</tr>
+	
+</table>
+

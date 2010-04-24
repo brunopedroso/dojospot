@@ -1,29 +1,36 @@
-Tarefas:
+Working on:
 
-	layout
-		- prepara o layout pra mudança
-		- cria a nova home, com foto, lista prox sessoes e páginas
-		
-	TODOs
-		- login.feature aponta pra pag inicial
+
 		
 
 Features v0:
 
 
 	- páginas
-		* o que é o dojo-sea?
-			* porque a sea mantém um dojo? 
+
 		* o que é coding-dojo?
-			* onde achar mais informações
-	    * o que praticamos no dojo?
-	    * regras básicas do dojo
-		
-		* quem somos?
+			* onde achar mais informações?
+			
+		* o que é o dojo-sea?
+			* porque a sea mantém um dojo?
+			* Qual a filosofia do dojo-sea?
+				* o que praticamos no dojo-sea?
+				* compartilhamento
+	    
+	    * regras básicas do dojo-sea
+			* confirmar, 
+				- limite de pessoas
+				- comprometimento, confiança
+			* Cada um participa como quiser
+				- não precisa programar, se vc não quiser
+			* Respeito
+				- silencio
+				- celulares
+			
 	    * como participar?
 	    
 	    
-		- páginas estáticas - um controller q lê arquivos? mantém layout
+		- páginas estáticas - um controller q lê arquivos de **um plugin**? mantém layout
 		
 	- deploy
 		- maquina na sea
@@ -33,6 +40,7 @@ Features v0:
 
 Débito
 
+	- login.feature aponta pra pag inicial
 	- refactoring?: uma feature a  parte 'soh quem estiver confirmado pode editar'
 	- TODOs
 	- css com sass
@@ -40,6 +48,10 @@ Débito
 
 Backlog
 
+	- capa só mostra 2 sessões
+	- limite no tamanho do nome da sessão (quebrando na tela)
+
+	- um rodapé (com powered by)
 
 	- registrar retrospectiva (log-in required)
 		- quem participou 
@@ -78,5 +90,10 @@ Backlog
 		- convite?: já define um mérito...
 
 	
+		- sorteio de fotos:
+			- http://www.flickr.com/photos/drhurn/1985687/
+			- http://www.flickr.com/photos/supersonicphotos/4226467205/
+			- http://www.flickr.com/photos/libraryman/213815586/
+			
+		- link de credito como um textinho sobre a foto (precisa de um fundo transparente)
 		
-	

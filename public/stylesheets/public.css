@@ -25,8 +25,18 @@ label {
 	font-size: 20px;
 }
 
+li {
+	list-style-type: none;
+	list-style-position: outside;
+	margin-bottom: 5px;
+}
+
+td {
+	padding: 5px;
+}
+
 #container {
-	width:700px;
+	width:900px;
 	position:relative;
 	margin:20px auto;
 }
@@ -66,12 +76,6 @@ label {
 	margin-left: 20px;
 }
 
-#central {
-	min-height: 500px ;
-	padding:10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-}
 
 
 div.box {
@@ -106,4 +110,11 @@ div.box h3 {
 	position: relative;
 	float: right;
 	margin-top: 20px;
+}
+
+.picture_frame {
+	background: #fedfcd;
+	border: 10px solid #fedfcd;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
 }
