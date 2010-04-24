@@ -1,5 +1,7 @@
 # language: pt
 
+# TODO: refact: mudar pra pagina inicial de volta
+
 Funcionalidade: Fazer login
 
 	Para poder interagir com o sistema (propor sessões, confirmar presença, etc)
@@ -9,13 +11,13 @@ Funcionalidade: Fazer login
 	Cenário: Link de log-out não deve aparecer se eu não estiver logado
 
 		Dado que eu não estou logado no sistema
-		E que eu estou na "página inicial"
+		E que eu estou na "lista de sessões"
 		Então eu não devo ver o link "Log out"
 
 	Cenário: Link de log-in leva à página de login
 	
 		Dado que eu não estou logado no sistema
-		E que eu estou na "página inicial"
+		E que eu estou na "lista de sessões"
 		Quando eu clico em "Log in"
 		Então eu devo estar na "página de login"
 
@@ -27,7 +29,7 @@ Funcionalidade: Fazer login
 		Quando eu preencho "login" com "foo"
 		E eu preencho "password" com "secret"
 		E eu aperto "Log in"
-		Então eu devo estar na "página inicial"
+		Então eu devo estar na "lista de sessões"
 		E eu devo ver "foo"
 		E eu devo ver um link "Log out"
 		E eu não devo ver o link "Log in"

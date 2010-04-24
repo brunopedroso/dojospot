@@ -8,7 +8,7 @@ Funcionalidade: Propor uma sessão de dojo
 	Cenário: Só pode marcar sessão de dojo se estiver logado
 	
 		Dado que eu não estou logado no sistema
-		E que eu estou na "página inicial"
+		E que eu estou na "lista de sessões"
 		Então eu não devo ver o link "Porpor nova sessão"
 
 	Cenário: Não deve permitir acesso ao formulário de nova sessão sem login
@@ -20,7 +20,7 @@ Funcionalidade: Propor uma sessão de dojo
 	Cenário: Iniciando a marcação de uma nova sessão
 		
 		Dado que eu estou logado no sistema
-		E que eu estou na "página inicial"
+		E que eu estou na "lista de sessões"
 		Quando eu clico em "Propor uma nova sessão"
 		Então eu devo estar na "página de nova sessão"
 		
@@ -31,7 +31,7 @@ Funcionalidade: Propor uma sessão de dojo
 		E eu estou na página de nova sessão
 		Quando eu preencho a proposta de sessão com "título", "texto", "local", "amanhã", e "12:00"
 		E eu aperto "Salvar"
-		Então eu devo estar na página inicial
+		Então eu devo estar na "lista de sessões"
 		E eu devo ver a sessão proposta com "título", "texto", "local", "amanhã", e "12:00"
 		E eu devo ver "bruno" na lista de nomes confirmados
 		
@@ -39,21 +39,21 @@ Funcionalidade: Propor uma sessão de dojo
 
 		Dado que eu não estou logado no sistema
 		E que existe uma sessão marcada amanhã
-		E que eu estou na "página inicial"
+		E que eu estou na "lista de sessões"
 		Então eu não devo ver o link "editar"
 
 	Cenário: Não pode editar se não estiver confirmado
 
 		Dado que eu estou logado no sistema
 		E que existe uma sessão marcada amanhã
-		E que eu estou na "página inicial"
+		E que eu estou na "lista de sessões"
 		Então eu não devo ver o link "editar"
 
 	Cenário: Só pode editar se estiver confirmado
 
 		Dado que eu estou logado no sistema
 		E que existe uma sessão marcada amanhã
-		E que eu estou na "página inicial"
+		E que eu estou na "lista de sessões"
 		Quando eu clico em "Confirmar minha presença"
 		Então eu devo ver o link "editar"
 
@@ -61,11 +61,11 @@ Funcionalidade: Propor uma sessão de dojo
 
 		Dado que eu estou logado no sistema
 		E que existe uma sessão marcada amanhã
-		E que eu estou na "página inicial"
+		E que eu estou na "lista de sessões"
 		Quando eu clico em "Confirmar minha presença"
 		E eu clico em "editar"
 		E eu preencho a proposta de sessão com "título", "texto", "local", "amanhã", e "12:00"
 		E eu aperto "Salvar"
-		Então eu devo estar na página inicial
+		Então eu devo estar na "lista de sessões"
 		E eu devo ver a sessão proposta com "título", "texto", "local", "amanhã", e "12:00"
 

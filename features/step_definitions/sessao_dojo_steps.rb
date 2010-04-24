@@ -54,7 +54,7 @@ Dado /^que existe uma sessão com título "(.*)" marcada (.*)$/ do |titulo, qndo
 end
 
 Dado /^que eu estou confirmado na sessão "([^\"]*)"$/ do |title|
-  visit path_to('página inicial')
+  visit path_to('lista de sessões')
 	id = DojoSession.find_by_title(title).id
 	click_link_within "#dojo_session_#{id}", "Confirmar minha presença"
 end
