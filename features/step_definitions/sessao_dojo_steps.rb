@@ -64,6 +64,9 @@ Então /^eu devo ver os detalhes da sessão$/ do
 	assert_contain @dojo_session.text
 end
 
+
+#TODO: refactoring: colocar os títulos das sessões na descrição do passo ao invés de guardar como field
+
 Dado /^que existem três sessões marcada$/ do
   @dojo_session1 = Factory.create :dojo_session, :date => Date.today
 	@dojo_session2 = Factory.create(:dojo_session, :date => (Date.today + 1))

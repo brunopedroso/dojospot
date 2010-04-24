@@ -1,0 +1,21 @@
+
+
+<% unless @dojo_sessions.empty? %>
+
+	<% for dojo_session in @dojo_sessions do %>
+
+		<div class="dojo_session" id="dojo_session_<%=dojo_session.id%>">
+
+			<h3 style="margin-bottom: 5px;"><%= dojo_session.title %></h3>
+			
+			<span class="claro" style="margin-left:20px"> 
+				( <%= l dojo_session.date, :format=>"pretty" %>)
+			</span>
+			
+		</div>
+		
+	<% end %>
+
+<% else %>
+	<p>Nenhuma sessão proposta no momento.</p>
+<% end %>
