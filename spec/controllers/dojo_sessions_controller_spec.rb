@@ -6,7 +6,29 @@ describe DojoSessionsController do
 		@user = Factory.create :user
 		session[:user_id] = @user.id
 	end
+	
+	context 'index' do
 		
+		it 'should assign the proposed dojo_sessions' do
+			
+			myArray = ['my_array']
+			DojoSession.should_receive(:find_proposed_sessions).and_return(myArray)
+			
+			get :index
+			
+			assigns[:dojo_sessions].should == myArray
+			
+		end
+		
+		it 'should access index even if not logged in' do 
+			session[:user_id]=nil
+			get :index
+			response.should be_success
+			response.should render_template('dojo_sessions/index.html.erb')
+		end
+		
+	end
+	
 	context 'get new' do
 
 		it 'should create a new dojo_session' do 
@@ -29,9 +51,9 @@ describe DojoSessionsController do
 	
 	context 'post to dojo_sessions/create' do
 		
-		it 'should redirect to home page' do
+		it 'should redirect to index' do
 			post :create, Factory.attributes_for(:dojo_session)
-			response.should redirect_to('/')
+			response.should redirect_to(dojo_sessions_path)
 		end
 		
 		it 'should save the new dojo_session' do 
@@ -124,7 +146,7 @@ describe DojoSessionsController do
 			post :update, :id=>id, :dojo_session=>attrs.stringify_keys
 		end
 		
-		it 'should redirect to the main page' do 
+		it 'should redirect to the sessions index page' do 
 			
 			attrs = Factory.attributes_for(:dojo_session)
 			id = 33
@@ -136,7 +158,7 @@ describe DojoSessionsController do
 			
 			post :update, :id=>id, :dojo_session=>attrs.stringify_keys
 			
-			response.should redirect_to('/')
+			response.should redirect_to(dojo_sessions_path)
 			
 		end
 		
@@ -148,10 +170,10 @@ describe DojoSessionsController do
 	
 	context 'get to confirm presence' do
 		
-		it 'should redirect to home page' do
+		it 'should redirect to index' do
 			dojo_session = Factory.create :dojo_session
 			get :confirm_presence, :id=>dojo_session.id
-			response.should redirect_to('/')
+			response.should redirect_to(dojo_sessions_path)
 		end
 		
 		it 'should associate the current user with the dojo_session, as a confirmed user' do
@@ -195,10 +217,10 @@ describe DojoSessionsController do
 	
 	context 'get to unconfirm presence' do
 		
-		it 'should redirect to home page' do
+		it 'should redirect to index' do
 			dojo_session = Factory.create :dojo_session
 			get :unconfirm_presence, :id=>dojo_session.id
-			response.should redirect_to('/')
+			response.should redirect_to(dojo_sessions_path)
 		end
 		
 		it 'should remove the current user from the confirmed users' do

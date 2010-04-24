@@ -1,6 +1,10 @@
 class DojoSessionsController < ApplicationController
 
-	before_filter :login_required
+	before_filter :login_required, :except=>:index
+
+	def index
+		@dojo_sessions = DojoSession.find_proposed_sessions
+	end
 
 	def new
 		@dojo_session = DojoSession.new
@@ -13,7 +17,7 @@ class DojoSessionsController < ApplicationController
 		dojo_session.confirmed_users << current_user
 		
 		dojo_session.save
-		redirect_to '/'
+		redirect_to dojo_sessions_path
 	end
 
 	def confirm_presence
@@ -22,14 +26,14 @@ class DojoSessionsController < ApplicationController
 			dojo_session.confirmed_users << current_user
 			dojo_session.save
 		end
-		redirect_to '/'
+		redirect_to dojo_sessions_path
 	end
 	
 	def unconfirm_presence
 		dojo_session = DojoSession.find params[:id].to_i
 		dojo_session.confirmed_users.delete current_user
 		dojo_session.save
-		redirect_to '/'
+		redirect_to dojo_sessions_path
 	end
 
 	def edit
@@ -40,7 +44,7 @@ class DojoSessionsController < ApplicationController
 		session = DojoSession.find params[:id].to_i
 		session.update_attributes(params[:dojo_session])
 		session.save
-		redirect_to '/'
+		redirect_to dojo_sessions_path
 	end
 	
 end

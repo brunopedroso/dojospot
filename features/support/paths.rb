@@ -8,8 +8,8 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
     
-    # when /página inicial/
-    #   '/'
+    when /página inicial/
+      '/'
 
     when /lista de sessões/
       '/dojo_sessions'
