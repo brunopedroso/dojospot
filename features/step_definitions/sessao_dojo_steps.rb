@@ -85,7 +85,7 @@ Então /^eu devo ver os detalhes das três sessões ordenadas$/ do
 end
 
 Então /^eu devo ver "([^\"]*)" na lista de nomes confirmados$/ do |username|
-	within("div.dojo_session") do |div|
+	within("div#confirmations") do |div|
 			assert_contain "Confirmados"
   		assert_contain username
 	end
@@ -93,7 +93,7 @@ end
 
 Então /^eu não devo ver "([^\"]*)" na lista de nomes confirmados$/ do |username|	
 	doc = Nokogiri::HTML(response.body)
-	dojo = doc.search('div.dojo_session #confirmations')
+	dojo = doc.search('div.box #confirmations')
 	dojo.should_not contain(username)
 	dojo.should contain('Confirmar minha presença')
 end

@@ -30,13 +30,13 @@ Funcionalidade: Confirmar presença em sessão de dojo
 		E eu devo ver "bruno" na lista de nomes confirmados
 		
 		
-	Cenário: Desconfirmam presença
+	Cenário: Desconfirmar presença
 	
 		Dado que eu estou logado no sistema como "bruno"
 		E que existe uma sessão com título "minha sessão" marcada amanhã
 		E que eu estou confirmado na sessão "minha sessão"
 		E que eu estou na "lista de sessões"
 		Quando eu clico em "desconfirmar"
-		Então  eu devo estar na "lista de sessões"
+		Então eu devo estar na "lista de sessões"
 		E eu não devo ver "bruno" na lista de nomes confirmados
 		
