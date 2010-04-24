@@ -1,11 +1,13 @@
 Tarefas:
 
 	layout
+		- link pra lista de sessões
 		- prepara o layout pra mudança
 		- cria a nova home, com foto, lista prox sessoes e páginas
 		
 	TODOs
 		- login.feature aponta pra pag inicial
+		
 
 Features v0:
 
