@@ -20,7 +20,7 @@ describe 'home page' do
 			it 'should show the next proposed session date and title' do
 				render('/home/index')
 				
-				response.should have_tag('h3', @dojo_session.title)
+				response.should include_text( @dojo_session.title)
 				response.should include_text(I18n.l(@dojo_session.date, :format=>"pretty"))
 				
 			end

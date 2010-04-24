@@ -78,11 +78,10 @@ Então /^eu devo ver os detalhes das três sessões ordenadas$/ do
 
   doc = Nokogiri::HTML(response.body)
 	
-	titles = doc.search('h3')
+	doc.should contain(@dojo_session1.title)
+	doc.should contain(@dojo_session3.title)
+	doc.should contain(@dojo_session2.title)
 	
-	titles[0].content.should == @dojo_session1.title
-	titles[1].content.should == @dojo_session3.title
-	titles[2].content.should == @dojo_session2.title
 end
 
 Então /^eu devo ver "([^\"]*)" na lista de nomes confirmados$/ do |username|

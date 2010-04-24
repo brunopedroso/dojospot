@@ -96,6 +96,30 @@ div.dojo_session table tr td {
 	text-align:justify;
 }
 
+
+div.box {
+	background: #fedfcd;
+	margin-bottom: 10px;
+	padding: 2px 20px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+div.box h3 {
+	font-size:30px;
+	margin: 10px 0;
+}
+
+div.box table tr td {
+	padding: 10px;
+}
+
+div.box table tr td {
+	vertical-align:text-top;
+	text-align:justify;
+}
+
+
 .page_title {
 	position:relative;
 /*	left:20px;*/

@@ -1,7 +1,6 @@
 Tarefas:
 
 	layout
-		- refatorar: home atual vira a index das dojo_sessions
 		- prepara o layout pra mudança
 		- cria a nova home, com foto, lista prox sessoes e páginas
 		
@@ -31,9 +30,15 @@ Features v0:
 		- capistrano
 
 
-Backlog
+Débito
 
 	- refactoring?: uma feature a  parte 'soh quem estiver confirmado pode editar'
+	- TODOs
+	- css com sass
+
+
+Backlog
+
 
 	- registrar retrospectiva (log-in required)
 		- quem participou 

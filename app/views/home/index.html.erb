@@ -1,21 +1,30 @@
 
+<div class="box">
+	
+	<h2>Próximas sessões</h2>
 
-<% unless @dojo_sessions.empty? %>
+	<% unless @dojo_sessions.empty? %>
 
-	<% for dojo_session in @dojo_sessions do %>
+		<ul>
 
-		<div class="dojo_session" id="dojo_session_<%=dojo_session.id%>">
+			<% for dojo_session in @dojo_sessions do %>
 
-			<h3 style="margin-bottom: 5px;"><%= dojo_session.title %></h3>
+					<li>
+					
+						<strong><%= dojo_session.title %></strong><br/>
+					
+						<span class="claro" style="font-size: small; margin:20px"> 
+							(<%= l dojo_session.date, :format=>"pretty" %>)
+						</span>
 			
-			<span class="claro" style="margin-left:20px"> 
-				( <%= l dojo_session.date, :format=>"pretty" %>)
-			</span>
-			
-		</div>
+					</li>
+					
+			<% end %>
 		
-	<% end %>
+		</ul>
 
-<% else %>
-	<p>Nenhuma sessão proposta no momento.</p>
-<% end %>
+	<% else %>
+		<p>Nenhuma sessão proposta no momento.</p>
+	<% end %>
+	
+</div>
