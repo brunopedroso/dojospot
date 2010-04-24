@@ -28,7 +28,7 @@ label {
 #container {
 	width:700px;
 	position:relative;
-	margin:auto;
+	margin:20px auto;
 }
 
 #logon_menu {
@@ -71,35 +71,13 @@ label {
 	padding:10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
-
-}
-
-div.dojo_session {
-	background: #fedfcd;
-	margin-bottom: 10px;
-	padding: 2px 20px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-}
-
-div.dojo_session h3 {
-	font-size:30px;
-	margin: 10px 0;
-}
-
-div.dojo_session table tr td {
-	padding: 10px;
-}
-
-div.dojo_session table tr td {
-	vertical-align:text-top;
-	text-align:justify;
 }
 
 
 div.box {
 	background: #fedfcd;
-	padding: 10px;
+	padding: 10px 20px;
+	margin-bottom: 10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 }
@@ -121,7 +99,6 @@ div.box h3 {
 }
 
 .claro {
-/*		   #fedfcd*/
 	color: #ff7700;
 }
 
