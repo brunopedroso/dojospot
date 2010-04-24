@@ -9,28 +9,105 @@ Features v0:
 	- páginas
 
 		* o que é coding-dojo?
-			* onde achar mais informações?
 			
-		* o que é o dojo-sea?
-			* porque a sea mantém um dojo?
-			* Qual a filosofia do dojo-sea?
-				* o que praticamos no dojo-sea?
+			* ambiente de treinamento, aprendizado e compartilhamento
+
+			* na prática
+				- fazemos reuniões com cerca de 2 horas de duração onde
+					- sentamos em torno de um computador e um projetor
+					- nos empenhamos na solução de um problema bem definido
+						- normalmente um problema de programação, usando TDD
+					- escolhemos um aspecto para trabalhar
+						- um método
+						- um princípio
+						- uma disposição
+					- discutimos, lanchamos e rimos um bocado!
+
+			* ambiente seguro
+				* aprendizado contínuo
 				* compartilhamento
-	    
-	    * regras básicas do dojo-sea
-			* confirmar, 
-				- limite de pessoas
-				- comprometimento, confiança
-			* Cada um participa como quiser
-				- não precisa programar, se vc não quiser
-			* Respeito
-				- silencio
-				- celulares
+				* confiança, respeito, construtivismo
+				* não competitivo, cooperativo
+				* crescimento e reconhecimento profissional
+				* experimentar coisas novas (especialmente aquelas para que 'não temos tempo' no dia a dia)
+				
+			* socialização, criar e manter relações
+				* bate papo descontraído, discussões filosóficas (wcafé)
 			
-	    * como participar?
+			* Mais sobre coding-dojo
+				- codingdojo.org
+				- outros dojos no brasil
+					- sp
+					- rio
+					- floripa
+			
+			
+		* Sobre o dojo-sea
+		
+			* sea
+				- onde? bsb.
+				- link pro site
+				
+			* porque a sea mantém um dojo?
+			
+			* Qual a filosofia do dojo-sea?
+				* software bom é feito em ateliê, não em fábrica!
+				* compartilhamento
+				* amizade, diversão
+				* confiança, respeito
+				* comprometimento e reconhecimento
+				
+				* o que praticamos no dojo-sea?
+				
+					- podemos pratcar de tudo, mas damos uma ênfase muito especial às práticas em que acreditamos mais:
+					 	- tdd, design incremental, pair-programming, planejamento iterativo, dentre outros
+					
+					- não estamos querendo convencer ninguém sobre nossa forma de trabalhar
+						estamos apenas compartilhando nossas crenças e abrindo espaço para discussão
+						portanto, venha apenas se estiver com esse espítito.
+						não venha com peito de desafio, venha humilde e tolerante
+						não venha por obrigação, venha por diversão
+						não venha por vaidade, venha por curiosidade
+						não venha por benefícios, venha pelos amigos 
+						
+				
+				* tipos de dojo que costumamos praticar (atualmente)
+					- kata e randori
+	
+			
 	    
+	    * Como particpar?
+	
+			* quem pode participar?
+	
+			* Regras básicas
+			
+				* confirmação 
+					- comprometimento, confiança
+					- limite de pessoas
+						- a preferência é sempre dos SEArences
+				* Cada um participa como quiser
+					- não precisa programar, se vc não quiser
+					* Respeito, no geral
+						- silencio (conversas paralelas)
+						- celulares
+						- ouvir mais que falar
+				* Não ficaremos ansiosos por cumprir nosso objetivo rápido
+					- o objetivo maior é o aprendizado que ocorre no processo, não o resultado final
+						- o importante é não é a chegada, mas o caminho
+			
+			* quando acontecem as sessões?
+			* onde fica a SEA?
+				- mapa gmaps?
 	    
-		- páginas estáticas - um controller q lê arquivos de **um plugin**? mantém layout
+		-> páginas estáticas - um controller q lê arquivos de **um plugin**? mantém layout
+
+
+
+
+	- propor e editar sessão só se for confiável
+		- uma flag por enquanto
+
 		
 	- deploy
 		- maquina na sea
@@ -48,10 +125,14 @@ Débito
 
 Backlog
 
+	- os confirmados podem editar o texto da sessão
+
 	- capa só mostra 2 sessões
 	- limite no tamanho do nome da sessão (quebrando na tela)
 
-	- um rodapé (com powered by)
+	- um rodapé
+	 	- powered by
+		- contato
 
 	- registrar retrospectiva (log-in required)
 		- quem participou 

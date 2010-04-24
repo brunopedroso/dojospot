@@ -1,24 +1,25 @@
-<h1 id="sign_up">Sign up</h1>
 
-<p>Already have an account? <%= link_to "Log in", login_path %>.</p>
+<div class="box" style="width:300px; margin:auto">
 
-<% form_for @user do |f| %>
-  <%= f.error_messages %>
-  <p>
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
-  </p>
-  <p>
-    <%= f.label :email, "Email Address" %> &nbsp;<span class="field_hint">(Não é necessário por enquanto)</span><br />
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </p>
-  <p>
-    <%= f.label :password_confirmation, "Confirm Password" %><br />
-    <%= f.password_field :password_confirmation %>
-  </p>
-  <p><%= f.submit "Sign up" %></p>
-<% end %>
+	<h1 id="sign_up">Criar uma conta</h1>
+
+	<p class="claro">Já tem uma conta? <%= link_to "Log in", login_path %>.</p>
+
+	<% form_for @user do |f| %>
+	  <%= f.error_messages %>
+	  <p>
+	    <%= f.label :username %><br />
+	    <%= f.text_field :username, :size => 10  %>
+	  </p>
+	  <p>
+	    <%= f.label :password, "Senha" %><br />
+	    <%= f.password_field :password, :size => 10 %>
+	  </p>
+	  <p>
+	    <%= f.label :password_confirmation, "Senha de novo" %><br />
+	    <%= f.password_field :password_confirmation, :size => 10 %>
+	  </p>
+	  <p style="text-align: right; margin-right: 20px"><%= f.submit "Registrar" %></p>
+	<% end %>
+
+</div>
