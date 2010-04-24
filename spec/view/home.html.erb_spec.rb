@@ -43,14 +43,21 @@ describe 'home page' do
 	
 		it 'should show the three proposed sessions' do
 			assigns[:dojo_sessions] = [Factory.create(:dojo_session), Factory.create(:dojo_session), Factory.create(:dojo_session)]
-			render('dojo_sessions/index')
+			render('home/index')
 			dojo_sessions = assigns[:dojo_sessions]
-			response.should have_tag('div[id=?]', "dojo_session_#{dojo_sessions[0].id}", :text=>/.*#{dojo_sessions[0].title}*/)
-			response.should have_tag('div[id=?]', "dojo_session_#{dojo_sessions[1].id}", :text=>/.*#{dojo_sessions[1].title}*/)
-			response.should have_tag('div[id=?]', "dojo_session_#{dojo_sessions[2].id}", :text=>/.*#{dojo_sessions[2].title}*/)
+			response.should have_tag('div[id=?]', "next_sessions", :text=>/.*#{dojo_sessions[0].title}*/)
+			response.should have_tag('div[id=?]', "next_sessions", :text=>/.*#{dojo_sessions[1].title}*/)
+			response.should have_tag('div[id=?]', "next_sessions", :text=>/.*#{dojo_sessions[2].title}*/)
 		end
 	
-	
+		it 'should show a link to the sessions list' do
+			assigns[:dojo_sessions] = [Factory.create(:dojo_session)]
+			render('home/index')
+			response.should have_tag('div[id=?]', "next_sessions") do |div|
+				div.should have_tag('a[href=?]', dojo_sessions_path, :text=>'mais detalhes >>')
+			end
+		end
+		
 	end
 	
 end

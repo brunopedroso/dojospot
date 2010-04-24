@@ -1,5 +1,5 @@
 
-<div class="box">
+<div class="box" id="next_sessions">
 	
 	<h2>Próximas sessões</h2>
 
@@ -22,6 +22,8 @@
 			<% end %>
 		
 		</ul>
+
+		<%= link_to("mais detalhes >>", dojo_sessions_path) %>
 
 	<% else %>
 		<p>Nenhuma sessão proposta no momento.</p>
