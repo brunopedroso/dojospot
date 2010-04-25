@@ -1,18 +1,18 @@
 Working on:
 
-	- formatar as páginas bonitinho
 		
 Features v0:
 
 
 	- colocar textile na edição da sessão
 
-	- botão de confirmar no signup
+	- botão de cancelar no signup
 	- boxes do login/signup mais largos
 	
 	- propor e editar sessão só se for confiável
 		- uma flag por enquanto
 
+	- margem superior do box na lista de sessoes
 		
 	- deploy
 		- maquina na sea
