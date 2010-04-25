@@ -11,43 +11,69 @@ p{font-style:italic;text-align:justify;margin:0 20px;}. O DojoSEA é o espaço q
 	
 <br/><br/><br/><br/>
 	
-O DojoSEA existe desde 2008
+p<>. O DojoSEA existe "desde 2008":http://blog.seatecnologia.com.br/2008/08/04/coding-dojo-sea, e cada vez mais nos
+impressionamos com o retorno que temos por mantê-lo. Aconselhamos fortemente que empresas, equipes e comunidades
+em geral mantenham seus próprios Dojos.
 	
 *Porque a SEA mantém um Dojo?* 
 * Melhoramos *sensivelmente* o nível técnico dos nossos colaboradores;
 * Nos conhecemos melhor e aumentamos a integração da nossa equipe;
 * Construímos e fortalecemos nossa cultura;
 * Conhecemos pessoas novas e elas nos conhecem;
-* Ensinamos e aprendemos
+* Ensinamos e aprendemos com essas pessoas;
+* (Leia também "5 razões para ter um Dojo na sua empresa":http://dojofloripa.wordpress.com/2008/07/01/5-razoes-para-ter-um-dojo-na-sua-empresa/)
 
 
-<br/><br/><br/><br/>
+<br/>
 
+*Qual a filosofia do DojoSEA?*
 
-* Qual a filosofia do dojo-sea?
-** software bom é feito em ateliê, não em fábrica!
-** compartilhamento
-** amizade, diversão
-** confiança, respeito
-** comprometimento e reconhecimento
-** não há qq tipo de restrição técnica à participação (basta interesse, respeito e comprometimento)	
-** o que praticamos no dojo-sea?
+!{float: right; width: 300px}http://farm3.static.flickr.com/2519/4182208057_41a5d6f55e.jpg!:http://www.flickr.com/photos/h-k-d/4182208057/
 
+p<>. Entendemos que ninguém é dono da verdade e que cada Dojo deve cultivar seus próprios valores e princípios. 
+Os nossos atualmente são esses:
 
-	, desenvolvam uma cultura,
-	descontraiam-se, cresçam e criem oportunidades de aprendizado	
-
-*** podemos pratcar de tudo, mas damos uma ênfase muito especial às práticas em que acreditamos mais:
-**** tdd, design incremental, pair-programming, planejamento iterativo, dentre outros
-		
-*** não estamos querendo convencer ninguém sobre nossa forma de trabalhar
-**** estamos apenas compartilhando nossas crenças e abrindo espaço para discussão
-**** portanto, venha apenas se estiver com esse espítito.
-**** não venha com peito de desafio, venha humilde e tolerante
-**** não venha por obrigação, venha por diversão
-**** não venha por vaidade, venha por curiosidade
-**** não venha por benefícios, venha pelos amigos 
-			
+* Software é melhor desenvolvido em ateliês do que em fábricas;
+* Pessoas são insubstituíveis;
+* Queremos cultivar relações de confiança, respeito, comprometimento e reconhecimento.
+* Conhecimento valioso é o compartilhado.
+* Aquilo que fazemos por diversão e por interesse real sai mais bem feito.
+* (De modo geral, considere também o que está descrito n"o manifesto ágil":http://agilemanifesto.org/)
 	
-** tipos de dojo que costumamos praticar (atualmente)
-*** kata e randori
+<br/>
+	
+*O que praticamos no DojoSEA?*
+
+p<>. A dinâmica do CodingDojo funciona muito bem para praticar vários aspectos do desenvolvimento de software. 
+Não temos muitas restrições quanto aos temas das nossas sessões, mas gostamos de dar ênfase especial 
+às práticas que valorizamos mais.
+
+p<>. "TDD":http://en.wikipedia.org/wiki/Test-driven_development, design incremental, pair-programming, 
+planejamento iterativo, e demais práticas do "XP":http://www.extremeprogramming.org/ costumam receber a maior 
+parte da nossa atenção. Também gostemos de brincar com novas tecnologias, com problemas interessantes
+com outros princípios de __design__ e com o que mais nos trouxer curiosidade. 
+
+p<>. Gostamos de reuniões com uma quantidade moderada de participantes (10 pessoas já é bastante, até pelo tamanho
+da nossa sala). Normalmente nos dois formatos tradicionais de Dojo: Kata e Randori.
+
+
+p<>. Sinta-se a vontade para propor novos temas, mas tenha a educação e a sensibilidade para respeitar 
+nossa cultura.
+
+
+
+<br/>
+
+!{float: left; width:300px}http://farm3.static.flickr.com/2395/2189414108_297f81a03a.jpg!
+
+*Venha se estiver em sintonia!*
+
+p<>. Não estamos querendo convencer ninguém sobre nossa forma de trabalhar. Estamos apenas compartilhando nossas
+crenças e abrindo espaço para a discussão construtiva e para o crescimento.
+
+Não venha com peito de desafio, venha humilde e tolerante
+
+Não venha por obrigação, venha por diversão
+
+Não venha por vaidade, venha por curiosidade
+	

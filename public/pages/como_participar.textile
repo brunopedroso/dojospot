@@ -1,6 +1,7 @@
 h1. Como participar do DojoSEA?
 
 * quem pode participar?
+** não há qq tipo de restrição técnica à participação (basta interesse, respeito e comprometimento)
 
 * Regras básicas
 
