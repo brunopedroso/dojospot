@@ -4,15 +4,13 @@ Working on:
 Features v0:
 
 
-	- colocar textile na edição da sessão
-
 	- botão de cancelar no signup
 	- boxes do login/signup mais largos
-	
+	- margem superior do box na lista de sessoes
+		
 	- propor e editar sessão só se for confiável
 		- uma flag por enquanto
 
-	- margem superior do box na lista de sessoes
 		
 	- deploy
 		- maquina na sea
@@ -29,6 +27,8 @@ Débito
 
 
 Backlog
+
+	- colocar textile na edição da sessão
 
 	- os confirmados podem editar só o texto da sessão
 
