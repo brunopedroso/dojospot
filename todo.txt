@@ -7,7 +7,9 @@ Features v0:
 
 	- colocar textile na edição da sessão
 
-
+	- botão de confirmar no signup
+	- boxes do login/signup mais largos
+	
 	- propor e editar sessão só se for confiável
 		- uma flag por enquanto
 
@@ -28,7 +30,7 @@ Débito
 
 Backlog
 
-	- os confirmados podem editar o texto da sessão
+	- os confirmados podem editar só o texto da sessão
 
 	- capa só mostra 2 sessões
 	- limite no tamanho do nome da sessão (quebrando na tela)
@@ -60,7 +62,7 @@ Backlog
 	- posts de blog
 		+ comentário
 	
-	- perfil da figura
+	- perfil
 		- tagcloud das sessoes q participou
 		- qtde sessões
 		- de quantas/quais sessoes ele participou
@@ -69,15 +71,15 @@ Backlog
 		- quantas ele confirmou e não foi?
 		- quantas ele foi sem confirmar?
 
+	- só pode propor quem tem pelo menos uma presença (trust)	
+	- escala de confiança/mérito'
+	 	- pode começar numérica
+		- pode começar administrando pelo console
 
-		- só pode propor quem tem pelo menos uma presença (trust)	
-		- convite?: já define um mérito...
-
-	
-		- sorteio de fotos:
-			- http://www.flickr.com/photos/drhurn/1985687/
-			- http://www.flickr.com/photos/supersonicphotos/4226467205/
-			- http://www.flickr.com/photos/libraryman/213815586/
-			
-		- link de credito como um textinho sobre a foto (precisa de um fundo transparente)
+	- sorteio de fotos:
+		- http://www.flickr.com/photos/drhurn/1985687/
+		- http://www.flickr.com/photos/supersonicphotos/4226467205/
+		- http://www.flickr.com/photos/libraryman/213815586/
 		
+	- link de credito como um textinho sobre a foto (precisa de um fundo transparente)
+	
