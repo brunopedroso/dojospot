@@ -1,28 +1,38 @@
-h1. O que é coding-dojo?
+h1. O que é Coding Dojo?
 
 
-bq. "A Coding Dojo is a meeting where a bunch of coders get together to work on a programming challenge. 
+bq<>. "A Coding Dojo is a meeting where a bunch of coders get together to work on a programming challenge. 
 	 They are there have fun and to engage in "DeliberatePractice":http://codingdojo.org/cgi-bin/wiki.pl?DeliberatePractice in order to improve their skills."
 	"codingdojo.org":http://codingdojo.org/cgi-bin/wiki.pl?WhatIsCodingDojo
 
-p=. !{width:300px}http://lh4.ggpht.com/brunopedroso/SJcfHpqGvcI/AAAAAAAAAFU/5UcQfhu0tOE/IMG_0532.JPG?imgmax=720!
+<br/>
 
-Não é "difícil":http://www.google.com.br/search?q=coding+dojo achar outras definições de coding-dojo.
+!{float:left; height:250px; }http://gc.blog.br/wp-content/uploads/2009/09/devinrio_coding_dojo2.jpg!
 
-Trata-se de um *ambiente de treinamento, compartilhamento e aprendizado contínuo*.
 
-Na prática, fazemos reuniões com cerca de 2h de duração onde:
-* nos sentamos em torno de um computador e um projetor;
-* nos empenhamos na solução de um problema bem definido;
-* discutimos, lanchamos e rimos um bocado!
+p<>. Não é difícil achar "outras definições":http://www.google.com.br/search?q=coding+dojo de coding-dojo.
 
-Trara-se de um ambiente seguro, cooperativo e construtivo onde cultivamos confiança e respeito.
+p<>. A intenção é criar um *ambiente de treinamento, compartilhamento e aprendizado contínuo*.
+
+p<>. Na prática, fazemos reuniões com cerca de 2h de duração onde:
+
+* Nos sentamos em torno de um computador e um projetor;
+* Nos empenhamos na solução de um problema bem definido;
+* Exercitamos uma técnica bem definida;
+* Discutimos, lanchamos e rimos um bocado!
+
+<br/>
+
+p<>. Trara-se de um ambiente seguro, cooperativo e construtivo onde cultivamos confiança e respeito.
 É um lugar de crescimento e reconhecimento profissional, onde podemos experimentar coisas novas 
 sem medo de errar (especialmente aquelas para que 'não temos tempo' no dia a dia)
 
-É também um ambiente de socialização, onde cultivamos novas e velhas amizades.
+p<>. É também um ambiente de socialização, onde cultivamos novas e velhas amizades.
 Rola desde o bate papo descontraído até discussões filosóficas, em um clima bem parecido com
 um "WorldCafé":http://www.theworldcafe.com/
+
+<br/>
+
 
 Algumas referências sobre coding-dojo:
 * "codingdojo.org":http://codingdojo.org/
@@ -31,5 +41,3 @@ Algumas referências sobre coding-dojo:
 ** "Floripa":http://dojofloripa.wordpress.com/
 ** "Brasília":http://groups.google.com.br/group/dojo-brasilia
 ** "Rio":http://dojorio.wordpress.com/
-
-

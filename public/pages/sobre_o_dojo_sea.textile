@@ -1,16 +1,28 @@
 h1. Sobre o DojoSEA
 
 
+p=. !{width:300px;position:relative; float:left}http://lh4.ggpht.com/brunopedroso/SJcfHpqGvcI/AAAAAAAAAFU/5UcQfhu0tOE/IMG_0532.JPG?imgmax=720!
 
-p=. !http://gc.blog.br/wp-content/uploads/2009/09/devinrio_coding_dojo2.jpg!
+<br/><br/>
 
-p=. Leenda da foto.
-
-* sea
-** onde? bsb.
-** link pro site
+p{font-style:italic;text-align:justify;margin:0 20px;}. O DojoSEA é o espaço que a "SEA":http://www.seatecnologia.com.br mantém para que seus colaboradores e amigos se conheçam 
+		e compartilhem experiências sobre desenvolvimento de software.
 	
-* porque a sea mantém um dojo?
+	
+<br/><br/><br/><br/>
+	
+O DojoSEA existe desde 2008
+	
+*Porque a SEA mantém um Dojo?* 
+* Melhoramos *sensivelmente* o nível técnico dos nossos colaboradores;
+* Nos conhecemos melhor e aumentamos a integração da nossa equipe;
+* Construímos e fortalecemos nossa cultura;
+* Conhecemos pessoas novas e elas nos conhecem;
+* Ensinamos e aprendemos
+
+
+<br/><br/><br/><br/>
+
 
 * Qual a filosofia do dojo-sea?
 ** software bom é feito em ateliê, não em fábrica!
@@ -20,7 +32,11 @@ p=. Leenda da foto.
 ** comprometimento e reconhecimento
 ** não há qq tipo de restrição técnica à participação (basta interesse, respeito e comprometimento)	
 ** o que praticamos no dojo-sea?
-	
+
+
+	, desenvolvam uma cultura,
+	descontraiam-se, cresçam e criem oportunidades de aprendizado	
+
 *** podemos pratcar de tudo, mas damos uma ênfase muito especial às práticas em que acreditamos mais:
 **** tdd, design incremental, pair-programming, planejamento iterativo, dentre outros
 		

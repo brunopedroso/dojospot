@@ -7,7 +7,8 @@ body {
 	margin: 0;
 	font-family: arial;
 	font-size: 18px;
-	color: #BB6644;
+	color: #555;
+/*	color: #BB6644;*/
 }
 
 h2 {
@@ -35,6 +36,11 @@ td {
 blockquote {
 	margin: 0 20%;
 	font-style: italic;
+}
+
+div.box img {
+	margin: 10px 40px; 
+	border: 4px solid #555
 }
 
 #container {
