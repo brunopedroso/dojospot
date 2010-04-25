@@ -1,0 +1,34 @@
+h2. O que é coding-dojo?
+
+
+			
+* ambiente de treinamento, aprendizado e compartilhamento
+
+* na prática
+	- fazemos reuniões com cerca de 2 horas de duração onde
+		- sentamos em torno de um computador e um projetor
+		- nos empenhamos na solução de um problema bem definido
+			- normalmente um problema de programação, usando TDD
+		- escolhemos um aspecto para trabalhar
+			- um método
+			- um princípio
+			- uma disposição
+		- discutimos, lanchamos e rimos um bocado!
+
+* ambiente seguro
+	* aprendizado contínuo
+	* compartilhamento
+	* confiança, respeito, construtivismo
+	* não competitivo, cooperativo
+	* crescimento e reconhecimento profissional
+	* experimentar coisas novas (especialmente aquelas para que 'não temos tempo' no dia a dia)
+	
+* socialização, criar e manter relações
+	* bate papo descontraído, discussões filosóficas (wcafé)
+
+* Mais sobre coding-dojo
+	- codingdojo.org
+	- outros dojos no brasil
+		- sp
+		- rio
+		- floripa

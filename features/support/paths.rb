@@ -20,8 +20,8 @@ module NavigationHelpers
     when /página de nova sessão/
       '/dojo_sessions/new'
 
-		when /O que é coding-dojo?/
-			'/pages/o_que_eh_coding_dojo'
+		when /Sobre coding-dojo?/
+			'/pages/sobre_coding_dojo'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
