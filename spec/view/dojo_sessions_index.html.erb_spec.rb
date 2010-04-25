@@ -23,7 +23,7 @@ describe 'dojo sessions index' do
 			it 'should show the next proposed session' do
 				render('dojo_sessions/index')
 
-				response.should have_tag('h3', @dojo_session.title)
+				response.should have_tag('h1', @dojo_session.title)
 				response.should have_tag('p', @dojo_session.text)
 				response.should include_text(@dojo_session.place)
 				response.should include_text(I18n.l(@dojo_session.date, :format=>"pretty"))

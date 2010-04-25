@@ -9,4 +9,4 @@ Funcionalidade: Manter páginas de conteúdo
 	Cenário: Páginas estilizadas
 	
 		Dado que eu estou na "Sobre coding-dojo?"
-		Então eu devo ver "O que é coding-dojo?" dentro de "h2"
+		Então eu devo ver "O que é Coding Dojo?" dentro de "h1"
