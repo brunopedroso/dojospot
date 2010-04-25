@@ -1,4 +1,4 @@
-h2. Sobre o DojoSEA
+h1. Sobre o DojoSEA
 
 
 
@@ -18,7 +18,7 @@ p=. Leenda da foto.
 ** amizade, diversão
 ** confiança, respeito
 ** comprometimento e reconhecimento
-	
+** não há qq tipo de restrição técnica à participação (basta interesse, respeito e comprometimento)	
 ** o que praticamos no dojo-sea?
 	
 *** podemos pratcar de tudo, mas damos uma ênfase muito especial às práticas em que acreditamos mais:

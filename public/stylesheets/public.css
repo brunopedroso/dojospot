@@ -27,11 +27,6 @@ label {
 	font-size: 20px;
 }
 
-li {
-	list-style-type: none;
-	list-style-position: outside;
-	margin-bottom: 5px;
-}
 
 td {
 	padding: 5px;
@@ -39,7 +34,6 @@ td {
 
 blockquote {
 	margin: 0 20%;
-	color: #777;
 	font-style: italic;
 }
 

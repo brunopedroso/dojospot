@@ -16,7 +16,7 @@
 	
 		<td valign="middle" style="padding-top:40px; font-size: large">
 			
-			<ul>
+			<ul style="list-style-type: none">
 				<li><%= link_to "Sobre Coding-Dojo", page_path('sobre_coding_dojo') %></li>
 				<li><%= link_to "Sobre o DojoSEA", page_path('sobre_o_dojo_sea') %></li>
 				<li><%= link_to "Como participar?", page_path('como_participar') %></li>
@@ -38,7 +38,7 @@
 
 				<% unless @dojo_sessions.empty? %>
 
-					<ul>
+					<ul style="list-style-type: none">
 
 						<% for dojo_session in @dojo_sessions do %>
 
