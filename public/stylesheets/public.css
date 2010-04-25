@@ -6,6 +6,8 @@ a {
 body {
 	margin: 0;
 	font-family: arial;
+	font-size: 18px;
+	color: #BB6644;
 }
 
 h2 {
@@ -109,7 +111,7 @@ div.box h3 {
 }
 
 .claro {
-	color: #ff7700;
+	color: #ff9922;
 }
 
 .link_northeast {
