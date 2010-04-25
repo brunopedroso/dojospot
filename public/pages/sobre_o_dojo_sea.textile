@@ -1,31 +1,37 @@
 h2. Sobre o DojoSEA
 
+
+
+p=. !http://gc.blog.br/wp-content/uploads/2009/09/devinrio_coding_dojo2.jpg!
+
+p=. Leenda da foto.
+
 * sea
-	- onde? bsb.
-	- link pro site
+** onde? bsb.
+** link pro site
 	
 * porque a sea mantém um dojo?
 
 * Qual a filosofia do dojo-sea?
-	* software bom é feito em ateliê, não em fábrica!
-	* compartilhamento
-	* amizade, diversão
-	* confiança, respeito
-	* comprometimento e reconhecimento
+** software bom é feito em ateliê, não em fábrica!
+** compartilhamento
+** amizade, diversão
+** confiança, respeito
+** comprometimento e reconhecimento
 	
-	* o que praticamos no dojo-sea?
+** o que praticamos no dojo-sea?
 	
-		- podemos pratcar de tudo, mas damos uma ênfase muito especial às práticas em que acreditamos mais:
-		 	- tdd, design incremental, pair-programming, planejamento iterativo, dentre outros
+*** podemos pratcar de tudo, mas damos uma ênfase muito especial às práticas em que acreditamos mais:
+**** tdd, design incremental, pair-programming, planejamento iterativo, dentre outros
 		
-		- não estamos querendo convencer ninguém sobre nossa forma de trabalhar
-			estamos apenas compartilhando nossas crenças e abrindo espaço para discussão
-			portanto, venha apenas se estiver com esse espítito.
-			não venha com peito de desafio, venha humilde e tolerante
-			não venha por obrigação, venha por diversão
-			não venha por vaidade, venha por curiosidade
-			não venha por benefícios, venha pelos amigos 
+*** não estamos querendo convencer ninguém sobre nossa forma de trabalhar
+**** estamos apenas compartilhando nossas crenças e abrindo espaço para discussão
+**** portanto, venha apenas se estiver com esse espítito.
+**** não venha com peito de desafio, venha humilde e tolerante
+**** não venha por obrigação, venha por diversão
+**** não venha por vaidade, venha por curiosidade
+**** não venha por benefícios, venha pelos amigos 
 			
 	
-	* tipos de dojo que costumamos praticar (atualmente)
-		- kata e randori
+** tipos de dojo que costumamos praticar (atualmente)
+*** kata e randori

@@ -35,6 +35,12 @@ td {
 	padding: 5px;
 }
 
+blockquote {
+	margin: 0 20%;
+	color: #777;
+	font-style: italic;
+}
+
 #container {
 	width:900px;
 	position:relative;
