@@ -1,25 +1,78 @@
-h1. Como participar do DojoSEA?
+h1. Seja bem vindo!
 
-* quem pode participar?
-** não há qq tipo de restrição técnica à participação (basta interesse, respeito e comprometimento)
+!{width: 350px; float: left}http://farm3.static.flickr.com/2799/4371254094_d4cd5dfa8f.jpg!:http://www.flickr.com/photos/brunauto/4371254094/
 
-* Regras básicas
+<br/><br/><br/><br/>
 
-** confirmação 
-*** comprometimento, confiança
-**** limite de pessoas
-****** a preferência é sempre dos SEArences
+p{font-style:italic; text-align:justify}. Não existe nenhum tipo de restrição técnica para participar. Basta ter interesse, respeito e humildade... Basta
+vir "com o coração aberto":http://en.wikipedia.org/wiki/Zen_Mind,_Beginner%27s_Mind
+que tudo dará certo.
 
-** Cada um participa como quiser
-*** não precisa programar, se vc não quiser
-*** Respeito, no geral
-**** silencio (conversas paralelas)
-**** celulares
-**** ouvir mais que falar
-*** Não ficaremos ansiosos por cumprir nosso objetivo rápido
-**** o objetivo maior é o aprendizado que ocorre no processo, não o resultado final
-****** o importante é não é a chegada, mas o caminho
 
-** quando acontecem as sessões?
-** onde fica a SEA?
-*** mapa gmaps?
+p{font-style:italic; text-align:justify}. Vale a pena antes ler um pouco a respeito de "TDD":http://en.wikipedia.org/wiki/Test-driven_development, 
+de "CodingDojo":/pages/sobre_coding_dojo, e sobre os princípios do
+"DojoSEA":/pages/sobre_o_dojo_sea.
+
+<br/><br/><br/><br/><br/>
+
+
+Aqui está um pequeno conjunto de *Regras Básicas*:
+
+p(((. (Eternamente em construção!)
+
+<br/>
+
+* *Confirmação*
+
+p(((. Confirmar sua presença no site é fundamental pois demonstra comprometimento, gera confiança e
+evita problemas logísticos.
+
+<br/>
+
+* *A preferência é do pessoal "da casa"*
+
+p(((. Temos espaço e tempo limitados. Nos reservamos ao direito de dar preferência de participação aos colaboradores diretos e 
+amigos mais próximos, por razões óbvias. 
+
+<br/>
+* *Participe como quiser*
+
+!{width:200px; float: right}http://projeteliberdadecapoeira.files.wordpress.com/2008/06/roda-do-capoeira.jpg!:http://projeteliberdadecapoeira.com.br/eventos/
+
+p(((. Diferentemente do "clube da luta":http://pt.wikipedia.org/wiki/Fight_Club, aqui você não precisa programar
+ se for a sua primeira noite. Nem na segunda, nem nunca, se você não se sentir a vontade.
+Cada um participa como quiser, dentro dos limites do respeito e da eduçação.
+
+p(((. (É claro que somos da forte opinião de que quanto antes você entrar na roda, melhor!)
+
+<br/>
+
+* *Etiqueta básica*
+
+<div style="margin-left: 20px">
+	
+** *Silencio*. Nada de conversas paralelas;
+** Deixe o *celular* no silencioso também;
+** Tente *ouvir* mais que falar;
+** *Não fique ansioso* pra terminar o problema;
+
+</div>
+
+<br/>
+
+bq. O importante não é a chegada, mas o caminho
+
+<br/>
+
+*Quando acontecem as sessões?*
+
+Não temos um dia certo... Na verdade temos, mas com freqüência mudamos isso. 
+O melhor é ficar ligado "no site":/dojo_sessions/.
+
+<br/>
+
+*Onde fica a SEA?*
+
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=pt-BR&amp;t=h&amp;msa=0&amp;msid=113789762603456247386.00048515e584deac8355c&amp;ll=-15.758554,-47.887688&amp;spn=0.028912,0.036478&amp;z=14&amp;output=embed"></iframe><br /><small>Visualizar <a href="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=pt-BR&amp;t=h&amp;msa=0&amp;msid=113789762603456247386.00048515e584deac8355c&amp;ll=-15.758554,-47.887688&amp;spn=0.028912,0.036478&amp;z=14&amp;source=embed" style="color:#0000FF;text-align:left">sea</a> em um mapa maior</small>
+
+
