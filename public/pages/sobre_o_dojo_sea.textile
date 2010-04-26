@@ -36,11 +36,11 @@ Os nossos atualmente são esses:
 
 * Software é melhor desenvolvido em ateliê do que em fábrica;
 * Pessoas são insubstituíveis;
-* Queremos cultivar relações de confiança, respeito, comprometimento e reconhecimento.
-* Conhecimento valioso é o conhecimento compartilhado.
-* Aquilo que fazemos por diversão e por interesse real sai mais bem feito.
-* De modo geral, considere também o que está "aqui":http://agilemanifesto.org/ e "aqui":http://codingdojo.org/cgi-bin/wiki.pl?CodingDojoPrinciples
-* Esta lista, por definição, estará sempre em construção.
+* Queremos cultivar relações de confiança, respeito, comprometimento e reconhecimento;
+* Conhecimento valioso é o conhecimento compartilhado;
+* Aquilo que fazemos por diversão e por interesse real sai mais bem feito;
+* De modo geral, considere também o que está "aqui":http://agilemanifesto.org/ e "aqui":http://codingdojo.org/cgi-bin/wiki.pl?CodingDojoPrinciples ;
+* Esta lista, por definição, estará sempre em construção;
 	
 <br/>
 	
