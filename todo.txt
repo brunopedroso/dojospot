@@ -11,13 +11,8 @@ Features v0:
 	- propor e editar sessão só se for confiável
 		- uma flag por enquanto
 
-		
-	- deploy
-		- maquina na sea
-		- colocar no github
-		- capistrano
-
-
+	- mais detalhes qndo não tem sessão proposta
+	
 Débito
 
 	- login.feature aponta pra pag inicial
@@ -28,6 +23,9 @@ Débito
 
 Backlog
 
+
+	- colocar no github
+	
 	- colocar textile na edição da sessão
 
 	- os confirmados podem editar só o texto da sessão

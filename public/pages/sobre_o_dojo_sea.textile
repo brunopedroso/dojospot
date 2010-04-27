@@ -5,16 +5,12 @@ p=. !{width:350px;position:relative; float:left}http://lh4.ggpht.com/brunopedros
 
 <br/><br/><br/><br/>
 
-p{font-style:italic;text-align:justify;margin:0 20px;}. O DojoSEA é o espaço que a "SEA":http://www.seatecnologia.com.br mantém para que seus colaboradores e amigos se conheçam 
-		e compartilhem experiências sobre desenvolvimento de software.
+p{font-style:italic;text-align:justify;margin:0 20px;}. O DojoSEA é o espaço que a "SEA":http://www.seatecnologia.com.br mantém para que seus colaboradores e amigos se conheçam e compartilhem experiências sobre desenvolvimento de software.
 	
 	
 <br/><br/><br/><br/>
 	
-p<>. O DojoSEA existe "desde 2008":http://blog.seatecnologia.com.br/2008/08/04/coding-dojo-sea, 
-e estamos mais que convencidos de que está valendo a pena!
-Aconselhamos fortemente que mais empresas, equipes e a comunidade
-em geral mantenham seus próprios Dojos.
+p<>. O DojoSEA existe "desde 2008":http://blog.seatecnologia.com.br/2008/08/04/coding-dojo-sea, e estamos mais que convencidos de que está valendo a pena! Aconselhamos fortemente que mais empresas, equipes e a comunidade em geral mantenham seus próprios Dojos.
 	
 *Porque a SEA mantém um Dojo?* 
 * Melhoramos *sensivelmente* o nível técnico dos nossos colaboradores;
@@ -31,8 +27,7 @@ em geral mantenham seus próprios Dojos.
 
 !{float: right; width: 300px}http://farm3.static.flickr.com/2519/4182208057_41a5d6f55e.jpg!:http://www.flickr.com/photos/h-k-d/4182208057/
 
-p<>. Entendemos que ninguém é dono da verdade e que cada Dojo deve cultivar seus próprios valores e princípios. 
-Os nossos atualmente são esses:
+p<>. Entendemos que ninguém é dono da verdade e que cada Dojo deve cultivar seus próprios valores e princípios. Os nossos atualmente são esses:
 
 * Software é melhor desenvolvido em ateliê do que em fábrica;
 * Pessoas são insubstituíveis;
@@ -46,18 +41,11 @@ Os nossos atualmente são esses:
 	
 *O que praticamos no DojoSEA?*
 
-p<>. A dinâmica do CodingDojo funciona muito bem para praticar vários aspectos do desenvolvimento de software. 
-Não temos muitas restrições quanto aos temas das nossas sessões, mas gostamos de dar ênfase especial 
-às práticas que valorizamos mais.
+p<>. A dinâmica do CodingDojo funciona muito bem para praticar vários aspectos do desenvolvimento de software. Não temos muitas restrições quanto aos temas das nossas sessões, mas gostamos de dar ênfase especial às práticas que valorizamos mais.
 
-p<>. "TDD":http://en.wikipedia.org/wiki/Test-driven_development, design incremental, pair-programming, 
-planejamento iterativo, e demais práticas do "XP":http://www.extremeprogramming.org/ costumam receber a maior 
-parte da nossa atenção. Também gostamos de brincar com novas tecnologias, com problemas interessantes
-com outros princípios de __design__ e com o que mais nos causar curiosidade e interesse.
+p<>. "TDD":http://en.wikipedia.org/wiki/Test-driven_development, design incremental, pair-programming, planejamento iterativo, e demais práticas do "XP":http://www.extremeprogramming.org/ costumam receber a maior parte da nossa atenção. Também gostamos de brincar com novas tecnologias, com problemas interessantes com outros princípios de __design__ e com o que mais nos causar curiosidade e interesse.
 
-p<>. Gostamos de reuniões com uma quantidade moderada de participantes (10 pessoas já é bastante, até pelo tamanho
-da nossa sala). Normalmente usamos os "dois formatos tradicionais":http://codingdojo.org/cgi-bin/wiki.pl?WhatIsCodingDojo 
-de Dojo.
+p<>. Gostamos de reuniões com uma quantidade moderada de participantes (10 pessoas já é bastante, até pelo tamanho da nossa sala). Normalmente usamos os "dois formatos tradicionais":http://codingdojo.org/cgi-bin/wiki.pl?WhatIsCodingDojo de Dojo.
 
 
 p<>. Sinta-se a vontade para propor novos temas, mas por favor tenha sensibilidade e respeito em relação a nossos valores e cultura.
@@ -68,8 +56,7 @@ p<>. Sinta-se a vontade para propor novos temas, mas por favor tenha sensibilida
 
 *Venha - se estiver em sintonia!*
 
-p<>. Não estamos querendo convencer ninguém sobre nossa forma de trabalhar. Estamos apenas compartilhando nossas
-crenças e abrindo espaço para a discussão construtiva e para o crescimento.
+p<>. Não estamos querendo convencer ninguém sobre nossa forma de trabalhar. Estamos apenas compartilhando nossas crenças e abrindo espaço para a discussão construtiva e para o crescimento.
 
 Não venha com peito de desafio, venha humilde e tolerante
 
