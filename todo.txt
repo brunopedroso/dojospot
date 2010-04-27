@@ -19,7 +19,7 @@ Débito
 	- refactoring?: uma feature a  parte 'soh quem estiver confirmado pode editar'
 	- TODOs
 	- css com sass
-
+	- quebrar as features
 
 Backlog
 

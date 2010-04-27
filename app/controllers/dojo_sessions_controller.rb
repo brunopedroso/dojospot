@@ -9,9 +9,11 @@ class DojoSessionsController < ApplicationController
 	def new
 		if !current_user.has_propose_priv?
 			redirect_to login_path
-		else
-			@dojo_session = DojoSession.new
+			return
 		end
+		
+		@dojo_session = DojoSession.new
+		
 	end
 	
 	def create
@@ -20,7 +22,6 @@ class DojoSessionsController < ApplicationController
 			redirect_to login_path
 			return
 		end
-		
 		
 		dojo_session = DojoSession.new(params[:dojo_session])
 		
@@ -48,10 +49,23 @@ class DojoSessionsController < ApplicationController
 	end
 
 	def edit
+		
+		if !current_user.has_propose_priv?
+			redirect_to login_path
+			return
+		end
+		
 		@dojo_session = DojoSession.find(params[:id].to_i)
 	end
 	
 	def update
+		
+		if !current_user.has_propose_priv?
+			redirect_to login_path
+			return
+		end
+		
+		
 		session = DojoSession.find params[:id].to_i
 		session.update_attributes(params[:dojo_session])
 		session.save

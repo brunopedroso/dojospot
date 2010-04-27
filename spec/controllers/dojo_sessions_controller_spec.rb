@@ -137,10 +137,16 @@ describe DojoSessionsController do
 	end
 	
 	context 'get the edit page' do
+
+		before :each do
+			@user.has_propose_priv=true
+			@user.save
+		end
 		
 		it 'should render the edit page' do
 			
 			dojo_session = mock_model(DojoSession)
+			
 			DojoSession.stub!(:find).and_return(dojo_session)
 			
 			get :edit
@@ -152,15 +158,32 @@ describe DojoSessionsController do
 			id = 33
 			
 			dojo_session = mock_model(DojoSession)
+			
 			DojoSession.should_receive(:find).with(id).and_return(dojo_session)
 			
 			get :edit, :id=>id
 			assigns[:dojo_session].should == dojo_session
 		end
 		
+		it 'should redirect to login if the user does not have privileges' do
+			
+			@user.has_propose_priv=false
+			@user.save
+						
+			get :edit
+			response.should redirect_to(login_path)
+			
+		end
+		
 	end
 	
 	context 'put to edit the session' do
+		
+		before :each do
+			@user.has_propose_priv=true
+			@user.save
+		end
+		
 		
 		it 'should update the sessions atributes' do
 			attrs = Factory.attributes_for(:dojo_session)
@@ -190,6 +213,19 @@ describe DojoSessionsController do
 			
 		end
 		
+		it 'should redirect to login if the user does not have privileges' do
+			
+			@user.has_propose_priv=false
+			@user.save
+			
+			id = 33
+			attrs = Factory.attributes_for(:dojo_session)
+			post :update, :id=>id, :dojo_session=>attrs.stringify_keys
+			
+			response.should redirect_to(login_path)
+			
+		end
+
 		
 		# TODO 'should it validate any field?'
 		
