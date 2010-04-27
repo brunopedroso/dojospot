@@ -4,14 +4,14 @@ Working on:
 Features v0:
 
 
+	- propor e editar sessão só se for confiável
+		- uma flag por enquanto
+
 	- botão de cancelar no signup
 	- boxes do login/signup mais largos
 	- margem superior do box na lista de sessoes
 		
-	- propor e editar sessão só se for confiável
-		- uma flag por enquanto
-
-	- mais detalhes qndo não tem sessão proposta
+	- propor sessão na capa, qndo não tem sessão proposta
 	
 Débito
 

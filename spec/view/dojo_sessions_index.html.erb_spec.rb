@@ -86,8 +86,14 @@ describe 'dojo sessions index' do
 			response.should_not have_tag('a[href=?]','/dojo_sessions/new')
 		end
 
+		it 'should not show link to propose session if i dont have such privilege' do
+			session[:user_id] = Factory.create(:user, :has_propose_priv => false).id
+			render('dojo_sessions/index')
+			response.should_not have_tag('a[href=?]','/dojo_sessions/new')
+		end
+
 		it 'should show link to propose session when logged in' do
-			session[:user_id] = Factory.create(:user).id
+			session[:user_id] = Factory.create(:user, :has_propose_priv => true).id
 			render('dojo_sessions/index')
 			response.should have_tag('a[href=?]','/dojo_sessions/new','Propor uma nova sessão')
 		end

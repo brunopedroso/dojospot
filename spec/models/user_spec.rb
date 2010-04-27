@@ -83,4 +83,10 @@ describe User do
     new_user(:username => 'foobar', :password => 'secret').save!
     User.authenticate('foobar', 'badpassword').should be_nil
   end
+
+	it 'should start without propose_privilege, by default' do
+		user = new_user()
+		user.has_propose_priv?.should == false
+	end
+
 end
