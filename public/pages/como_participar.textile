@@ -60,7 +60,7 @@ bq. O importante não é a chegada, mas o caminho
 *Quando acontecem as sessões?*
 
 Não temos um dia certo... Na verdade temos, mas com freqüência mudamos isso. 
-O melhor é ficar ligado "no site":/dojo_sessions/.
+O melhor é ficar ligado "no site":../dojo_sessions/.
 
 <br/>
 
