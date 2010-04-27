@@ -59,7 +59,6 @@ Funcionalidade: Propor uma sessão de dojo
 		E que eu estou na "lista de sessões"
 		Então eu não devo ver o link "editar"
 
-	Cenário: Só pode editar se tiver privilégio
 
 	Cenário: Não pode editar se não estiver confirmado
 
@@ -70,15 +69,27 @@ Funcionalidade: Propor uma sessão de dojo
 
 	Cenário: Só pode editar se estiver confirmado
 
-		Dado que eu estou logado no sistema
+		Dado que eu estou logado no sistema como "bruno"
+		E que o usuário "bruno" tem privilégio de propor sessão
 		E que existe uma sessão marcada amanhã
 		E que eu estou na "lista de sessões"
 		Quando eu clico em "Confirmar minha presença"
 		Então eu devo ver o link "editar"
 
+	Cenário: Só pode editar se tiver privilégio
+
+		Dado que eu estou logado no sistema como "bruno"
+		E que o usuário "bruno" não tem privilégio de propor sessão
+		E que existe uma sessão marcada amanhã
+		E que eu estou na "lista de sessões"
+		# mesmo se estiver confirmado
+		Quando eu clico em "Confirmar minha presença"
+		Então eu não devo ver o link "editar"
+
 	Cenário: Editando uma sessão
 
-		Dado que eu estou logado no sistema
+		Dado que eu estou logado no sistema como "bruno"
+		E que o usuário "bruno" tem privilégio de propor sessão
 		E que existe uma sessão marcada amanhã
 		E que eu estou na "lista de sessões"
 		Quando eu clico em "Confirmar minha presença"

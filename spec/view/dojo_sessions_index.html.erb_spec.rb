@@ -48,8 +48,15 @@ describe 'dojo sessions index' do
 				response.should_not have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/edit", 'editar')
 			end
 
-			it 'should show a link to edit when i am logged in one of the confirmed users ' do				
-				session[:user_id] = @dojo_session.confirmed_users[0].id
+			it 'should show a link to edit when i am logged in one of the confirmed users ' do
+				user = @dojo_session.confirmed_users[0]
+
+				# tem que ter privilégio
+				user.has_propose_priv=true
+				user.save
+
+				session[:user_id] = user.id
+				
 				render('dojo_sessions/index')
 				response.should have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/edit", 'editar')
 			end
@@ -59,6 +66,15 @@ describe 'dojo sessions index' do
 				render('dojo_sessions/index')
 				response.should_not have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/edit", 'editar')
 			end
+
+			it 'should not show a link to edit if i do NOT have privileges' do
+				user = @dojo_session.confirmed_users[0]
+				user.has_propose_priv=false
+				session[:user_id] = session[:user_id] = user.id
+				render('dojo_sessions/index')
+				response.should_not have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/edit", 'editar')
+			end
+
 			
 		end
 
