@@ -12,9 +12,9 @@
 		<div id="logon_menu">
 			<% if logged_in? %>
 				Bem vindo, <b> <%= current_user.username %> </b> /
-				<a href="/logout">Log out</a>
+				<%= link_to "Log out", logout_path%>
 			<% else %>
-				<a href="/login">Log in</a>
+				<%= link_to "Log in", login_path%>
 			<% end %>
 			&nbsp;
 		</div>
