@@ -23,7 +23,6 @@ Débito
 
 Backlog
 
-
 	- colocar no github
 	
 	- colocar textile na edição da sessão

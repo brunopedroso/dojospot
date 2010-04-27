@@ -1,27 +1,23 @@
 class DojoSessionsController < ApplicationController
 
 	before_filter :login_required, :except=>:index
+	before_filter :require_propose_priv, :only=>[:new, :create, :edit, :update]
+
+	def require_propose_priv
+		if !current_user.has_propose_priv?
+			redirect_to login_path
+		end
+	end
 
 	def index
 		@dojo_sessions = DojoSession.find_proposed_sessions
 	end
 
 	def new
-		if !current_user.has_propose_priv?
-			redirect_to login_path
-			return
-		end
-		
 		@dojo_session = DojoSession.new
-		
 	end
 	
 	def create
-		
-		if !current_user.has_propose_priv?
-			redirect_to login_path
-			return
-		end
 		
 		dojo_session = DojoSession.new(params[:dojo_session])
 		
@@ -49,23 +45,10 @@ class DojoSessionsController < ApplicationController
 	end
 
 	def edit
-		
-		if !current_user.has_propose_priv?
-			redirect_to login_path
-			return
-		end
-		
 		@dojo_session = DojoSession.find(params[:id].to_i)
 	end
 	
 	def update
-		
-		if !current_user.has_propose_priv?
-			redirect_to login_path
-			return
-		end
-		
-		
 		session = DojoSession.find params[:id].to_i
 		session.update_attributes(params[:dojo_session])
 		session.save
