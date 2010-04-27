@@ -67,5 +67,7 @@
 <% end %>
 
 <% if logged_in? %>
-	<div style="text-align:right; margin-right:10px"><a href="/dojo_sessions/new">Propor uma nova sessão</a></div>
+	<div style="text-align:right; margin-right:10px">
+		<%= link_to "Propor uma nova sessão", new_dojo_session_path %>
+	</div>
 <% end%>
