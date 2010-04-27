@@ -7,7 +7,7 @@ h1. Seja bem vindo!
 p{font-style:italic; text-align:justify}. Não existe nenhum tipo de restrição técnica para participar. Basta ter interesse, respeito e humildade... Basta vir "com o coração aberto":http://en.wikipedia.org/wiki/Zen_Mind,_Beginner%27s_Mind que tudo dará certo.
 
 
-p{font-style:italic; text-align:justify}. Vale a pena antes ler um pouco a respeito de "TDD":http://en.wikipedia.org/wiki/Test-driven_development, de "CodingDojo":/pages/sobre_coding_dojo, e sobre os princípios do "DojoSEA":/pages/sobre_o_dojo_sea.
+p{font-style:italic; text-align:justify}. Vale a pena antes ler um pouco a respeito de "TDD":http://en.wikipedia.org/wiki/Test-driven_development, de "CodingDojo":sobre_coding_dojo, e sobre os princípios do "DojoSEA":sobre_o_dojo_sea.
 
 <br/><br/><br/><br/><br/>
 
