@@ -31,6 +31,12 @@ describe DojoSessionsController do
 	
 	context 'get new' do
 
+		before :each do
+			@user = Factory.create(:user, :has_propose_priv=>true)
+			session[:user_id] = @user.id
+		end
+
+
 		it 'should create a new dojo_session' do 
 			dojo_session = mock_model(DojoSession,{
 				:new_record? => true
@@ -45,11 +51,24 @@ describe DojoSessionsController do
 			get :new
 			response.should redirect_to('/login')
 		end
+
+		it 'should redirect to login if the user does not have propose privilege' do
+		 	@user = Factory.create(:user, :has_propose_priv=>false)
+			session[:user_id] = @user.id
+			get :new
+			response.should redirect_to('/login')
+		end
 		
 	end
 	
 	
 	context 'post to dojo_sessions/create' do
+		
+		before :each do
+			@user = Factory.create(:user, :has_propose_priv=>true)
+			session[:user_id] = @user.id
+		end
+	
 		
 		it 'should redirect to index' do
 			post :create, Factory.attributes_for(:dojo_session)
@@ -104,6 +123,15 @@ describe DojoSessionsController do
 			end
 
 		end
+		
+		it 'should redirect to login if the user does not have propose privilege' do
+		 	@user = Factory.create(:user, :has_propose_priv=>false)
+			session[:user_id] = @user.id
+			args = Factory.attributes_for(:dojo_session).stringify_keys
+			post :create, :dojo_session=>args
+			response.should redirect_to('/login')
+		end
+		
 
 		
 	end

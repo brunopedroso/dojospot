@@ -26,6 +26,12 @@ Funcionalidade: Propor uma sessão de dojo
 
 	Cenário: Não deve permitir acesso ao formulário de nova sessão sem login
 
+		Dado que eu estou logado no sistema como "bruno"
+		E que o usuário "bruno" não tem privilégio de propor sessão
+		Quando eu vou para "página de nova sessão"
+		Então eu devo estar na "página de login"
+			
+
 	Cenário: Iniciando a marcação de uma nova sessão
 		
 		Dado que eu estou logado no sistema como "bruno"
@@ -37,6 +43,7 @@ Funcionalidade: Propor uma sessão de dojo
 	Cenário: Propondo uma sessão
 	
 		Dado que eu estou logado no sistema como "bruno"
+		E que o usuário "bruno" tem privilégio de propor sessão
 		E que não existem sessões marcadas
 		E eu estou na página de nova sessão
 		Quando eu preencho a proposta de sessão com "título", "texto", "local", "amanhã", e "12:00"

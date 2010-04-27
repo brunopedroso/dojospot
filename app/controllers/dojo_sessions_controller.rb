@@ -7,10 +7,21 @@ class DojoSessionsController < ApplicationController
 	end
 
 	def new
-		@dojo_session = DojoSession.new
+		if !current_user.has_propose_priv?
+			redirect_to login_path
+		else
+			@dojo_session = DojoSession.new
+		end
 	end
 	
 	def create
+		
+		if !current_user.has_propose_priv?
+			redirect_to login_path
+			return
+		end
+		
+		
 		dojo_session = DojoSession.new(params[:dojo_session])
 		
 		# já associa como confirmado
