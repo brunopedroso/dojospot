@@ -1,5 +1,5 @@
 
-<div class="box" style="width:300px; margin:auto">
+<div class="box" style="width:400px; margin:auto">
 
 	<h1 id="sign_up">Criar uma conta</h1>
 
@@ -19,7 +19,10 @@
 	    <%= f.label :password_confirmation, "Senha de novo" %><br />
 	    <%= f.password_field :password_confirmation, :size => 10 %>
 	  </p>
-	  <p style="text-align: right; margin-right: 20px"><%= f.submit "Registrar" %></p>
+	  <p style="text-align: right; margin: 30px 20px 0 0">
+		<input type="button" onClick="history.back()" value="Cancelar"/> <%= f.submit "Registrar" %>
+	</p>
+	 
 	<% end %>
 
 </div>
