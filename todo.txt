@@ -1,8 +1,11 @@
 Working on:
 
 		
-Features v0:
+Features v0.1:
 		
+	- referência pra nossa lista
+	- colocar textile na edição da sessão
+	
 	
 Débito
 
@@ -12,14 +15,19 @@ Débito
 	- css com sass
 	- quebrar as features
 
+	- no deploy: rodar as migrations
+
 Backlog
 
+	- aparece nome ao invés de username
+	- editar perfil
+		- email
+		- nome
+	
 	- propor sessão na capa, qndo não tem sessão proposta
 	
 	- colocar no github
 	
-	- colocar textile na edição da sessão
-
 	- os confirmados podem editar só o texto da sessão
 
 	- capa só mostra 2 sessões
