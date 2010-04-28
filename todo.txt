@@ -5,6 +5,9 @@ Features v0.1:
 		
 	- referência pra nossa lista
 	- colocar textile na edição da sessão
+	- (gravatar), site (link nas fotos)
+	- goggle analitics
+	- voltar na página de sessões
 	
 	
 Débito
@@ -23,10 +26,14 @@ Backlog
 	- editar perfil
 		- email
 		- nome
+		- excluir perfil
 	
 	- propor sessão na capa, qndo não tem sessão proposta
 	
-	- colocar no github
+	- abrir o código
+		- leiame
+		- revisar coisas pessoais
+		- colocar no github
 	
 	- os confirmados podem editar só o texto da sessão
 
@@ -42,18 +49,19 @@ Backlog
 			associa
 			só quem confirmou
 			+ adicionar alguém q não havia confirmado
+			
+	- sessões passadas
+	- página de detalhes das sessões
 
-	- (gravatar), site (link nas fotos)
-	- quantidade de vagas
 	- tags
+	
+	- quantidade de vagas
 
 	- notificações
 		- rss
 		- email
 		- twitter
 
-	- sessões passadas
-	- página de detalhes das sessões
 	
 	- comentários nas seções (antes ou depois)
 	
