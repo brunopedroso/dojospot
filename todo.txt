@@ -10,7 +10,7 @@ Features v0.1:
 	- voltar na página de sessões
 	- colocar o vídeo que tá no post do campo minado.
 	- lista de confirmados numerada
-	
+	- links externos em nova janela
 	
 Débito
 
