@@ -8,6 +8,8 @@ Features v0.1:
 	- (gravatar), site (link nas fotos)
 	- goggle analitics
 	- voltar na página de sessões
+	- colocar o vídeo que tá no post do campo minado.
+	- lista de confirmados numerada
 	
 	
 Débito
@@ -21,6 +23,13 @@ Débito
 	- no deploy: rodar as migrations
 
 Backlog
+
+	- registrar retrospectiva (log-in required)
+		- quem participou 
+			associa
+			só quem confirmou
+			+ adicionar alguém q não havia confirmado
+		- [ideia] : algumas classes prontas pra retro - tabela, carinhas
 
 	- aparece nome ao invés de username
 	- editar perfil
@@ -44,12 +53,6 @@ Backlog
 	 	- powered by
 		- contato
 
-	- registrar retrospectiva (log-in required)
-		- quem participou 
-			associa
-			só quem confirmou
-			+ adicionar alguém q não havia confirmado
-			
 	- sessões passadas
 	- página de detalhes das sessões
 
