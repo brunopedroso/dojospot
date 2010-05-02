@@ -1,6 +1,6 @@
 h1. Seja bem vindo!
 
-!{width: 350px; float: left}http://farm3.static.flickr.com/2799/4371254094_d4cd5dfa8f.jpg!:http://www.flickr.com/photos/brunauto/4371254094/
+<a href="http://www.flickr.com/photos/brunauto/4371254094/" target="_blank"> !{width: 350px; float: left}http://farm3.static.flickr.com/2799/4371254094_d4cd5dfa8f.jpg! </a>
 
 <br/><br/><br/><br/>
 
@@ -29,7 +29,8 @@ p(((. Temos espaço e tempo limitados. Nos reservamos o direito de dar preferên
 
 <br/><br/>
 
-!{width:300px; float: right}http://projeteliberdadecapoeira.files.wordpress.com/2008/06/roda-do-capoeira.jpg!:http://projeteliberdadecapoeira.com.br/eventos/
+
+<a href="http://projeteliberdadecapoeira.com.br/eventos/" target="_blank"> !{width:300px; float: right}http://projeteliberdadecapoeira.files.wordpress.com/2008/06/roda-do-capoeira.jpg! </a>
 
 * *Participe como quiser*
 
@@ -61,6 +62,8 @@ bq. O importante não é a chegada, mas o caminho
 
 Não temos um dia certo... Na verdade temos, mas com freqüência mudamos isso. 
 O melhor é ficar ligado "no site":../dojo_sessions/.
+
+Enquanto não temos RSS nem notificações por email, fique de olho também na "nossa lista de emails":http://groups.google.com/group/dojosea
 
 <br/>
 

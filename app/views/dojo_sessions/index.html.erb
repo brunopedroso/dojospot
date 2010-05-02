@@ -1,7 +1,6 @@
 
 <h2 class="page_title"> Próximas sessões </h2>
 
-
 <% unless @dojo_sessions.empty? %>
 
 	<% for dojo_session in @dojo_sessions do %>
@@ -71,3 +70,5 @@
 		<%= link_to "Propor uma nova sessão", new_dojo_session_path %>
 	</div>
 <% end%>
+
+<%= link_to '<< Voltar', root_path %>

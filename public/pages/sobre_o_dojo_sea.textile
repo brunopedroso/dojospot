@@ -25,7 +25,7 @@ p<>. O DojoSEA existe "desde 2008":http://blog.seatecnologia.com.br/2008/08/04/c
 
 *Qual a filosofia do DojoSEA?*
 
-!{float: right; width: 300px}http://farm3.static.flickr.com/2519/4182208057_41a5d6f55e.jpg!:http://www.flickr.com/photos/h-k-d/4182208057/
+<a href="http://www.flickr.com/photos/h-k-d/4182208057/" target="_blank">!{float: right; width: 300px}http://farm3.static.flickr.com/2519/4182208057_41a5d6f55e.jpg! </a>
 
 p<>. Entendemos que ninguém é dono da verdade e que cada Dojo deve cultivar seus próprios valores e princípios. Os nossos atualmente são esses:
 
@@ -52,7 +52,7 @@ p<>. Sinta-se a vontade para propor novos temas, mas por favor tenha sensibilida
 
 <br/>
 
-!{float: left; width:350px}http://farm3.static.flickr.com/2395/2189414108_297f81a03a.jpg!:http://www.flickr.com/photos/vermininc/2189414108/
+<a href="http://www.flickr.com/photos/vermininc/2189414108/" target="_blank"> !{float: left; width:350px}http://farm3.static.flickr.com/2395/2189414108_297f81a03a.jpg! </a>
 
 *Venha - se estiver em sintonia!*
 

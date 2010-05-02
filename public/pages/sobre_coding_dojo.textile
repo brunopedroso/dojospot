@@ -7,10 +7,9 @@ bq<>. "A Coding Dojo is a meeting where a bunch of coders get together to work o
 
 p<>. Não é difícil achar "outras definições":http://www.google.com.br/search?q=coding+dojo de Coding Dojo.
 
-
-!{float:left; height:280px; }http://farm3.static.flickr.com/2583/3921534305_ac3aa01bef.jpg!:http://www.flickr.com/photos/guilhermechapiewski/3921534305/
-
-<br/>
+<a href="http://www.flickr.com/photos/guilhermechapiewski/3921534305/" target="_blank"> 
+!{float:left; height:280px; }http://farm3.static.flickr.com/2583/3921534305_ac3aa01bef.jpg!
+</a>
 
 p<>. A intenção é criar um *ambiente de treinamento, compartilhamento e aprendizado contínuo* principalmente a respeito de desenvolvimento de software.
 
@@ -32,3 +31,12 @@ Algumas referências sobre coding-dojo:
 ** "Floripa":http://dojofloripa.wordpress.com/
 ** "Brasília":http://groups.google.com.br/group/dojo-brasilia
 ** "Rio":http://dojorio.wordpress.com/
+
+<br/>
+
+
+Dê uma olhada também nesses videos:
+
+<object width="400" height="300"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=3040507&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=3040507&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="400" height="300"></embed></object>
+
+<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/gav9fLVkZQc&hl=pt_BR&fs=1&"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/gav9fLVkZQc&hl=pt_BR&fs=1&" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object>

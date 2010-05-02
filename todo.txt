@@ -1,16 +1,12 @@
 Working on:
 
 		
-Features v0.1:
-		
-	- referência pra nossa lista
+Features v0.2:
+	
 	- colocar textile na edição da sessão
 	- (gravatar), site (link nas fotos)
-	- goggle analitics
-	- voltar na página de sessões
-	- colocar o vídeo que tá no post do campo minado.
 	- lista de confirmados numerada
-	- links externos em nova janela
+	
 	
 Débito
 
@@ -37,6 +33,21 @@ Backlog
 		- nome
 		- excluir perfil
 	
+	- sessões passadas
+	- página de detalhes das sessões
+	
+	
+	- tags
+	
+	- quantidade de vagas
+
+	- notificações
+		- rss
+		- email
+		- twitter
+
+
+	
 	- propor sessão na capa, qndo não tem sessão proposta
 	
 	- abrir o código
@@ -52,18 +63,6 @@ Backlog
 	- um rodapé
 	 	- powered by
 		- contato
-
-	- sessões passadas
-	- página de detalhes das sessões
-
-	- tags
-	
-	- quantidade de vagas
-
-	- notificações
-		- rss
-		- email
-		- twitter
 
 	
 	- comentários nas seções (antes ou depois)
