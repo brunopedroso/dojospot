@@ -52,6 +52,17 @@ Funcionalidade: Propor uma sessão de dojo
 		E eu devo ver a sessão proposta com "título", "texto", "local", "amanhã", e "12:00"
 		E eu devo ver "bruno" na lista de nomes confirmados
 
+	Cenário: Texto da sessão estilizado
+	
+		Dado que eu estou logado no sistema como "bruno"
+		E que o usuário "bruno" tem privilégio de propor sessão
+		E eu estou na página de nova sessão
+		Quando eu preencho a proposta de sessão com "título", "h3. meu titulo feliz", "local", "amanhã", e "12:00"
+		E eu aperto "Salvar"
+		Então eu devo estar na "lista de sessões"
+		Então eu devo ver "meu titulo feliz" dentro de "h3"
+		
+
 	Cenário: Só pode editar se estiver logado
 
 		Dado que eu não estou logado no sistema

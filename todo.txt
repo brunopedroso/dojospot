@@ -8,8 +8,6 @@ Features v0.2:
 		- revisar coisas pessoais
 		- colocar no github
 	
-	- colocar textile na edição da sessão
-	
 	- aparece nome ao invés de username
 	- (gravatar), site (link nas fotos)	
 	- editar perfil
@@ -98,3 +96,4 @@ Backlog
 		
 	- link de credito como um textinho sobre a foto (precisa de um fundo transparente)
 	
+	- traduzir rspec?

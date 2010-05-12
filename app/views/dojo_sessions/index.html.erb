@@ -21,7 +21,7 @@
 		
 			<br/>
 
-			<p><%= dojo_session.text %></p>
+			<p><%= RedCloth.new(dojo_session.text).to_html %></p>
 
 			<div id="confirmations">
 

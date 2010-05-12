@@ -42,6 +42,12 @@ describe 'dojo sessions index' do
 				response.should_not have_tag('p', 'Nenhuma sessão proposta no momento.')
 			end
 			
+			it 'should textilize the dojo session content' do
+				@dojo_session.text = 'h3. meu titulo muito feliz'
+				render('dojo_sessions/index')
+				response.should have_tag('h3', 'meu titulo muito feliz')
+			end
+			
 			it 'should not show a link to edit if i am NOT logged in' do
 				session[:user_id] = nil
 				render('dojo_sessions/index')
