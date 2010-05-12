@@ -3,10 +3,23 @@ Working on:
 		
 Features v0.2:
 	
-	- colocar textile na edição da sessão
-	- (gravatar), site (link nas fotos)
-	- lista de confirmados numerada
+	- abrir o código
+		- leiame
+		- revisar coisas pessoais
+		- colocar no github
 	
+	- colocar textile na edição da sessão
+	
+	- aparece nome ao invés de username
+	- (gravatar), site (link nas fotos)	
+	- editar perfil
+		- email
+		- nome
+		- excluir perfil
+	
+	- tagcloud do site
+		- tags
+
 	
 Débito
 
@@ -27,17 +40,13 @@ Backlog
 			+ adicionar alguém q não havia confirmado
 		- [ideia] : algumas classes prontas pra retro - tabela, carinhas
 
-	- aparece nome ao invés de username
-	- editar perfil
-		- email
-		- nome
-		- excluir perfil
+	
 	
 	- sessões passadas
 	- página de detalhes das sessões
 	
 	
-	- tags
+
 	
 	- quantidade de vagas
 
@@ -49,11 +58,8 @@ Backlog
 
 	
 	- propor sessão na capa, qndo não tem sessão proposta
-	
-	- abrir o código
-		- leiame
-		- revisar coisas pessoais
-		- colocar no github
+
+	- openID
 	
 	- os confirmados podem editar só o texto da sessão
 
@@ -79,7 +85,8 @@ Backlog
 		- quantas ele confirmou e não foi?
 		- quantas ele foi sem confirmar?
 
-	- só pode propor quem tem pelo menos uma presença (trust)	
+	- só pode propor quem tem pelo menos uma presença (trust)
+	
 	- escala de confiança/mérito'
 	 	- pode começar numérica
 		- pode começar administrando pelo console

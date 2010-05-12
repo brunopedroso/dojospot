@@ -209,8 +209,8 @@ describe 'dojo sessions index' do
 				render('dojo_sessions/index')
 
 				response.should have_tag('div[id=?]', "dojo_session_#{@dojo_session.id}", :text=>/.*Confirmados até agora.*/)
-				response.should have_tag('div[id=?]', "dojo_session_#{@dojo_session.id}", :text=>/.*#{user1.username}.*/)
-				response.should have_tag('div[id=?]', "dojo_session_#{@dojo_session.id}", :text=>/.*#{user2.username}.*/)
+				response.should have_tag('div[id=?] ol li', "dojo_session_#{@dojo_session.id}", :text=>/.*#{user1.username}.*/)
+				response.should have_tag('div[id=?] ol li', "dojo_session_#{@dojo_session.id}", :text=>/.*#{user2.username}.*/)
 
 			end
 			
