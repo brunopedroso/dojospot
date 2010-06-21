@@ -1,7 +1,10 @@
-Working on:
 
-		
+
+========  (ÚLTIMA PRIORIZAÇÃO) ========
+
 Features v0.2:
+	
+	- translate to english
 	
 	- abrir o código
 		- leiame
@@ -18,6 +21,8 @@ Features v0.2:
 	- tagcloud do site
 		- tags
 
+
+========  (DÉBITO TÉCNICO) ========
 	
 Débito
 
@@ -28,6 +33,16 @@ Débito
 	- quebrar as features
 
 	- no deploy: rodar as migrations
+
+
+
+
+
+
+=========================  (BACKLOG) ===========================
+=== NÀO FOI PRIORIZADO AINDA - ORDEM COMPLETAMENTE ALEATÓRIA ===
+================================================================
+
 
 Backlog
 
@@ -47,6 +62,7 @@ Backlog
 
 	
 	- quantidade de vagas
+		- só mostra uma linha na listagem. fila espera - (as pessoas decidem)
 
 	- notificações
 		- rss
@@ -57,7 +73,7 @@ Backlog
 	
 	- propor sessão na capa, qndo não tem sessão proposta
 
-	- openID
+	- openID?
 	
 	- os confirmados podem editar só o texto da sessão
 
@@ -85,9 +101,6 @@ Backlog
 
 	- só pode propor quem tem pelo menos uma presença (trust)
 	
-	- escala de confiança/mérito'
-	 	- pode começar numérica
-		- pode começar administrando pelo console
 
 	- sorteio de fotos:
 		- http://www.flickr.com/photos/drhurn/1985687/
@@ -97,3 +110,45 @@ Backlog
 	- link de credito como um textinho sobre a foto (precisa de um fundo transparente)
 	
 	- traduzir rspec?
+	
+	- associar código/commit github com sessão
+	
+	- cadastrar sessões antigas (outras sessões, que não foram propostas pelo site)
+		- relatórios externos
+	        blog
+	        email em lista
+	        url qualquer
+	
+	
+	- escala de confiança/mérito'
+	 	- pode começar numérica
+		- pode começar administrando pelo console
+		
+				crédito
+				    katas apresentados
+				    sessões marcadas
+				    sessões atendidas
+				        programou ou só assistiu?
+				    graduações
+				        critérios públicos
+				        cálculo feito pela classe de modelo
+				            a partir dos dados do banco
+				            o critério de valor é distinto e fácil de criticar
+				        primeira versão
+				            aspirante
+				                até 2 sessões
+				            participante/aluno
+				                mais de duas sessões
+				            batizado
+				                mais de 2 sessões
+				                marcado pelo menos 2 sessões
+				                um kata
+				                    atendido por pelo menos 2 pessoas
+				                    um mais graduado
+				    kudo
+				        en.wikipedia.org > Wiki > Kudos <http://en.wikipedia.org/wiki/Kudos>
+				        dictionary.reference.com > Browse > Kudos <http://dictionary.reference.com/browse/kudos>
+	
+	
+	
+	
