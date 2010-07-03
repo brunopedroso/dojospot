@@ -2,22 +2,30 @@ Dado /^que não existem sessões marcadas$/ do
   DojoSession.find_proposed_sessions.should be_empty
 end
 
+
+def calculate_relative_date(date_string) 
+	if date_string
+		date_string.strip!
+		
+		#Refact: use regexp and extract the number here...
+		if date_string == "1 days ago"
+			return Date.today - 1
+
+		elsif date_string == "2 days ago"
+				return Date.today - 2
+
+		elsif date_string == "3 days ago"
+				return Date.today - 3
+		else
+				return date_string
+		end
+	end
+end
+
 Given /^the following sessions exist:$/ do |table|
   table.hashes.each do |hash|
 	
-		if hash[:date]
-			if hash[:date].strip == "1 days ago"
-				hash[:date] = Date.today - 1
-
-			elsif hash[:date].strip == "2 days ago"
-					hash[:date] = Date.today - 2
-
-			elsif hash[:date].strip == "3 days ago"
-					hash[:date] = Date.today - 3
-
-			end
-		end
-
+		hash[:date] = calculate_relative_date(hash[:date]) if hash[:date]
 		Factory.create :dojo_session, hash
 		
 	end
@@ -128,8 +136,12 @@ Then /^I should see the titles (.*), (.*), (.*), (.*), (.*)$/ do |t1,t2,t3,t4,t5
 		assert_contain t5
 end
 
-Then /^I should see the sessions details in this specific order 's2', 's1', 's3'$/ do
-  pending # express the regexp above with the code you wish you had
+Then /^I should see the sessions details in this specific order (.*), (.*), (.*)$/ do |a,b,c|
+  doc = Nokogiri::HTML(response.body)
+	dojo = doc.search('h2')
+	dojo[0].content.should == a
+	dojo[1].content.should == b
+	dojo[2].content.should == c
 end
 
 Then /^I should see the following session details:$/ do |table|

@@ -27,7 +27,7 @@ Feature: List past dojo sessions
 			|s2		|1 days ago	|
 			|s3		|3 days ago	|
 		And I am on 'the past sessions listing'
-		Then I should see the sessions details in this specific order 's2', 's1', 's3'
+		Then I should see the sessions details in this specific order s2, s1, s3
 	
 	Scenario: Show title, date, local and body of each sessions
 		Given the following sessions exist:
