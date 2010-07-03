@@ -13,10 +13,12 @@ module NavigationHelpers
     when /the home page/
       '/'
 
-
     when /lista de sessões/
       '/dojo_sessions'
 
+    when /the past sessions listing/
+			'/history'
+			
     when /página de login/
       '/login'
 

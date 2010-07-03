@@ -2,6 +2,12 @@ Dado /^que não existem sessões marcadas$/ do
   DojoSession.find_proposed_sessions.should be_empty
 end
 
+Given /^the following sessions exist:$/ do |table|
+  table.hashes.each do |hash|
+		Factory.create :dojo_session, hash
+	end
+end
+
 Quando /^eu preencho a proposta de sessão com "([^\"]*)", "([^\"]*)", "([^\"]*)", "([^\"]*)", e "([^\"]*)"$/ do |title, text, place, date, time|
 	fill_in "dojo_session[title]", :with => title
 	fill_in "dojo_session[text]", :with => text
@@ -98,3 +104,20 @@ Então /^eu não devo ver "([^\"]*)" na lista de nomes confirmados$/ do |usernam
 	dojo.should contain('Confirmar minha presença')
 end
 
+#TODO: transformar em array
+Then /^I should see the titles (.*), (.*), (.*), (.*), (.*)$/ do |t1,t2,t3,t4,t5|
+    assert_contain t1
+		assert_contain t2
+		assert_contain t3
+		assert_contain t4
+		assert_contain t5
+end
+
+Then /^I should see the sessions details in this specific order 's2', 's1', 's3'$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+Then /^I should see the following session details:$/ do |table|
+  # table is a Cucumber::Ast::Table
+  pending # express the regexp above with the code you wish you had
+end
