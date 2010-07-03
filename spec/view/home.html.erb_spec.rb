@@ -2,10 +2,13 @@ require 'spec_helper'
 
 describe 'home page' do
 
+	before :each do
+		assigns[:dojo_sessions] = []
+	end
+	
 	context 'proposed sessions display list' do
 	
 		it 'should show no-sessions message without proposed sessions' do 
-			assigns[:dojo_sessions] = []
 			render('/home/index')
 			response.should have_tag('p', 'Nenhuma sessão proposta no momento.')
 		end
@@ -58,6 +61,11 @@ describe 'home page' do
 			end
 		end
 		
+	end
+	
+	it 'should have a link to the sessions hitory' do
+		render('home/index')
+		response.should have_tag('a[href=?]', "/history", 'histórico de sessões')
 	end
 	
 end

@@ -10,6 +10,9 @@ module NavigationHelpers
     
     when /página inicial/
       '/'
+    when /the home page/
+      '/'
+
 
     when /lista de sessões/
       '/dojo_sessions'
