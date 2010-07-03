@@ -88,19 +88,32 @@ Dado /^que eu estou confirmado na sessão "([^\"]*)"$/ do |title|
 	click_link_within "#dojo_session_#{id}", "Confirmar minha presença"
 end
 
-Então /^eu devo ver os detalhes da sessão$/ do
-  assert_contain @dojo_session.title
-	assert_contain @dojo_session.text
-end
-
-
 #TODO: refactoring: colocar os títulos das sessões na descrição do passo ao invés de guardar como field
-
 Dado /^que existem três sessões marcada$/ do
   @dojo_session1 = Factory.create :dojo_session, :date => Date.today
 	@dojo_session2 = Factory.create(:dojo_session, :date => (Date.today + 1))
 	@dojo_session3 = Factory.create(:dojo_session, :date => (Date.today + 1))
+end
 
+
+Then /^I should see the following session details:$/ do |table|
+	table.hashes.each do |hash|
+		within("div") do |div|
+	  	div.should have_tag("h2", hash[:title])
+	
+			date_time_place = I18n.l(calculate_relative_date(hash[:date]), :format=>"default") +
+												", " + hash[:time] + 
+												", " + hash[:place]
+	
+			div.should have_tag("span", date_time_place)
+			
+		end
+	end
+end
+
+Então /^eu devo ver os detalhes da sessão$/ do
+  assert_contain @dojo_session.title
+	assert_contain @dojo_session.text
 end
 
 Então /^eu devo ver os detalhes das três sessões ordenadas$/ do
@@ -142,9 +155,4 @@ Then /^I should see the sessions details in this specific order (.*), (.*), (.*)
 	dojo[0].content.should == a
 	dojo[1].content.should == b
 	dojo[2].content.should == c
-end
-
-Then /^I should see the following session details:$/ do |table|
-  # table is a Cucumber::Ast::Table
-  pending # express the regexp above with the code you wish you had
 end
