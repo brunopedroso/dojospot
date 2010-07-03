@@ -4,22 +4,18 @@
 
 Features v0.2:
 	
-	- translate to english
 	
-	- abrir o código
-		- leiame
-		- revisar coisas pessoais
-		- colocar no github
-	
+	- sessões passadas
+	- página de detalhes das sessões
+
+Features v0.3:
+
 	- aparece nome ao invés de username
 	- (gravatar), site (link nas fotos)	
 	- editar perfil
 		- email
 		- nome
 		- excluir perfil
-	
-	- tagcloud do site
-		- tags
 
 
 ========  (DÉBITO TÉCNICO) ========
@@ -43,6 +39,10 @@ Débito
 === NÀO FOI PRIORIZADO AINDA - ORDEM COMPLETAMENTE ALEATÓRIA ===
 ================================================================
 
+- tagcloud do site
+	- tags
+
+- translate to english
 
 Backlog
 
@@ -52,13 +52,6 @@ Backlog
 			só quem confirmou
 			+ adicionar alguém q não havia confirmado
 		- [ideia] : algumas classes prontas pra retro - tabela, carinhas
-
-	
-	
-	- sessões passadas
-	- página de detalhes das sessões
-	
-	
 
 	
 	- quantidade de vagas
