@@ -4,7 +4,22 @@ end
 
 Given /^the following sessions exist:$/ do |table|
   table.hashes.each do |hash|
+	
+		if hash[:date]
+			if hash[:date].strip == "1 days ago"
+				hash[:date] = Date.today - 1
+
+			elsif hash[:date].strip == "2 days ago"
+					hash[:date] = Date.today - 2
+
+			elsif hash[:date].strip == "3 days ago"
+					hash[:date] = Date.today - 3
+
+			end
+		end
+
 		Factory.create :dojo_session, hash
+		
 	end
 end
 

@@ -65,7 +65,7 @@ describe 'home page' do
 	
 	it 'should have a link to the sessions hitory' do
 		render('home/index')
-		response.should have_tag('a[href=?]', "/history", 'histórico de sessões')
+		response.should have_tag('a[href=?]', "/history", 'Histórico de sessões')
 	end
 	
 end

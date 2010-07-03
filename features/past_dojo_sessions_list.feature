@@ -22,7 +22,7 @@ Feature: List past dojo sessions
 		
 	Scenario: Show sessions in decreasing date order
 		Given the following sessions exist:
-			|title	| date		|
+			|title	|date		|
 			|s1		|2 days ago	|
 			|s2		|1 days ago	|
 			|s3		|3 days ago	|
@@ -32,9 +32,9 @@ Feature: List past dojo sessions
 	Scenario: Show title, date, local and body of each sessions
 		Given the following sessions exist:
 			|title		| date		|place		|text			|
-			|a session	|yesterday	|anywhere	|let's go guys!	|
+			|a session	|1 days ago	|anywhere	|let's go guys!	|
 		And I am on 'the past sessions listing'
 		Then I should see the following session details:
 			|title		| date		|place		|text			|
-			|a session	|yesterday	|anywhere	|let's go guys!	|
+			|a session	|1 days ago	|anywhere	|let's go guys!	|
 

@@ -1,0 +1,5 @@
+
+<% @dojo_sessions.each do |session| %>
+	<h2><%= session.title %></h2>
+	<span><%= l session.date, :format=>"default" %></span>
+<% end %>
