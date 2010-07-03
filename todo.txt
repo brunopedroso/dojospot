@@ -1,5 +1,6 @@
 ========  INBOX ========
 - 3 ultimas sessões na capa
+- só listagem na tela inicial do histórico
 
 ========  (ÚLTIMA PRIORIZAÇÃO) ========
 
