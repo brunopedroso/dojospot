@@ -7,6 +7,8 @@ Features v0.2:
 	
 	- sessões passadas
 	- página de detalhes das sessões
+	- propor sessão na capa, qndo não tem sessão proposta
+
 
 Features v0.3:
 
@@ -39,12 +41,12 @@ Débito
 === NÀO FOI PRIORIZADO AINDA - ORDEM COMPLETAMENTE ALEATÓRIA ===
 ================================================================
 
-- tagcloud do site
-	- tags
-
-- translate to english
-
 Backlog
+
+	- tagcloud do site
+		- tags
+
+	- translate to english
 
 	- registrar retrospectiva (log-in required)
 		- quem participou 
@@ -62,9 +64,6 @@ Backlog
 		- email
 		- twitter
 
-
-	
-	- propor sessão na capa, qndo não tem sessão proposta
 
 	- openID?
 	
