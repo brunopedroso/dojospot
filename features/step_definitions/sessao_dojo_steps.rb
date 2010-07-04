@@ -101,11 +101,8 @@ Then /^I should see the following session details:$/ do |table|
 		within("div") do |div|
 	  	div.should have_tag("h2", hash[:title])
 	
-			date_time_place = I18n.l(calculate_relative_date(hash[:date]), :format=>"default") +
-												", " + hash[:time] + 
-												", " + hash[:place]
-	
-			div.should have_tag("span", date_time_place)
+			date_time_place = ".*#{I18n.l(calculate_relative_date(hash[:date]), :format=>"default")}, #{hash[:time]}, #{hash[:place]}.*"
+			div.should have_tag("span", Regexp.new(date_time_place))
 			
 		end
 	end

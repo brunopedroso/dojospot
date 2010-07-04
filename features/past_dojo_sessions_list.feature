@@ -31,8 +31,8 @@ Feature: List past dojo sessions
 	
 	Scenario: Show title, date, local and body of each sessions
 		Given the following sessions exist:
-			|title		|date		|place		|text			|
-			|a session	|1 days ago	|anywhere	|let's go guys!	|
+			|title		|date		|time			|place		|text			|
+			|a session	|1 days ago	|whatever time	|anywhere	|let's go guys!	|
 		And I am on 'the past sessions listing'
 		Then I should see the following session details:
 			|title		|date		|time			|place		|text			|
