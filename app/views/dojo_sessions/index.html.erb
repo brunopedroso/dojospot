@@ -14,9 +14,7 @@
 			<h1 style="margin-bottom: 5px;"><%= dojo_session.title %></h1>
 		
 			<span class="claro" style="margin-left:20px"> 
-				( <%= l dojo_session.date, :format=>"pretty" %>, 
-			 	  <%= dojo_session.time %>, 
-			      <%= dojo_session.place %> )
+				( <%= l dojo_session.date, :format=>"pretty" %>, <%= dojo_session.time %>, <%= dojo_session.place %> )
 			</span>
 		
 			<br/>
