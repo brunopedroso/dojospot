@@ -1,14 +1,14 @@
 ========  INBOX ========
-- 3 ultimas sessões na capa
-- só listagem na tela inicial do histórico
+- 3 last sessins on home
+- separate sessions by month
 
-========  (ÚLTIMA PRIORIZAÇÃO) ========
+========  (LAST PRIORIZATION) ========
 
 Features v0.2:
 	
 	
-	- sessões passadas
-	- página de detalhes das sessões
+	√ past sessions
+	- session detail page
 	- propor sessão na capa, qndo não tem sessão proposta
 
 

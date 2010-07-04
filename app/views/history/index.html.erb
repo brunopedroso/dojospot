@@ -1,7 +1,10 @@
 
+<h1 class="page_title"> Histórico de sessões </h1>
+
 <% @dojo_sessions.each do |session| %>
-	<h2><%= session.title %></h2>
+	<h2 style="margin-bottom:0"><%= session.title %></h2>
 	<span class="claro" style="margin-left:20px"> 
 		( <%= l session.date, :format=>"default" %>, <%= session.time %>, <%= session.place %> )
 	</span>
+	<p/>
 <% end %>
