@@ -3,13 +3,6 @@
 
 ========  (LAST PRIORIZATION) ========
 
-√ Features v0.2:
-	
-	√ past sessions
-	√ session detail page
-	√ propor sessão na capa, qndo não tem sessão proposta
-
-
 Features v0.3:
 
 	- aparece nome ao invés de username
