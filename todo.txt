@@ -1,6 +1,5 @@
 ======== INBOX ==========
 
- - paronize name history x past_sessions
 
 ========  (LAST PRIORIZATION) ========
 
@@ -8,7 +7,7 @@ Features v0.2:
 	
 	
 	√ past sessions
-	- session detail page
+	√ session detail page
 	- propor sessão na capa, qndo não tem sessão proposta
 
 
@@ -24,7 +23,7 @@ Features v0.3:
 
 ========  (DÉBITO TÉCNICO) ========
 
-
+ - padronize name history x past_sessions in stories
 	
 
 =========================  (BACKLOG) ===========================

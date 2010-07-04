@@ -15,6 +15,11 @@ h2 {
 	margin: 10px 5px;
 }
 
+h2 a {
+	color: #777;
+	text-decoration: none;
+}
+
 input {
 	font-size: 16px;
 }
