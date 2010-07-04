@@ -1,0 +1,13 @@
+<div class="box" id="dojo_session_<%=@dojo_session.id%>">
+
+	<h1 style="margin-bottom: 5px;"><%= @dojo_session.title %></h1>
+
+	<span class="claro" style="margin-left:20px"> 
+		( <%= l @dojo_session.date, :format=>"pretty" %>, <%= @dojo_session.time %>, <%= @dojo_session.place %> )
+	</span>
+
+	<br/>
+
+	<p><%= RedCloth.new(@dojo_session.text).to_html %></p>
+
+</div>

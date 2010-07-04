@@ -22,7 +22,7 @@ module NavigationHelpers
 			'/history'
 
     when /the session detail page/
-			/\/dojo_session\/\d+/
+			/\/dojo_sessions\/\d+/
 
 			
     when /página de login/
