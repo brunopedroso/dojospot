@@ -4,7 +4,7 @@ Funcionalidade: Propor uma sessão de dojo
 	Para poder convidar pessoas
 	Como um participante
 	Eu quero propor uma sessão de dojo
-			
+	
 	Cenário: Iniciando a marcação de uma nova sessão
 		
 		Dado que eu estou logado no sistema como "bruno"
@@ -12,7 +12,16 @@ Funcionalidade: Propor uma sessão de dojo
 		E que eu estou na "lista de sessões"
 		Quando eu clico em "Propor uma nova sessão"
 		Então eu devo estar na "página de nova sessão"
-		
+	
+	Cenário: Iniciando a partir da home
+
+		Dado que eu estou logado no sistema como "bruno"
+		E que o usuário "bruno" tem privilégio de propor sessão
+		E que não existem sessões marcadas
+		E que eu estou na "página inicial"
+		Quando eu clico em "Propor uma nova sessão"
+		Então eu devo estar na "página de nova sessão"
+	
 	Cenário: Propondo uma sessão
 	
 		Dado que eu estou logado no sistema como "bruno"

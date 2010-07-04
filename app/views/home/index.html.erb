@@ -54,7 +54,7 @@
 								</li>
 
 						<% end %>
-
+						
 					</ul>
 
 					<div style="text-align: right">
@@ -63,6 +63,13 @@
 
 				<% else %>
 					<p>Nenhuma sessão proposta no momento.</p>
+
+					<% if logged_in? && current_user.has_propose_priv? %>
+						<div style="text-align:right; margin-right:10px">
+							<%= link_to "Propor uma nova sessão", new_dojo_session_path %>
+						</div>
+					<% end %>
+
 				<% end %>
 
 			</div>

@@ -13,6 +13,37 @@ describe 'home page' do
 			response.should have_tag('p', 'Nenhuma sessão proposta no momento.')
 		end
 
+		context 'link to propose session' do
+			
+			it 'should show a link to propose, if there are no sessions and Im an authorized and logged in user' do 
+				assigns[:dojo_sessions] = []
+				session[:user_id] = Factory.create(:user, :has_propose_priv => true).id
+				render('/home/index')
+				response.should have_tag('a[href=?]', '/dojo_sessions/new', 'Propor uma nova sessão')
+			end
+
+			it 'should not show the link to propose, if there are sessions' do 
+				assigns[:dojo_sessions] = [Factory.create(:dojo_session)]
+				session[:user_id] = Factory.create(:user, :has_propose_priv => true).id
+				render('/home/index')
+				response.should_not have_tag('a[href=?]', '/dojo_sessions/new', 'Propor uma nova sessão')
+			end
+
+			it 'should not show the link to propose, if im not logged in' do 
+				assigns[:dojo_sessions] = []
+				render('/home/index')
+				response.should_not have_tag('a[href=?]', '/dojo_sessions/new', 'Propor uma nova sessão')
+			end
+
+			it 'should not show the link to propose, if i have no privileges' do 
+				assigns[:dojo_sessions] = []
+				session[:user_id] = Factory.create(:user, :has_propose_priv => false).id
+				render('/home/index')
+				response.should_not have_tag('a[href=?]', '/dojo_sessions/new', 'Propor uma nova sessão')
+			end
+			
+		end
+
 		context 'details' do
 	
 			before :each do 
@@ -60,7 +91,7 @@ describe 'home page' do
 		
 	end
 	
-	it 'should have a link to the sessions hitory' do
+	it 'should have a link to the sessions history' do
 		render('home/index')
 		response.should have_tag('a[href=?]', "/history", 'Histórico de sessões')
 	end
