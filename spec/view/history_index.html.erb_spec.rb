@@ -17,7 +17,14 @@ describe 'dojo session history index' do
 			response.should have_tag('span', Regexp.new(date_time_place))
 		end
 		
-		
 	end
+
+	it 'should show a link to the details page on the title' do
+		session = Factory.create(:dojo_session)
+		assigns[:dojo_sessions] = [session]
+		render 'history/index'
+		response.should have_tag('a[href=?]', "/dojo_sessions/#{session.id}", session.title)
+	end
+
 	
 end

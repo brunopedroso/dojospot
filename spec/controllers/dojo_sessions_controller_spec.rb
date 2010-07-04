@@ -307,4 +307,28 @@ describe DojoSessionsController do
 	
 	end
 	
+	context 'get session details (show)' do
+		
+		it 'should render show template' do
+			DojoSession.stub!(:find)
+			get :show, :id=>1
+			response.should render_template('show')
+		end
+		
+		it 'should load the dojo_session' do 
+			DojoSession.should_receive(:find).with("33").and_return("nothing")
+			get :show, :id=>33
+			assigns[:dojo_session].should == "nothing"
+		end
+		
+		it 'should access index session details if not logged in' do
+			DojoSession.stub!(:find)
+			session[:user_id]=nil
+			get :show, :id=>1
+			response.should be_success
+			response.should render_template('dojo_sessions/show.html.erb')
+		end
+		
+	end
+	
 end

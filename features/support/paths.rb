@@ -18,6 +18,12 @@ module NavigationHelpers
 
     when /the past sessions listing/
 			'/history'
+    when /the history page/
+			'/history'
+
+    when /the session detail page/
+			/\/dojo_session\/\d+/
+
 			
     when /página de login/
       '/login'

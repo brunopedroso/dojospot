@@ -1,6 +1,6 @@
 class DojoSessionsController < ApplicationController
 
-	before_filter :login_required, :except=>:index
+	before_filter :login_required, :except=>[:index, :show]
 	before_filter :require_propose_priv, :only=>[:new, :create, :edit, :update]
 
 	def require_propose_priv
@@ -15,6 +15,10 @@ class DojoSessionsController < ApplicationController
 
 	def new
 		@dojo_session = DojoSession.new
+	end
+	
+	def show
+		@dojo_session = DojoSession.find(params[:id])
 	end
 	
 	def create

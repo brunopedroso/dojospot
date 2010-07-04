@@ -2,7 +2,7 @@
 <h1 class="page_title"> Histórico de sessões </h1>
 
 <% @dojo_sessions.each do |session| %>
-	<h2 style="margin-bottom:0"><%= session.title %></h2>
+	<h2 style="margin-bottom:0"><%= link_to session.title, dojo_session_path(session) %></h2>
 	<span class="claro" style="margin-left:20px"> 
 		( <%= l session.date, :format=>"pretty" %>, <%= session.time %>, <%= session.place %> )
 	</span>

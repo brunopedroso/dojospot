@@ -1,3 +1,7 @@
+======== INBOX ==========
+
+ - paronize name history x past_sessions
+
 ========  (LAST PRIORIZATION) ========
 
 Features v0.2:
