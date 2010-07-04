@@ -16,6 +16,13 @@ def calculate_relative_date(date_string)
 
 		elsif date_string == "3 days ago"
 				return Date.today - 3
+				
+		elsif date_string == "today" or date_string == "hoje"
+				return Date.today
+
+		elsif date_string == "tomorow" or date_string == "amanhã"
+				return Date.today + 1
+
 		else
 				return date_string
 		end
@@ -31,14 +38,17 @@ Given /^the following sessions exist:$/ do |table|
 	end
 end
 
+Dado /^que existem as seguintes sessões marcadas:$/ do |table|
+	 Given %{the following sessions exist:}, table
+end
+
+
 Quando /^eu preencho a proposta de sessão com "([^\"]*)", "([^\"]*)", "([^\"]*)", "([^\"]*)", e "([^\"]*)"$/ do |title, text, place, date, time|
 	fill_in "dojo_session[title]", :with => title
 	fill_in "dojo_session[text]", :with => text
 	fill_in "dojo_session[place]", :with => place
 	
-	if date == 'amanhã'
-		date = Date.today + 1
-	end
+	date = calculate_relative_date(date)
 	
 	fill_in "dojo_session[date]", :with => date.to_s_br
 	fill_in "dojo_session[time]", :with => time
@@ -49,10 +59,7 @@ Então /^eu devo ver a sessão proposta com "([^\"]*)", "([^\"]*)", "([^\"]*)", 
 	assert_contain text
 	assert_contain place
 	
-	if date == 'amanhã'
-		date = Date.today + 1
-	end
-	
+	date = calculate_relative_date(date)	
 	assert_contain I18n.l(date, :format=>"pretty")
 	assert_contain time
 end
@@ -88,13 +95,6 @@ Dado /^que eu estou confirmado na sessão "([^\"]*)"$/ do |title|
 	click_link_within "#dojo_session_#{id}", "Confirmar minha presença"
 end
 
-#TODO: refactoring: colocar os títulos das sessões na descrição do passo ao invés de guardar como field
-Dado /^que existem três sessões marcada$/ do
-  @dojo_session1 = Factory.create :dojo_session, :date => Date.today
-	@dojo_session2 = Factory.create(:dojo_session, :date => (Date.today + 1))
-	@dojo_session3 = Factory.create(:dojo_session, :date => (Date.today + 1))
-end
-
 
 Then /^I should see the following session details:$/ do |table|
 	table.hashes.each do |hash|
@@ -108,20 +108,14 @@ Then /^I should see the following session details:$/ do |table|
 	end
 end
 
-Então /^eu devo ver os detalhes da sessão$/ do
-  assert_contain @dojo_session.title
-	assert_contain @dojo_session.text
+
+Então /^eu devo ver os detalhes das seguintes sessões, nesta ordem:$/ do |table|
+	table.hashes.each do |hash|
+	  doc = Nokogiri::HTML(response.body)
+		doc.should contain(hash[:title])
+	end
 end
 
-Então /^eu devo ver os detalhes das três sessões ordenadas$/ do
-
-  doc = Nokogiri::HTML(response.body)
-	
-	doc.should contain(@dojo_session1.title)
-	doc.should contain(@dojo_session3.title)
-	doc.should contain(@dojo_session2.title)
-	
-end
 
 Então /^eu devo ver "([^\"]*)" na lista de nomes confirmados$/ do |username|
 	within("div#confirmations") do |div|

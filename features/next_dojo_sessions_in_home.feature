@@ -13,14 +13,25 @@ Funcionalidade: Lista de próximas sessões na página inicial
 	
 	Cenário: Três sessões marcadas
 
-		Dado que existem três sessões marcada
+		Dado que existem as seguintes sessões marcadas:
+			|title		|date		|
+			|session 1	|today		|
+			|session 2	|tomorow	|
+			|session 3	|tomorow	|
 		E que eu estou na "página inicial"
-		Então eu devo ver os detalhes das três sessões ordenadas
+		Então eu devo ver os detalhes das seguintes sessões, nesta ordem:
+			|title		|date		|
+			|session 1	|today		|
+			|session 2	|tomorow	|
+			|session 3	|tomorow	|
+		
 		
 	Cenário: Link pra lista de sessões
-	
-	
-		Dado que existem três sessões marcada
+		Dado que existem as seguintes sessões marcadas:
+			|title		|date		|
+			|session 1	|today		|
+			|session 2	|tomorow	|
+			|session 3	|tomorow	|
 		E que eu estou na "página inicial"
 		Quando eu clico em "mais detalhes >>" dentro de "#next_sessions"
 		Então eu devo estar na "lista de sessões"

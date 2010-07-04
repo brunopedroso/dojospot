@@ -13,18 +13,34 @@ Funcionalidade: Listar próximas sessões na tela inicial
 	
 	Cenário: Uma sessão marcada amanhã
 	
-		Dado que existe uma sessão marcada amanhã
+		Dado que existem as seguintes sessões marcadas:
+			|title		|date		|
+			|session 1	|tomorow	|
 		E que eu estou na "lista de sessões"
-		Então eu devo ver os detalhes da sessão
+		Então eu devo ver os detalhes das seguintes sessões, nesta ordem:
+			|title		|date		|
+			|session 1	|tomorow	|
 
 	Cenário: Uma sessão marcada hoje
 
-		Dado que existe uma sessão marcada hoje
-		E que eu estou na "lista de sessões"
-		Então eu devo ver os detalhes da sessão
+	Dado que existem as seguintes sessões marcadas:
+		|title		|date		|
+		|session 1	|today		|
+	E que eu estou na "lista de sessões"
+	Então eu devo ver os detalhes das seguintes sessões, nesta ordem:
+		|title		|date		|
+		|session 1	|today		|
 	
 	Cenário: Três sessões marcadas
 
-		Dado que existem três sessões marcada
+		Dado que existem as seguintes sessões marcadas:
+			|title		|date		|
+			|session 1	|today		|
+			|session 2	|tomorow	|
+			|session 3	|tomorow	|
 		E que eu estou na "lista de sessões"
-		Então eu devo ver os detalhes das três sessões ordenadas
+		Então eu devo ver os detalhes das seguintes sessões, nesta ordem:
+			|title		|date		|
+			|session 1	|today		|
+			|session 2	|tomorow	|
+			|session 3	|tomorow	|
