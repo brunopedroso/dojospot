@@ -26,8 +26,6 @@ Features v0.3:
 	
 Débito
 
-	- login.feature aponta pra pag inicial
-	- refactoring?: uma feature a  parte 'soh quem estiver confirmado pode editar'
 	- TODOs
 	- css com sass
 	- quebrar as features

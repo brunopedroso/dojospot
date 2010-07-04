@@ -1,7 +1,5 @@
 # language: pt
 
-# TODO: refact: mudar pra pagina inicial de volta
-
 Funcionalidade: Fazer login
 
 	Para poder interagir com o sistema (propor sessões, confirmar presença, etc)
