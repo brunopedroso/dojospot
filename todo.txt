@@ -1,7 +1,3 @@
-========  INBOX ========
-- 3 last sessins on home
-- separate sessions by month
-
 ========  (LAST PRIORIZATION) ========
 
 Features v0.2:
@@ -23,25 +19,24 @@ Features v0.3:
 
 
 ========  (DÉBITO TÉCNICO) ========
+
+
 	
-Débito
-
-	- TODOs
-	- css com sass
-	- quebrar as features
-
-	- no deploy: rodar as migrations
-
-
-
-
-
 
 =========================  (BACKLOG) ===========================
 === NÀO FOI PRIORIZADO AINDA - ORDEM COMPLETAMENTE ALEATÓRIA ===
 ================================================================
 
 Backlog
+
+	- css com sass
+	- no deploy: rodar as migrations
+
+	- 3 last sessins on home
+	- separate sessions by month
+
+	- na home: quantidade de confirmados
+	- data apresentada como 'amanhã', 'depois de amanhã', etc.
 
 	- tagcloud do site
 		- tags

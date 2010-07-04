@@ -28,9 +28,6 @@ describe 'home page' do
 				
 			end
 			
-			# TODO: quantidade de confirmados
-			# TODO: data apresentada como 'amanhã', 'depois de amanhã', etc.
-	
 			it 'should present date in brazilian format' do
 				render('dojo_sessions/index')
 				the_date = I18n.l @dojo_session[:date], :format=>"pretty"

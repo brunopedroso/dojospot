@@ -2,8 +2,6 @@ require 'spec_helper'
 
 describe 'dojo sessions index' do
 	
-	# TODO: mudar pra testar a dojo_sesisons/index
-	
 	context 'proposed sessions display list' do
 		
 		
