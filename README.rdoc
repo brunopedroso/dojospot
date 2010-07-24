@@ -1,17 +1,17 @@
 = DojoSpot
 
-	Dojospot is a web application to help develop and manage a coding-dojo.
+Dojospot is a web application to help develop and manage a coding-dojo.
 	
-	The intent is to help evolve/integrate/promote the culture of coding-dojo as a continuous learning and 
-	acknowledgement mechanism. (partly in consonance with the intents and principles of 
-	the AgileSkilsProect[http://www.agileskillsproject.org/] )
+The intent is to help evolve/integrate/promote the culture of coding-dojo as a continuous learning and 
+acknowledgement mechanism. (partly in consonance with the intents and principles of 
+the AgileSkilsProect[http://www.agileskillsproject.org/] )
 	
-	By recognizing the merit of people that participates in coding-dojo meetings, we think we are strengthening
-	 the comunity and somehow rethinking the traditional logic of merit in our industry (certifications?)  
+By recognizing the merit of people that participates in coding-dojo meetings, we think we are strengthening
+ the comunity and somehow rethinking the traditional logic of merit in our industry (certifications?)  
 	
-	THE INTENT IS NOT to create a unified merit criteria regarding all coding dojos, but to find a way to balance 
-	between the integration (and representativeness) of the comunity and the individuality of each group. 
-	(It is somehow the way the Capoeira comunity organizes itself)
+THE INTENT IS NOT to create a unified merit criteria regarding all coding dojos, but to find a way to balance 
+between the integration (and representativeness) of the comunity and the individuality of each group. 
+(It is somehow the way the Capoeira comunity organizes itself)
 	
 	
 == Roadmap
