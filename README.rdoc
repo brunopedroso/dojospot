@@ -6,11 +6,11 @@ Here is the firt runing instance if DojoSpot, runing fot the DojoSEA[http://www.
 
 http://2.bp.blogspot.com/_QjczglH8Fiw/TB-EQQenS3I/AAAAAAAAAyQ/XftuzM-x1Ok/s400/dooSea.png
 	
-The intent is to help evolve/integrate/promote the *culture of coding-dojo as a continuous learning and acknowledgement mechanism*. (partly in consonance with the intents and principles of the AgileSkilsProect[http://www.agileskillsproject.org/] )
+The intent is to help evolve/integrate/promote the <b>culture of coding-dojo as a continuous learning and acknowledgement mechanism</b>. (partly in consonance with the intents and principles of the AgileSkilsProect[http://www.agileskillsproject.org/] )
 	
 By recognizing the merit of people that participates in coding-dojo meetings, we think we are strengthening the comunity and somehow rethinking the traditional logic of merit in our industry (certifications)  
 	
-*THE INTENT IS NOT* to create a unified merit criteria regarding all coding dojos, but to find a way to balance between the integration (and representativeness) of the comunity and the individuality of each group. (It is somehow the way the Capoeira comunity organizes itself)
+<b>THE INTENT IS NOT</b> to create a unified merit criteria regarding all coding dojos, but to find a way to balance between the integration (and representativeness) of the comunity and the individuality of each group. (It is somehow the way the Capoeira comunity organizes itself)
 	
 	
 == Roadmap
