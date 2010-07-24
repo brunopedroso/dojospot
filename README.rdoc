@@ -1,6 +1,6 @@
 = DojoSpot
 
-Dojospot is a web application to help develop and manage a coding-dojo.
+Dojospot is a web application to help develop and manage a CodingDojo[http://codingdojo.org/].
 
 Here is the firt runing instance if DojoSpot, runing fot the DojoSEA[http://www.seatecnologia.com.br/dojo]: 
 
