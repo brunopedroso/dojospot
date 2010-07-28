@@ -5,13 +5,13 @@
 
 Features v0.3:
 
+	- translate to english
 	- aparece nome ao invés de username
-	- (gravatar), site (link nas fotos)	
-	- editar perfil
-		- email
-		- nome
-		- excluir perfil
+		- editar perfil - só nome
+	- (gravatar), site (link nas fotos)
+		- emai no perfil pro gravatar
 
+	
 
 ========  (DÉBITO TÉCNICO) ========
 
@@ -24,6 +24,14 @@ Features v0.3:
 
 Backlog
 
+	- extract a partial for the session details (with links to edit, confirm, etc)
+
+	- extract google analytics code to a separate file
+
+	- links to content in the home page should be read automaticaly from the content file
+
+	- excluir perfil
+
 	- css com sass
 	- no deploy: rodar as migrations
 
@@ -35,8 +43,6 @@ Backlog
 
 	- tagcloud do site
 		- tags
-
-	- translate to english
 
 	- registrar retrospectiva (log-in required)
 		- quem participou 
@@ -90,8 +96,6 @@ Backlog
 		- http://www.flickr.com/photos/libraryman/213815586/
 		
 	- link de credito como um textinho sobre a foto (precisa de um fundo transparente)
-	
-	- traduzir rspec?
 	
 	- associar código/commit github com sessão
 	

@@ -15,13 +15,13 @@
 	    <%= text_field_tag :login, params[:login] %>
 	  </p>
 	  <p>
-	    <%= label_tag :password, "Senha" %><br />
+	    <%= label_tag :password, "Password" %><br />
 	    <%= password_field_tag :password %>
 	  </p>
 	  <p><%= submit_tag "Log in" %></p>
 	<% end %>
 
-	<p class="claro">Não tem uma conta ainda? <%= link_to "Crie uma!", signup_path %></p>
+	<p class="claro">Don't have an account? <%= link_to "Create one!", signup_path %></p>
 
 	
 </div>

@@ -1,9 +1,9 @@
 
 <div class="box" style="width:400px; margin:auto">
 
-	<h1 id="sign_up">Criar uma conta</h1>
+	<h1 id="sign_up">Creating an account</h1>
 
-	<p class="claro">Já tem uma conta? <%= link_to "Log in", login_path %>.</p>
+	<p class="claro">Already have an account? <%= link_to "Log in", login_path %>.</p>
 
 	<% form_for @user do |f| %>
 	  <%= f.error_messages %>
@@ -12,15 +12,15 @@
 	    <%= f.text_field :username, :size => 10  %>
 	  </p>
 	  <p>
-	    <%= f.label :password, "Senha" %><br />
+	    <%= f.label :password, "Password" %><br />
 	    <%= f.password_field :password, :size => 10 %>
 	  </p>
 	  <p>
-	    <%= f.label :password_confirmation, "Senha de novo" %><br />
+	    <%= f.label :password_confirmation, "Password again" %><br />
 	    <%= f.password_field :password_confirmation, :size => 10 %>
 	  </p>
 	  <p style="text-align: right; margin: 30px 20px 0 0">
-		<input type="button" onClick="history.back()" value="Cancelar"/> <%= f.submit "Registrar" %>
+		<input type="button" onClick="history.back()" value="Cancel"/> <%= f.submit "Register" %>
 	</p>
 	 
 	<% end %>

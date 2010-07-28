@@ -1,5 +1,5 @@
-<%= link_to '<< Voltar', root_path %>
-<h1 class="page_title" style="margin-top:10px"> Histórico de sessões </h1>
+<%= link_to '<< Back', root_path %>
+<h1 class="page_title" style="margin-top:10px"> Sessions history </h1>
 
 <% @dojo_sessions.each do |session| %>
 	<h2 style="margin-bottom:0"><%= link_to session.title, dojo_session_path(session) %></h2>

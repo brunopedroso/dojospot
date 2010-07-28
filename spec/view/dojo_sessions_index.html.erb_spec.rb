@@ -8,7 +8,7 @@ describe 'dojo sessions index' do
 		it 'should show no-sessions message without proposed sessions' do 
 			assigns[:dojo_sessions] = []
 			render('dojo_sessions/index')
-			response.should have_tag('p', 'Nenhuma sessão proposta no momento.')
+			response.should have_tag('p', 'No proposed sessions at this moment')
 		end
 
 		context 'details' do
@@ -62,13 +62,13 @@ describe 'dojo sessions index' do
 				session[:user_id] = user.id
 				
 				render('dojo_sessions/index')
-				response.should have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/edit", 'editar')
+				response.should have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/edit", 'edit')
 			end
 
 			it 'should not show a link to edit if i am NOT a confirmed user' do
 				session[:user_id] = Factory.create(:user).id
 				render('dojo_sessions/index')
-				response.should_not have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/edit", 'editar')
+				response.should_not have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/edit", 'edit')
 			end
 
 			it 'should not show a link to edit if i do NOT have privileges' do
@@ -115,7 +115,7 @@ describe 'dojo sessions index' do
 		it 'should show link to propose session when logged in' do
 			session[:user_id] = Factory.create(:user, :has_propose_priv => true).id
 			render('dojo_sessions/index')
-			response.should have_tag('a[href=?]','/dojo_sessions/new','Propor uma nova sessão')
+			response.should have_tag('a[href=?]','/dojo_sessions/new','Propose a new session')
 		end
 
 	end
@@ -135,7 +135,7 @@ describe 'dojo sessions index' do
 
 				render('dojo_sessions/index')
 
-				response.should have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/confirm_presence", 'Confirmar minha presença')
+				response.should have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/confirm_presence", 'Confirm my presence!')
 
 			end
 			
@@ -146,7 +146,7 @@ describe 'dojo sessions index' do
 
 				render('dojo_sessions/index')
 
-				response.should have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/confirm_presence", 'Confirmar minha presença')
+				response.should have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/confirm_presence", 'Confirm my presence!')
 
 			end
 
@@ -171,7 +171,7 @@ describe 'dojo sessions index' do
 
 				render('dojo_sessions/index')
 
-				response.should have_tag('a', 'Confirmar minha presença')
+				response.should have_tag('a', 'Confirm my presence!')
 
 			end
 			
@@ -188,7 +188,7 @@ describe 'dojo sessions index' do
 				render('dojo_sessions/index')
 
 				response.should_not have_tag('div[id=?]', "dojo_session_#{@dojo_session.id}", :text=>/.*Confirmados até agora.*/)
-				response.should have_tag('div[id=?]', "dojo_session_#{@dojo_session.id}", :text=>/.*Ninguém confirmou ainda.*/)
+				response.should have_tag('div[id=?]', "dojo_session_#{@dojo_session.id}", :text=>/.*Nobody confirmed yet.*/)
 
 			end
 
@@ -199,7 +199,7 @@ describe 'dojo sessions index' do
 
 				render('dojo_sessions/index')
 
-				response.should have_tag('div[id=?]', "dojo_session_#{@dojo_session.id}", :text=>/.*Confirmados até agora.*/)
+				response.should have_tag('div[id=?]', "dojo_session_#{@dojo_session.id}", :text=>/.*Confirmed so far.*/)
 				response.should_not have_tag('div[id=?]', "dojo_session_#{@dojo_session.id}", :text=>/.*Ninguém confirmou ainda.*/)
 
 			end
@@ -212,7 +212,7 @@ describe 'dojo sessions index' do
 
 				render('dojo_sessions/index')
 
-				response.should have_tag('div[id=?]', "dojo_session_#{@dojo_session.id}", :text=>/.*Confirmados até agora.*/)
+				response.should have_tag('div[id=?]', "dojo_session_#{@dojo_session.id}", :text=>/.*Confirmed so far.*/)
 				response.should have_tag('div[id=?] ol li', "dojo_session_#{@dojo_session.id}", :text=>/.*#{user1.username}.*/)
 				response.should have_tag('div[id=?] ol li', "dojo_session_#{@dojo_session.id}", :text=>/.*#{user2.username}.*/)
 
@@ -224,7 +224,7 @@ describe 'dojo sessions index' do
 				
 				render('dojo_sessions/index')
 				
-				response.should have_tag('div[id=?] a[href=?]', "dojo_session_#{@dojo_session.id}", unconfirm_presence_dojo_session_path(@dojo_session.id),:text=>/.*desconfirmar.*/)
+				response.should have_tag('div[id=?] a[href=?]', "dojo_session_#{@dojo_session.id}", unconfirm_presence_dojo_session_path(@dojo_session.id),:text=>/.*unconfirm.*/)
 				
 			 end
 

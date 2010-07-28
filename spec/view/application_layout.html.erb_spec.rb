@@ -25,7 +25,7 @@ describe 'application layout' do
 
 			it 'should show the user name' do
 				render('layouts/application')
-				response.should have_text(/Bem vindo,(.*) foo/)
+				response.should have_text(/Welcome,(.*) foo/)
 			end
 
 			it 'should show logout link' do

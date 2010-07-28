@@ -10,7 +10,7 @@ Funcionalidade: Precisa de autorização para editar sessão
 		Dado que eu não estou logado no sistema
 		E que existe uma sessão marcada amanhã
 		E que eu estou na "lista de sessões"
-		Então eu não devo ver o link "editar"
+		Então eu não devo ver o link "edit"
 
 
 	Cenário: Não pode editar se não estiver confirmado
@@ -18,7 +18,7 @@ Funcionalidade: Precisa de autorização para editar sessão
 		Dado que eu estou logado no sistema
 		E que existe uma sessão marcada amanhã
 		E que eu estou na "lista de sessões"
-		Então eu não devo ver o link "editar"
+		Então eu não devo ver o link "edit"
 
 	Cenário: Só pode editar se estiver confirmado
 
@@ -26,8 +26,8 @@ Funcionalidade: Precisa de autorização para editar sessão
 		E que o usuário "bruno" tem privilégio de propor sessão
 		E que existe uma sessão marcada amanhã
 		E que eu estou na "lista de sessões"
-		Quando eu clico em "Confirmar minha presença"
-		Então eu devo ver o link "editar"
+		Quando eu clico em "Confirm my presence"
+		Então eu devo ver o link "edit"
 
 	Cenário: Só pode editar se tiver privilégio
 
@@ -36,6 +36,6 @@ Funcionalidade: Precisa de autorização para editar sessão
 		E que existe uma sessão marcada amanhã
 		E que eu estou na "lista de sessões"
 		# mesmo se estiver confirmado
-		Quando eu clico em "Confirmar minha presença"
-		Então eu não devo ver o link "editar"
+		Quando eu clico em "Confirm my presence"
+		Então eu não devo ver o link "edit"
 

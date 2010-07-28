@@ -9,7 +9,7 @@ Funcionalidade: Listar próximas sessões na tela inicial
 		
 		Dado que não existem sessões marcadas
 		E que eu estou na "lista de sessões"
-		Então eu devo ver "Nenhuma sessão proposta no momento." 
+		Então eu devo ver "No proposed sessions at this moment" 
 	
 	Cenário: Uma sessão marcada amanhã
 	

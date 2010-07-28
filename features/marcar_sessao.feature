@@ -10,7 +10,7 @@ Funcionalidade: Propor uma sessão de dojo
 		Dado que eu estou logado no sistema como "bruno"
 		E que o usuário "bruno" tem privilégio de propor sessão
 		E que eu estou na "lista de sessões"
-		Quando eu clico em "Propor uma nova sessão"
+		Quando eu clico em "Propose a new session"
 		Então eu devo estar na "página de nova sessão"
 	
 	Cenário: Iniciando a partir da home
@@ -19,7 +19,7 @@ Funcionalidade: Propor uma sessão de dojo
 		E que o usuário "bruno" tem privilégio de propor sessão
 		E que não existem sessões marcadas
 		E que eu estou na "página inicial"
-		Quando eu clico em "Propor uma nova sessão"
+		Quando eu clico em "Propose a new session"
 		Então eu devo estar na "página de nova sessão"
 	
 	Cenário: Propondo uma sessão
@@ -29,7 +29,7 @@ Funcionalidade: Propor uma sessão de dojo
 		E que não existem sessões marcadas
 		E eu estou na página de nova sessão
 		Quando eu preencho a proposta de sessão com "título", "texto", "local", "amanhã", e "12:00"
-		E eu aperto "Salvar"
+		E eu aperto "Save"
 		Então eu devo estar na "lista de sessões"
 		E eu devo ver a sessão proposta com "título", "texto", "local", "amanhã", e "12:00"
 		E eu devo ver "bruno" na lista de nomes confirmados
@@ -40,7 +40,7 @@ Funcionalidade: Propor uma sessão de dojo
 		E que o usuário "bruno" tem privilégio de propor sessão
 		E eu estou na página de nova sessão
 		Quando eu preencho a proposta de sessão com "título", "h3. meu titulo feliz", "local", "amanhã", e "12:00"
-		E eu aperto "Salvar"
+		E eu aperto "Save"
 		Então eu devo estar na "lista de sessões"
 		Então eu devo ver "meu titulo feliz" dentro de "h3"
 		
@@ -50,10 +50,10 @@ Funcionalidade: Propor uma sessão de dojo
 		E que o usuário "bruno" tem privilégio de propor sessão
 		E que existe uma sessão marcada amanhã
 		E que eu estou na "lista de sessões"
-		Quando eu clico em "Confirmar minha presença"
-		E eu clico em "editar"
+		Quando eu clico em "Confirm my presence"
+		E eu clico em "edit"
 		E eu preencho a proposta de sessão com "título", "texto", "local", "amanhã", e "12:00"
-		E eu aperto "Salvar"
+		E eu aperto "Save"
 		Então eu devo estar na "lista de sessões"
 		E eu devo ver a sessão proposta com "título", "texto", "local", "amanhã", e "12:00"
 

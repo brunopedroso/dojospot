@@ -12,9 +12,9 @@ Funcionalidade: Confirmar presença em sessão de dojo
 		E que existe uma sessão marcada amanhã
 		E que existe um usuário "foo" com senha "secret"
 		E que eu estou na "lista de sessões"
-		Quando eu clico em "Confirmar minha presença"
+		Quando eu clico em "Confirm my presence"
 		E eu preencho "login" com "foo"
-		E eu preencho "senha" com "secret"
+		E eu preencho "password" com "secret"
 		E eu aperto "Log in"
 		Então eu devo estar na "lista de sessões"
 		E eu devo ver "foo" na lista de nomes confirmados
@@ -24,9 +24,9 @@ Funcionalidade: Confirmar presença em sessão de dojo
 		Dado que eu estou logado no sistema como "bruno"
 		E que existe uma sessão marcada amanhã
 		E que eu estou na "lista de sessões"
-		Quando eu clico em "Confirmar minha presença"
+		Quando eu clico em "Confirm my presence"
 		Então eu devo estar na "lista de sessões"
-		E eu não devo ver o link "confirmar presença"
+		E eu não devo ver o link "confirm presence"
 		E eu devo ver "bruno" na lista de nomes confirmados
 		
 		
@@ -36,7 +36,7 @@ Funcionalidade: Confirmar presença em sessão de dojo
 		E que existe uma sessão com título "minha sessão" marcada amanhã
 		E que eu estou confirmado na sessão "minha sessão"
 		E que eu estou na "lista de sessões"
-		Quando eu clico em "desconfirmar"
+		Quando eu clico em "unconfirm"
 		Então eu devo estar na "lista de sessões"
 		E eu não devo ver "bruno" na lista de nomes confirmados
 		

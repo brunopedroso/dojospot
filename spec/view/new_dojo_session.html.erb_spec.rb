@@ -16,26 +16,26 @@ describe 'new session page' do
 	it 'should have fields for title, text, place, date and time' do
 		render('dojo_sessions/new.html')
 		
-		response.should have_tag('form label', 'Título')
+		response.should have_tag('form label', 'Title')
 		response.should have_tag('form input[type=?][name=?]', 'text', 'dojo_session[title]')
 		
-		response.should have_tag('form label', 'Texto')
+		response.should have_tag('form label', 'Text')
 		response.should have_tag('form textarea[name=?]', 'dojo_session[text]')
 		
-		response.should have_tag('form label', 'Local')
+		response.should have_tag('form label', 'Place')
 		response.should have_tag('form input[type=?][name=?]', 'text', 'dojo_session[place]')
 		
-		response.should have_tag('form label', 'Data')
+		response.should have_tag('form label', 'Date')
 		response.should have_tag('form input[type=?][name=?]', 'text', 'dojo_session[date]')
 		
-		response.should have_tag('form label', 'Horário')
+		response.should have_tag('form label', 'Time')
 		response.should have_tag('form input[type=?][name=?]', 'text', 'dojo_session[time]')
 		
 	end
 	
 	it 'should have a submit for proposing a dojo session' do 
 		render('dojo_sessions/new.html')
-		response.should have_tag('form input[type=?][value=?]', 'submit', 'Salvar')
+		response.should have_tag('form input[type=?][value=?]', 'submit', 'Save')
 	end
 	
 	

@@ -33,6 +33,6 @@ Funcionalidade: Lista de próximas sessões na página inicial
 			|session 2	|tomorow	|
 			|session 3	|tomorow	|
 		E que eu estou na "página inicial"
-		Quando eu clico em "mais detalhes >>" dentro de "#next_sessions"
+		Quando eu clico em "more details >>" dentro de "#next_sessions"
 		Então eu devo estar na "lista de sessões"
 	

@@ -19,7 +19,7 @@ describe 'home page' do
 				assigns[:dojo_sessions] = []
 				session[:user_id] = Factory.create(:user, :has_propose_priv => true).id
 				render('/home/index')
-				response.should have_tag('a[href=?]', '/dojo_sessions/new', 'Propor uma nova sessão')
+				response.should have_tag('a[href=?]', '/dojo_sessions/new', 'Propose a new session')
 			end
 
 			it 'should not show the link to propose, if there are sessions' do 
@@ -85,7 +85,7 @@ describe 'home page' do
 			assigns[:dojo_sessions] = [Factory.create(:dojo_session)]
 			render('home/index')
 			response.should have_tag('div[id=?]', "next_sessions") do |div|
-				div.should have_tag('a[href=?]', dojo_sessions_path, :text=>'mais detalhes >>')
+				div.should have_tag('a[href=?]', dojo_sessions_path, :text=>'more details >>')
 			end
 		end
 		
@@ -93,7 +93,7 @@ describe 'home page' do
 	
 	it 'should have a link to the sessions history' do
 		render('home/index')
-		response.should have_tag('a[href=?]', "/history", 'Histórico de sessões')
+		response.should have_tag('a[href=?]', "/history", 'Sessions history')
 	end
 	
 end

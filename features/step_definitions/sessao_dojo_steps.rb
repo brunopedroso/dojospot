@@ -27,7 +27,7 @@ end
 Dado /^que eu estou confirmado na sessão "([^\"]*)"$/ do |title|
   visit path_to('lista de sessões')
 	id = DojoSession.find_by_title(title).id
-	click_link_within "#dojo_session_#{id}", "Confirmar minha presença"
+	click_link_within "#dojo_session_#{id}", "Confirm my presence"
 end
 
 
@@ -75,7 +75,7 @@ end
 
 Então /^eu devo ver "([^\"]*)" na lista de nomes confirmados$/ do |username|
 	within("div#confirmations") do |div|
-			assert_contain "Confirmados"
+			assert_contain "Confirmed"
   		assert_contain username
 	end
 end
@@ -84,7 +84,7 @@ Então /^eu não devo ver "([^\"]*)" na lista de nomes confirmados$/ do |usernam
 	doc = Nokogiri::HTML(response.body)
 	dojo = doc.search('div.box #confirmations')
 	dojo.should_not contain(username)
-	dojo.should contain('Confirmar minha presença')
+	dojo.should contain('Confirm my presence')
 end
 
 #TODO: transformar em array

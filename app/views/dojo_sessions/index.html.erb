@@ -1,5 +1,5 @@
 
-<h2 class="page_title"> Próximas sessões </h2>
+<h2 class="page_title"> Next sessions </h2>
 
 <% unless @dojo_sessions.empty? %>
 
@@ -8,7 +8,7 @@
 		<div class="box" id="dojo_session_<%=dojo_session.id%>">
 
 			<% if logged_in? && dojo_session.confirmed_users.include?(current_user) && current_user.has_propose_priv? %>
-				<%= link_to 'editar', edit_dojo_session_path(dojo_session), :class => 'link_northeast' %>
+				<%= link_to 'edit', edit_dojo_session_path(dojo_session), :class => 'link_northeast' %>
 			<% end %>
 		
 			<h1 style="margin-bottom: 5px;"><%= dojo_session.title %></h1>
@@ -25,11 +25,11 @@
 
 				<% if dojo_session.confirmed_users.empty? %>
 			
-					<p>Ninguém confirmou ainda</p>
+					<p>Nobody confirmed yet</p>
 				
 				<% else %>
 
-					<span><b>Confirmados até agora:</b></span>
+					<span><b>Confirmed so far:</b></span>
 					<ol style="margin-top:5px">
 						<% for user in dojo_session.confirmed_users do %>
 							<li>
@@ -37,8 +37,8 @@
 								<%=user.username%>
 							
 								<% if user == current_user %>
-									<span class="claro">(você) &nbsp; </span>
-									<a class="small_link" href="<%= unconfirm_presence_dojo_session_path(dojo_session.id) %>">desconfirmar</a>
+									<span class="claro">(you) &nbsp; </span>
+									<a class="small_link" href="<%= unconfirm_presence_dojo_session_path(dojo_session.id) %>">unconfirm</a>
 								<% end %>
 							
 							</li>
@@ -49,7 +49,7 @@
 
 				<% if !dojo_session.confirmed_users.include?(current_user) %>
 					<ul><li>
-					<a href="<%= confirm_presence_dojo_session_path(dojo_session.id)%>">Confirmar minha presença</a>
+					<a href="<%= confirm_presence_dojo_session_path(dojo_session.id)%>">Confirm my presence!</a>
 					</li></ul>
 				<% end %>
 			
@@ -60,13 +60,13 @@
 	<% end %>
 
 <% else %>
-	<p>Nenhuma sessão proposta no momento.</p>
+	<p>No proposed sessions at this moment</p>
 <% end %>
 
 <% if logged_in? && current_user.has_propose_priv? %>
 	<div style="text-align:right; margin-right:10px">
-		<%= link_to "Propor uma nova sessão", new_dojo_session_path %>
+		<%= link_to "Propose a new session", new_dojo_session_path %>
 	</div>
 <% end%>
 
-<%= link_to '<< Voltar', root_path %>
+<%= link_to '<< Back', root_path %>

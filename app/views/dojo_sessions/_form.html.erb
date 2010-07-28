@@ -3,42 +3,42 @@
 
 	<table border="0" cellspacing="5" cellpadding="5">
 		<tr>
-			<td align="right"><%= f.label :title, 'Título' %>:</td>
+			<td align="right"><%= f.label :title, 'Title' %>:</td>
 			<td><%= f.text_field 'title', :size=>45 %></td>
 		</tr>
 
 		<tr>
-			<td align="right" valign="top"><%= f.label :text, 'Texto' %>:</td>
+			<td align="right" valign="top"><%= f.label :text, 'Text' %>:</td>
 			<td>
 				<%= f.text_area 'text', :cols=>70, :rows=>20 %><br/>
-				<span class="claro">(Use formatação <a target="_blank" href="http://redcloth.org/hobix.com/textile/">textile</a>)</span>
+				<span class="claro">(Use <a target="_blank" href="http://redcloth.org/hobix.com/textile/">textile formatting</a>)</span>
 			</td>
 		</tr>
 
 		<tr>
-			<td align="right"><%= f.label :text, 'Local' %>:</td>
+			<td align="right"><%= f.label :text, 'Place' %>:</td>
 			<td><%= f.text_field 'place', :size=>45 %></td>
 		</tr>
 
 		<tr>
-			<td align="right"><%= f.label :text, 'Data' %>:</td>
+			<td align="right"><%= f.label :text, 'Date' %>:</td>
 			<td>
 				<%= f.text_field 'date', :size=>10 %>
-				<span class="claro">(Use formato dd/mm/yyyy)</span>
+				<span class="claro">(Use dd/mm/yyyy format)</span>
 			</td>
 		</tr>
 
 		<tr>
-			<td align="right"><%= f.label :text, 'Horário' %>:</td>
+			<td align="right"><%= f.label :text, 'Time' %>:</td>
 			<td>
 				<%= f.text_field 'time', :size=>10 %>
-				<span class="claro">(Texto livre)</span>
+				<span class="claro">(Free text)</span>
 			</td>
 		</tr>
 
 		<tr>
 			<td align="right"></td>
-			<td> <input type="button" onClick="history.back()" value="Cancelar"/> <input type="submit" value="Salvar"/></td>
+			<td> <input type="button" onClick="history.back()" value="Cancel"/> <input type="submit" value="Save"/></td>
 		</tr>
 
 	</table>
