@@ -33,10 +33,17 @@ describe 'application layout' do
 				response.should have_tag('a[href=?]', '/logout', 'Log out')
 			end
 
-
 			it 'should not show a login link' do
 				render('layouts/application')
 				response.should_not include_text('Log in')
+			end
+			
+			it 'should show a link to edit profile' do
+				render('layouts/application')
+				# puts response.body
+				response.should have_tag('a[href=?]', edit_profile_path) do |link|
+					link.should have_tag('img[src=?]', /\/images\/edit-pencil\.gif(.*)/)
+				end
 			end
 
 	end

@@ -40,6 +40,7 @@ end
 
 
 Quando /^eu preencho a proposta de sessão com "([^\"]*)", "([^\"]*)", "([^\"]*)", "([^\"]*)", e "([^\"]*)"$/ do |title, text, place, date, time|
+	
 	fill_in "dojo_session[title]", :with => title
 	fill_in "dojo_session[text]", :with => text
 	fill_in "dojo_session[place]", :with => place

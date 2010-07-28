@@ -51,7 +51,7 @@ Funcionalidade: Propor uma sessão de dojo
 		E que existe uma sessão marcada amanhã
 		E que eu estou na "lista de sessões"
 		Quando eu clico em "Confirm my presence"
-		E eu clico em "edit"
+		E eu clico em "edit_dojo_session"
 		E eu preencho a proposta de sessão com "título", "texto", "local", "amanhã", e "12:00"
 		E eu aperto "Save"
 		Então eu devo estar na "lista de sessões"
