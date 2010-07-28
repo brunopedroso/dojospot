@@ -13,4 +13,8 @@ class UsersController < ApplicationController
       render :action => 'new'
     end
   end
+
+	def edit
+	end
+
 end

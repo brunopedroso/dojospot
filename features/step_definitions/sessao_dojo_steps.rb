@@ -25,10 +25,16 @@ Dado /^que existe uma sessão com título "(.*)" marcada (.*)$/ do |titulo, qndo
 end
 
 Dado /^que eu estou confirmado na sessão "([^\"]*)"$/ do |title|
+	Given %{I am confirmed in the session "#{title}"}
+end
+
+Given /^I am confirmed in the session "([^\"]*)"$/ do |title|
   visit path_to('lista de sessões')
 	id = DojoSession.find_by_title(title).id
 	click_link_within "#dojo_session_#{id}", "Confirm my presence"
 end
+
+
 
 
 
@@ -74,6 +80,10 @@ end
 
 
 Então /^eu devo ver "([^\"]*)" na lista de nomes confirmados$/ do |username|
+	Then %{I should see "#{username}" in the confirmed users list}
+end
+
+Então /^I should see "([^\"]*)" in the confirmed users list$/ do |username|
 	within("div#confirmations") do |div|
 			assert_contain "Confirmed"
   		assert_contain username

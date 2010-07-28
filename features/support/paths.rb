@@ -16,6 +16,9 @@ module NavigationHelpers
     when /lista de sessões/
       '/dojo_sessions'
 
+    when /next sessions page/
+      '/dojo_sessions'
+
     when /the past sessions listing/
 			'/history'
     when /the history page/
@@ -24,7 +27,9 @@ module NavigationHelpers
     when /the session detail page/
 			/\/dojo_sessions\/\d+/
 
-			
+    when /the edit profile page/
+			'/edit_profile'
+
     when /página de login/
       '/login'
 
