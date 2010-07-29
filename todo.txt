@@ -15,7 +15,7 @@ Features v0.3:
 ========  (DÉBITO TÉCNICO) ========
 
  - padronize name history x past_sessions in stories
-	
+ - edit_profile action is not RESTful
 
 =========================  (BACKLOG) ===========================
 === NÀO FOI PRIORIZADO AINDA - ORDEM COMPLETAMENTE ALEATÓRIA ===

@@ -15,6 +15,18 @@ class UsersController < ApplicationController
   end
 
 	def edit
+		@user = User.find(session[:user_id])
+	end
+	
+	def update
+		@user = User.find(params[:id])
+		@user.update_attributes(params[:user])
+		@user.save
+
+		#notice: we don't handle the case where user can't be updated...
+		
+		flash[:notice] = "Your profile has been successfully updated!"
+		redirect_to(edit_profile_path)
 	end
 
 end

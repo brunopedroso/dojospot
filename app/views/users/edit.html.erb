@@ -1,1 +1,5 @@
-<input type="text" name="name" value=""/>
+<%=flash[:notice]%>
+<% form_for(@user) do |form| %>
+	<input type="text" name="name" value=""/>
+	<input type="submit" name="save" value="save"/>
+<% end %>
