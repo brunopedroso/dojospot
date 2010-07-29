@@ -16,6 +16,7 @@ Features v0.3:
 
  - padronize name history x past_sessions in stories
  - edit_profile action is not RESTful
+ - create tags for the 'stable' versions in git
 
 =========================  (BACKLOG) ===========================
 === NÀO FOI PRIORIZADO AINDA - ORDEM COMPLETAMENTE ALEATÓRIA ===
