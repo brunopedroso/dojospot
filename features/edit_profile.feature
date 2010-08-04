@@ -31,7 +31,7 @@ Feature: Edit Profile
 		When I fill in "name" with "Bruno Pedroso"
 		And I press "save"
 		Then I should be on the edit profile page
-		And I should see the name field filled with "Bruno Pedroso"
+		And the "name" field should contain "Bruno Pedroso"
 	
 	Scenario: Editing the name causes the name to appear in the confirmatins list
 	

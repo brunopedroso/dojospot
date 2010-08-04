@@ -34,5 +34,16 @@ describe 'edit profile page' do
 		response.should include_text flash[:notice]
 	end
 
+	it "should pre fill the name field" do
+		
+	 	dojo_session = Factory.create(:dojo_session, :name=>'brunous')
+		assigns[:dojo_session] = dojo_session 
+		render('/users/edit')
+		
+		response.should have_tag('input[type="text"][name="name"][value="brunous"]')
+		
+	end
+
+
 	
 end
