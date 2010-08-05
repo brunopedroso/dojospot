@@ -1,6 +1,8 @@
 
 Given /^the name field is empty$/ do
-  response.should have_tag("input[type=?][name=?][value=?]", "text", "name", "")
+	doc = Nokogiri::HTML(response.body)
+	doc.search("input[type='text'][name='user[name]'][value='']", "text", "name")
+  # response.should have_tag("input[type=?][name=?][value=?]", "text", "name", "")
 end
 
 When /^I follow the pencil image link$/ do

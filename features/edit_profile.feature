@@ -28,7 +28,7 @@ Feature: Edit Profile
 		And I am logged in as "bruno"
 		And I am confirmed in the session "s1"
 		And I am on the edit profile page
-		When I fill in "name" with "Bruno Pedroso"
+		When I fill in "user[name]" with "Bruno Pedroso"
 		And I press "save"
 		Then I should be on the edit profile page
 		And the "name" field should contain "Bruno Pedroso"

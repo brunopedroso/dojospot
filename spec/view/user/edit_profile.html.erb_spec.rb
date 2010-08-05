@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'nokogiri'
 
 describe 'edit profile page' do
 
@@ -9,8 +10,8 @@ describe 'edit profile page' do
 	
 	it 'should have an input field for name' do
 		render 'users/edit'
-		response.should have_tag('input[type=?][name=?][value=?]', 
-															'text', 'name', '')
+		response.should have_tag('input[type=?][name=?]', 
+															'text', 'user[name]')
 	end
 
 	it 'should have a save button' do
@@ -35,13 +36,11 @@ describe 'edit profile page' do
 	end
 
 	it "should pre fill the name field" do
-		
-	 	dojo_session = Factory.create(:dojo_session, :name=>'brunous')
-		assigns[:dojo_session] = dojo_session 
+		@user.name="brunous"
 		render('/users/edit')
-		
-		response.should have_tag('input[type="text"][name="name"][value="brunous"]')
-		
+		doc = Nokogiri::HTML(response.body)
+		input = doc.search('input[type="text"][name="user[name]"][value="brunous"]')
+		input.length.should == 1
 	end
 
 

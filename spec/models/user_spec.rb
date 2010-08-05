@@ -89,4 +89,21 @@ describe User do
 		user.has_propose_priv?.should == false
 	end
 
+	it 'should store the name in the database' do
+		user = new_user
+		user.name = "bruno"
+		user.save!
+		other = User.find user.id
+		other.name.should == user.name
+	end
+
+	it 'should store the name in the database with mass assignment' do
+		user = Factory.create(:user)
+		name = "a strange name"
+		user.update_attributes!({:name=>name})
+		user.save
+		other = User.find user.id
+		other.name.should == name
+	end
+
 end

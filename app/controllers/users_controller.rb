@@ -22,7 +22,6 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 		@user.update_attributes(params[:user])
 		@user.save
-
 		#notice: we don't handle the case where user can't be updated...
 		
 		flash[:notice] = "Your profile has been successfully updated!"
