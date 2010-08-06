@@ -221,7 +221,8 @@ describe 'dojo sessions index' do
 			it 'should show the names of the confirmed users if they have filled a name' do
 				user1 = Factory.create(:user, :name=>'my real name')
 				user2 = Factory.create(:user)
-				@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[user1, user2])
+				user3 = Factory.create(:user, :name=> '') #empty - this is a special case
+				@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[user1, user2, user3])
 				assigns[:dojo_sessions] = [@dojo_session]
 
 				render('dojo_sessions/index')
@@ -229,6 +230,7 @@ describe 'dojo sessions index' do
 				response.should have_tag('div[id=?]', "dojo_session_#{@dojo_session.id}", :text=>/.*Confirmed so far.*/)
 				response.should have_tag('div[id=?] ol li', "dojo_session_#{@dojo_session.id}", :text=>/.*#{user1.name}.*/)
 				response.should have_tag('div[id=?] ol li', "dojo_session_#{@dojo_session.id}", :text=>/.*#{user2.username}.*/)
+				response.should have_tag('div[id=?] ol li', "dojo_session_#{@dojo_session.id}", :text=>/.*#{user3.username}.*/)
 
 			end
 

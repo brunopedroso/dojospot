@@ -6,7 +6,10 @@
 Features v0.3:
 
 	- aparece nome ao invés de username
-		- editar perfil - só nome
+		√ editar perfil - só nome
+		- layout
+		- msg suggesting the profile editing
+		- name in the welcome message
 	- (gravatar), site (link nas fotos)
 		- emai no perfil pro gravatar
 
@@ -17,7 +20,7 @@ Features v0.3:
  - padronize name history x past_sessions in stories
  - edit_profile action is not RESTful
  - create tags for the 'stable' versions in git
-
+ - helper for the box div
 
 =========================  (BACKLOG) ===========================
 === NÀO FOI PRIORIZADO AINDA - ORDEM COMPLETAMENTE ALEATÓRIA ===
