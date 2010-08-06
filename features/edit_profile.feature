@@ -33,7 +33,18 @@ Feature: Edit Profile
 		Then I should be on the edit profile page
 		And the "name" field should contain "Bruno Pedroso"
 	
-	Scenario: Editing the name causes the name to appear in the confirmatins list
+	Scenario: Editing the name causes it to appear instead of username
+		Given the following sessions exist:
+			|title	|date	|
+			|s1		|tomorow|
+		And I am logged in as "bruno"
+		And I am confirmed in the session "s1"
+		And I am on the edit profile page
+		When I fill in "user[name]" with "a diferent name"
+		And I press "save"
+		When I go to the next sessions page
+		Then I should see "a diferent name" in the confirmed users list
+		
 	
 	
 	

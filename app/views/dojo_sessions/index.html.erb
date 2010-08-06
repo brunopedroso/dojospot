@@ -34,7 +34,7 @@
 						<% for user in dojo_session.confirmed_users do %>
 							<li>
 						
-								<%=user.username%>
+								<%= user.name || user.username %>
 							
 								<% if user == current_user %>
 									<span class="claro">(you) &nbsp; </span>

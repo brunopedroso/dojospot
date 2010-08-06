@@ -204,7 +204,7 @@ describe 'dojo sessions index' do
 
 			end
 
-			it 'should show the names of the confirmed users' do
+			it 'should show the usernames of the confirmed users' do
 				user1 = Factory.create(:user)
 				user2 = Factory.create(:user)
 				@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[user1, user2])
@@ -217,6 +217,21 @@ describe 'dojo sessions index' do
 				response.should have_tag('div[id=?] ol li', "dojo_session_#{@dojo_session.id}", :text=>/.*#{user2.username}.*/)
 
 			end
+
+			it 'should show the names of the confirmed users if they have filled a name' do
+				user1 = Factory.create(:user, :name=>'my real name')
+				user2 = Factory.create(:user)
+				@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[user1, user2])
+				assigns[:dojo_sessions] = [@dojo_session]
+
+				render('dojo_sessions/index')
+
+				response.should have_tag('div[id=?]', "dojo_session_#{@dojo_session.id}", :text=>/.*Confirmed so far.*/)
+				response.should have_tag('div[id=?] ol li', "dojo_session_#{@dojo_session.id}", :text=>/.*#{user1.name}.*/)
+				response.should have_tag('div[id=?] ol li', "dojo_session_#{@dojo_session.id}", :text=>/.*#{user2.username}.*/)
+
+			end
+
 			
 			it 'should show a link to unconfirm, if the current_user is already confirmed' do
 				@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[@user])
