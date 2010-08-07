@@ -6,16 +6,18 @@
 		
 	<% form_for(@user) do |form| %>
 	
-		<label for="user_name">Your real name:</label>
-		<%=form.text_field "name"%>
-		
-		<p class="claro" style="text-align:right;margin-top:5px">
-			(Will be used instead of username)
-		</p>
-		
+		<div style="width:320px">
+			<label for="user_name">Your real name:</label>
+			<%=form.text_field "name"%>
+
+			<p class="claro" style="text-align:right;margin-top:5px">
+				(Will be used instead of username)
+			</p>
+		</div>
+
 		<p style="text-align:right; margin-right:20px; margin-top:40px">
 			<input type="submit" name="save" value="save"/>
-		</p>
+		</p>			
 	
 	<% end %>
 </div>
