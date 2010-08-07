@@ -19,8 +19,8 @@ describe 'application layout' do
 	context 'when logged in' do
 
 			before :each do
-				u = Factory.create :user
-				session[:user_id] = u.id
+				@u = Factory.create :user
+				session[:user_id] = @u.id
 			end
 
 			it 'should show the user name' do
@@ -45,6 +45,18 @@ describe 'application layout' do
 					link.should have_tag('img[src=?]', /\/images\/edit-pencil\.gif(.*)/)
 				end
 			end
+			
+			context 'with a user that has filled in his real name' do
+				
+				it 'should show the user real name' do
+					@u.name = "some real name"
+					@u.save
+					render('layouts/application')
+					response.should have_text(/Welcome,(.*) some real name/)
+				end
+				
+			end
+			
 
 	end
 end

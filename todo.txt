@@ -7,9 +7,9 @@ Features v0.3:
 
 	- aparece nome ao invés de username
 		√ editar perfil - só nome
-		- layout
-		- msg suggesting the profile editing
+		√ layout
 		- name in the welcome message
+		- msg suggesting the profile editing
 	- (gravatar), site (link nas fotos)
 		- emai no perfil pro gravatar
 

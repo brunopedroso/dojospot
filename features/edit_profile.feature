@@ -31,7 +31,7 @@ Feature: Edit Profile
 		When I fill in "user[name]" with "Bruno Pedroso"
 		And I press "save"
 		Then I should be on the edit profile page
-		And the "name" field should contain "Bruno Pedroso"
+		And the "Your real name:" field should contain "Bruno Pedroso"
 	
 	Scenario: Editing the name causes it to appear instead of username
 		Given the following sessions exist:
@@ -44,8 +44,8 @@ Feature: Edit Profile
 		And I press "save"
 		When I go to the next sessions page
 		Then I should see "a diferent name" in the confirmed users list
+		And I should see "Welcome, a diferent name" within "div#logon_menu"
 		
-	
 	
 	
 	

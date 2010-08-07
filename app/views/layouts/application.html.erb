@@ -11,7 +11,7 @@
 
 		<div id="logon_menu">
 			<% if logged_in? %>
-				Welcome, <b> <%= current_user.username %> </b>
+				Welcome, <b> <%= current_user.name_or_username %> </b>
 				<%= link_to image_tag("edit-pencil.gif",{:border=>0, :alt=>'edit profile'}), edit_profile_path, :id=>'edit_profile_link' %> /
 				<%= link_to "Log out", logout_path%>
 			<% else %>
