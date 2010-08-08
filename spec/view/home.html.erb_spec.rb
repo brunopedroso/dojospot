@@ -49,24 +49,21 @@ describe 'home page' do
 			before :each do 
 				@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[Factory.create(:user)])
 				assigns[:dojo_sessions] = [@dojo_session]
+				render('/home/index')
 			end
 	
 			it 'should show the next proposed session date and title' do
-				render('/home/index')
-				
 				response.should include_text( @dojo_session.title)
 				response.should include_text(I18n.l(@dojo_session.date, :format=>"pretty"))
 				
 			end
 			
 			it 'should present date in brazilian format' do
-				render('dojo_sessions/index')
 				the_date = I18n.l @dojo_session[:date], :format=>"pretty"
 				response.should include_text(the_date)
 			end
 				
 			it 'should not show the no-sessions message' do
-				render('dojo_sessions/index')
 				response.should_not have_tag('p', 'Nenhuma sessão proposta no momento.')
 			end
 					

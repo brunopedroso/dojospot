@@ -5,57 +5,7 @@
 
 	<% for dojo_session in @dojo_sessions do %>
 
-		<div class="box" id="dojo_session_<%=dojo_session.id%>">
-
-			<% if logged_in? && dojo_session.confirmed_users.include?(current_user) && current_user.has_propose_priv? %>
-				<%= link_to 'edit', edit_dojo_session_path(dojo_session), :class => 'link_northeast', :id=>'edit_dojo_session' %>
-			<% end %>
-		
-			<h1 style="margin-bottom: 5px;"><%= dojo_session.title %></h1>
-		
-			<span class="claro" style="margin-left:20px"> 
-				( <%= l dojo_session.date, :format=>"pretty" %>, <%= dojo_session.time %>, <%= dojo_session.place %> )
-			</span>
-		
-			<br/>
-
-			<p><%= RedCloth.new(dojo_session.text).to_html %></p>
-
-			<div id="confirmations">
-
-				<% if dojo_session.confirmed_users.empty? %>
-			
-					<p>Nobody confirmed yet</p>
-				
-				<% else %>
-
-					<span><b>Confirmed so far:</b></span>
-					<ol style="margin-top:5px">
-						<% for user in dojo_session.confirmed_users do %>
-							<li>
-						
-								<%= user.name_or_username %>
-							
-								<% if user == current_user %>
-									<span class="claro">(you) &nbsp; </span>
-									<a class="small_link" href="<%= unconfirm_presence_dojo_session_path(dojo_session.id) %>">unconfirm</a>
-								<% end %>
-							
-							</li>
-						<% end %>
-					</ol>
-			
-				<% end %>
-
-				<% if !dojo_session.confirmed_users.include?(current_user) %>
-					<ul><li>
-					<a href="<%= confirm_presence_dojo_session_path(dojo_session.id)%>">Confirm my presence!</a>
-					</li></ul>
-				<% end %>
-			
-			</div>
-		
-		</div>
+		<%= render :partial=> "dojo_session", :object=>dojo_session %>
 	
 	<% end %>
 

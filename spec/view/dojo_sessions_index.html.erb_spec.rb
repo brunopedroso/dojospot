@@ -18,71 +18,18 @@ describe 'dojo sessions index' do
 				assigns[:dojo_sessions] = [@dojo_session]
 			end
 
-			it 'should show the next proposed session' do
+			it 'should render partail' do
+				# view.should_receive(:render).with(:partial=>"dojo_session")
+				# @controller.template.should_receive(:render)
 				render('dojo_sessions/index')
-
-				response.should have_tag('h1', @dojo_session.title)
-				response.should have_tag('p', @dojo_session.text)
-				response.should include_text(@dojo_session.place)
-				response.should include_text(I18n.l(@dojo_session.date, :format=>"pretty"))
-				response.should include_text(@dojo_session.time)
-
+				#TODO could not test this... :-/
 			end
 
-			it 'should present date in brazilian format' do
-				render('dojo_sessions/index')
-				the_date = I18n.l @dojo_session[:date], :format=>"pretty"
-				response.should include_text(the_date)
-			end
-
-			it 'should not show the no-sessions message' do
-				render('dojo_sessions/index')
-				response.should_not have_tag('p', 'Nenhuma sessão proposta no momento.')
-			end
-			
-			it 'should textilize the dojo session content' do
-				@dojo_session.text = 'h3. meu titulo muito feliz'
-				render('dojo_sessions/index')
-				response.should have_tag('h3', 'meu titulo muito feliz')
-			end
-			
-			it 'should not show a link to edit if i am NOT logged in' do
-				session[:user_id] = nil
-				render('dojo_sessions/index')
-				response.should_not have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/edit", 'editar')
-			end
-
-			it 'should show a link to edit when i am logged in one of the confirmed users ' do
-				user = @dojo_session.confirmed_users[0]
-
-				# tem que ter privilégio
-				user.has_propose_priv=true
-				user.save
-
-				session[:user_id] = user.id
-				
-				render('dojo_sessions/index')
-				response.should have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/edit", 'edit')
-			end
-
-			it 'should not show a link to edit if i am NOT a confirmed user' do
-				session[:user_id] = Factory.create(:user).id
-				render('dojo_sessions/index')
-				response.should_not have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/edit", 'edit')
-			end
-
-			it 'should not show a link to edit if i do NOT have privileges' do
-				user = @dojo_session.confirmed_users[0]
-				user.has_propose_priv=false
-				session[:user_id] = session[:user_id] = user.id
-				render('dojo_sessions/index')
-				response.should_not have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/edit", 'editar')
-			end
-
-			
 		end
 
-
+		#TODO: mock the partial
+		#TODO this next step ends asserting that the partial is being rendered, but not in the best way...
+		
 		it 'should show the three proposed sessions' do
 			assigns[:dojo_sessions] = [Factory.create(:dojo_session), Factory.create(:dojo_session), Factory.create(:dojo_session)]
 			render('dojo_sessions/index')
@@ -93,7 +40,6 @@ describe 'dojo sessions index' do
 		end
 		
 	end
-
 
 	context 'proposition' do
 	
@@ -120,158 +66,5 @@ describe 'dojo sessions index' do
 
 	end
 
-	context 'confirmation' do
-
-		before :each do
-			@user = Factory.create(:user)
-			session[:user_id] = @user.id
-		end
-		
-		context 'link to confirm' do
-			it 'should show a link to confirm presence in the session if there is nobody confirmed' do
-
-				@dojo_session = Factory.create(:dojo_session)
-				assigns[:dojo_sessions] = [@dojo_session]
-
-				render('dojo_sessions/index')
-
-				response.should have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/confirm_presence", 'Confirm my presence!')
-
-			end
-			
-			it 'should show a link to confirm presence in the session if i am not one of the confirmed users' do
-
-				@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[Factory.create(:user)])
-				assigns[:dojo_sessions] = [@dojo_session]
-
-				render('dojo_sessions/index')
-
-				response.should have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/confirm_presence", 'Confirm my presence!')
-
-			end
-
-			it 'should not show a link to confirm presence if i am already a confirmed user' do
-
-				@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[@user])
-				assigns[:dojo_sessions] = [@dojo_session]
-
-				render('dojo_sessions/index')
-
-				response.should_not have_tag('a', 'Confirmar minha presença')
-
-			end
-			
-			it 'should show a link to confirm presence even if i am not logged in' do
-				
-				# a idéia é que caia na página de login, mas isso deve ser testado no controller, não aqui.
-				
-				session[:user_id] = nil
-				@dojo_session = Factory.create(:dojo_session)
-				assigns[:dojo_sessions] = [@dojo_session]
-
-				render('dojo_sessions/index')
-
-				response.should have_tag('a', 'Confirm my presence!')
-
-			end
-			
-		end
-		
-		
-		context 'confirmed users list' do 
-			
-			it 'should show nowbody-confirmed-message if there is nobody confirmed' do
-
-				@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[])
-				assigns[:dojo_sessions] = [@dojo_session]
-
-				render('dojo_sessions/index')
-
-				response.should_not have_tag('div[id=?]', "dojo_session_#{@dojo_session.id}", :text=>/.*Confirmados até agora.*/)
-				response.should have_tag('div[id=?]', "dojo_session_#{@dojo_session.id}", :text=>/.*Nobody confirmed yet.*/)
-
-			end
-
-			it 'should not show nobody-confirmed-message if there is someone confirmed' do
-
-				@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[Factory.create(:user)])
-				assigns[:dojo_sessions] = [@dojo_session]
-
-				render('dojo_sessions/index')
-
-				response.should have_tag('div[id=?]', "dojo_session_#{@dojo_session.id}", :text=>/.*Confirmed so far.*/)
-				response.should_not have_tag('div[id=?]', "dojo_session_#{@dojo_session.id}", :text=>/.*Ninguém confirmou ainda.*/)
-
-			end
-
-			it 'should show the usernames of the confirmed users' do
-				user1 = Factory.create(:user)
-				user2 = Factory.create(:user)
-				@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[user1, user2])
-				assigns[:dojo_sessions] = [@dojo_session]
-
-				render('dojo_sessions/index')
-
-				response.should have_tag('div[id=?]', "dojo_session_#{@dojo_session.id}", :text=>/.*Confirmed so far.*/)
-				response.should have_tag('div[id=?] ol li', "dojo_session_#{@dojo_session.id}", :text=>/.*#{user1.username}.*/)
-				response.should have_tag('div[id=?] ol li', "dojo_session_#{@dojo_session.id}", :text=>/.*#{user2.username}.*/)
-
-			end
-
-			it 'should show the names of the confirmed users if they have filled a name' do
-				user1 = Factory.create(:user, :name=>'my real name')
-				user2 = Factory.create(:user)
-				user3 = Factory.create(:user, :name=> '') #empty - this is a special case
-				@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[user1, user2, user3])
-				assigns[:dojo_sessions] = [@dojo_session]
-
-				render('dojo_sessions/index')
-
-				response.should have_tag('div[id=?]', "dojo_session_#{@dojo_session.id}", :text=>/.*Confirmed so far.*/)
-				response.should have_tag('div[id=?] ol li', "dojo_session_#{@dojo_session.id}", :text=>/.*#{user1.name}.*/)
-				response.should have_tag('div[id=?] ol li', "dojo_session_#{@dojo_session.id}", :text=>/.*#{user2.username}.*/)
-				response.should have_tag('div[id=?] ol li', "dojo_session_#{@dojo_session.id}", :text=>/.*#{user3.username}.*/)
-
-			end
-
-			
-			it 'should show a link to unconfirm, if the current_user is already confirmed' do
-				@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[@user])
-				assigns[:dojo_sessions] = [@dojo_session]
-				
-				render('dojo_sessions/index')
-				
-				response.should have_tag('div[id=?] a[href=?]', "dojo_session_#{@dojo_session.id}", unconfirm_presence_dojo_session_path(@dojo_session.id),:text=>/.*unconfirm.*/)
-				
-			 end
-
-			it 'should show a link to unconfirm, if i am not confirmed' do
-				user1 = Factory.create(:user)
-				@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[user1])
-				assigns[:dojo_sessions] = [@dojo_session]
-
-				render('dojo_sessions/index')
-
-				response.should_not have_tag('div[id=?] a[href=?]', "dojo_session_#{@dojo_session.id}", unconfirm_presence_dojo_session_path(@dojo_session.id))
-
-			 end
-
-			it 'should show a link to unconfirm, if i am not logged in' do
-				@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[@user])
-				assigns[:dojo_sessions] = [@dojo_session]
-				session[:user_id] = nil
-
-				render('dojo_sessions/index')
-
-				response.should_not have_tag('div[id=?] a[href=?]', "dojo_session_#{@dojo_session.id}", unconfirm_presence_dojo_session_path(@dojo_session.id))
-
-			 end
-
-			
-		end
-
-	
-		
-	end
 
 end
