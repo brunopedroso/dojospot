@@ -15,38 +15,42 @@
 
 	<p><%= RedCloth.new(dojo_session.text).to_html %></p>
 
-	<div id="confirmations">
+	<% if dojo_session.date >= Date.today %>
 
-		<% if dojo_session.confirmed_users.empty? %>
+		<div id="confirmations">
+
+			<% if dojo_session.confirmed_users.empty? %>
 	
-			<p>Nobody confirmed yet</p>
+				<p>Nobody confirmed yet</p>
 		
-		<% else %>
+			<% else %>
 
-			<span><b>Confirmed so far:</b></span>
-			<ol style="margin-top:5px">
-				<% for user in dojo_session.confirmed_users do %>
-					<li>
+				<span><b>Confirmed so far:</b></span>
+				<ol style="margin-top:5px">
+					<% for user in dojo_session.confirmed_users do %>
+						<li>
 				
-						<%= user.name_or_username %>
+							<%= user.name_or_username %>
 					
-						<% if user == current_user %>
-							<span class="claro">(you) &nbsp; </span>
-							<a class="small_link" href="<%= unconfirm_presence_dojo_session_path(dojo_session.id) %>">unconfirm</a>
-						<% end %>
+							<% if user == current_user %>
+								<span class="claro">(you) &nbsp; </span>
+								<a class="small_link" href="<%= unconfirm_presence_dojo_session_path(dojo_session.id) %>">unconfirm</a>
+							<% end %>
 					
-					</li>
-				<% end %>
-			</ol>
+						</li>
+					<% end %>
+				</ol>
 	
-		<% end %>
+			<% end %>
 
-		<% if !dojo_session.confirmed_users.include?(current_user) %>
-			<ul><li>
-			<a href="<%= confirm_presence_dojo_session_path(dojo_session.id)%>">Confirm my presence!</a>
-			</li></ul>
-		<% end %>
+			<% if !dojo_session.confirmed_users.include?(current_user) %>
+				<ul><li>
+				<a href="<%= confirm_presence_dojo_session_path(dojo_session.id)%>">Confirm my presence!</a>
+				</li></ul>
+			<% end %>
 	
-	</div>
+		</div>
+
+	<% end %>
 
 </div>

@@ -175,6 +175,20 @@ describe 'dojo partial' do
 			 end
 			
 		end
+
+		context 'a past session' do
+			
+			it 'should not show the confirmations div' do
+				
+				yesterday = Date.today-1
+				@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[@user], :date=>yesterday)
+				
+				render_partial
+				response.should_not have_tag('div[id=?]', "confirmations")
+				
+			end
+			
+		end
 		
 	end
 

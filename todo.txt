@@ -5,15 +5,14 @@
 
 Features v0.3:
 
-	- aparece nome ao invés de username
+	√ aparece nome ao invés de username
 		√ editar perfil - só nome
 		√ layout
-		- name in the welcome message
-		- msg suggesting the profile editing
-	- (gravatar), site (link nas fotos)
-		- emai no perfil pro gravatar
+		√ name in the welcome message
 
+	√ extract a partial for the session details (with links to edit, confirm, etc)
 	
+	- powered by and contact information at the footer of the page
 
 ========  (DÉBITO TÉCNICO) ========
 
@@ -28,9 +27,11 @@ Features v0.3:
 
 Backlog
 
+	- (gravatar), site (link nas fotos)
+		- emai no perfil pro gravatar
+
 	- translate to english
 
-	- extract a partial for the session details (with links to edit, confirm, etc)
 
 	- extract google analytics code to a separate file
 
@@ -74,11 +75,6 @@ Backlog
 	- capa só mostra 2 sessões
 	- limite no tamanho do nome da sessão (quebrando na tela)
 
-	- um rodapé
-	 	- powered by
-		- contato
-
-	
 	- comentários nas seções (antes ou depois)
 	
 	- posts de blog
