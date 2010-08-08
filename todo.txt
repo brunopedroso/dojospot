@@ -1,18 +1,7 @@
 ======== INBOX ==========
 
-
 ========  (LAST PRIORIZATION) ========
 
-Features v0.3:
-
-	√ aparece nome ao invés de username
-		√ editar perfil - só nome
-		√ layout
-		√ name in the welcome message
-
-	√ extract a partial for the session details (with links to edit, confirm, etc)
-	
-	- powered by and contact information at the footer of the page
 
 ========  (DÉBITO TÉCNICO) ========
 
@@ -139,4 +128,17 @@ Backlog
 	
 	
 	
+========= changelog =====
+
+Features v0.3 - 08/ago/2010
+
+	√ aparece nome ao invés de username
+		√ editar perfil - só nome
+		√ layout
+		√ name in the welcome message
+
+	√ extract a partial for the session details (with links to edit, confirm, etc)
 	
+	√ powered by and contact information at the footer of the page
+	
+============

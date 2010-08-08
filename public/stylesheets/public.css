@@ -1,4 +1,3 @@
-
 a {
 	color:#dd6600;
 }
@@ -50,8 +49,27 @@ div.box img {
 
 #container {
 	width:900px;
-	position:relative;
 	margin:20px auto;
+	height:auto !important;
+	padding-bottom: 20px; /* A mesma altura do rodapé, o valor deve ser negativo */
+}
+
+#footer {
+	background:#fedfcd;
+	position: relative;
+	margin-top: -35px; /* A mesma altura do rodapé, o valor deve ser negativo */
+	height: 20px;
+	clear:both;
+	padding: 7px 20px;
+	color: #888;
+	font-size:15px;
+}
+
+html, body, #wrapper {height: 100%;}
+
+body > #wrapper {
+	height: auto; 
+	min-height: 100%;
 }
 
 #logon_menu {

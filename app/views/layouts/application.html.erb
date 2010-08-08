@@ -8,27 +8,35 @@
 
 	<body>
 
+		<div id="wrapper">
+			
+			<div id="logon_menu">
+				<% if logged_in? %>
+					Welcome, <b> <%= current_user.name_or_username %> </b>
+					<%= link_to image_tag("edit-pencil.gif",{:border=>0, :alt=>'edit profile'}), edit_profile_path, :id=>'edit_profile_link' %> /
+					<%= link_to "Log out", logout_path%>
+				<% else %>
+					<%= link_to "Log in", login_path%>
+				<% end %>
+				&nbsp;
+			</div>
 
-		<div id="logon_menu">
-			<% if logged_in? %>
-				Welcome, <b> <%= current_user.name_or_username %> </b>
-				<%= link_to image_tag("edit-pencil.gif",{:border=>0, :alt=>'edit profile'}), edit_profile_path, :id=>'edit_profile_link' %> /
-				<%= link_to "Log out", logout_path%>
-			<% else %>
-				<%= link_to "Log in", login_path%>
-			<% end %>
-			&nbsp;
+			<div id="header">
+				<%= image_tag "teto.png" %>
+				<%= link_to "/DojoSEA", root_path %>
+				<%= image_tag "arvore.png", :style=>"float: right; margin-right:20px" %>
+			</div>
+
+			<div id="container">
+				<%= yield %>
+			</div>
+
+		</div>
+		
+		<div id="footer" style="text-align:right">
+			Powered by <a target="_blank" href="http://github.com/brunopedroso/dojospot">DojoSpot</a>
 		</div>
 
-		<div id="header">
-			<%= image_tag "teto.png" %>
-			<%= link_to "/DojoSEA", root_path %>
-			<%= image_tag "arvore.png", :style=>"float: right; margin-right:20px" %>
-		</div>
-
-		<div id="container">
-			<%= yield %>
-		</div>
 
 
 
