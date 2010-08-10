@@ -21,24 +21,7 @@ Backlog
 
 	- translate to english
 
-
 	- extract google analytics code to a separate file
-
-	- links to content in the home page should be read automaticaly from the content file
-
-	- excluir perfil
-
-	- css com sass
-	- no deploy: rodar as migrations
-
-	- 3 last sessins on home
-	- separate sessions by month
-
-	- na home: quantidade de confirmados
-	- data apresentada como 'amanhã', 'depois de amanhã', etc.
-
-	- tagcloud do site
-		- tags
 
 	- registrar retrospectiva (log-in required)
 		- quem participou 
@@ -47,21 +30,34 @@ Backlog
 			+ adicionar alguém q não havia confirmado
 		- [ideia] : algumas classes prontas pra retro - tabela, carinhas
 
-	
-	- quantidade de vagas
-		- só mostra uma linha na listagem. fila espera - (as pessoas decidem)
-
-	- notificações
+	- notifications
 		- rss
 		- email
 		- twitter
 
 
-	- openID?
+	- links to content in the home page should be read automaticaly from the content file
+
+	- delete profile
+
+	- css wih sass
+	- run migration on deploy
+
+	- 3 last sessins on home
+	- separate sessions by month in history
+
+	- at home: confirmations count
+	- show date as 'tomorow', 'in 2 days', etc.
+
+	- tagcloud
+		- tags
+
+	
+	- Limit people for a session
+		- just shows a line separating the n first
 	
 	- os confirmados podem editar só o texto da sessão
 
-	- capa só mostra 2 sessões
 	- limite no tamanho do nome da sessão (quebrando na tela)
 
 	- comentários nas seções (antes ou depois)
@@ -74,18 +70,15 @@ Backlog
 		- qtde sessões
 		- de quantas/quais sessoes ele participou
 		- quais sessoes ele propos
-		
-		- quantas ele confirmou e não foi?
-		- quantas ele foi sem confirmar?
 
-	- só pode propor quem tem pelo menos uma presença (trust)
-	
+
+	- só pode propor quem tem pelo menos uma presença? (trust)
 
 	- sorteio de fotos:
 		- http://www.flickr.com/photos/drhurn/1985687/
 		- http://www.flickr.com/photos/supersonicphotos/4226467205/
 		- http://www.flickr.com/photos/libraryman/213815586/
-		
+	
 	- link de credito como um textinho sobre a foto (precisa de um fundo transparente)
 	
 	- associar código/commit github com sessão
@@ -96,37 +89,7 @@ Backlog
 	        email em lista
 	        url qualquer
 	
-	
-	- escala de confiança/mérito'
-	 	- pode começar numérica
-		- pode começar administrando pelo console
 		
-				crédito
-				    katas apresentados
-				    sessões marcadas
-				    sessões atendidas
-				        programou ou só assistiu?
-				    graduações
-				        critérios públicos
-				        cálculo feito pela classe de modelo
-				            a partir dos dados do banco
-				            o critério de valor é distinto e fácil de criticar
-				        primeira versão
-				            aspirante
-				                até 2 sessões
-				            participante/aluno
-				                mais de duas sessões
-				            batizado
-				                mais de 2 sessões
-				                marcado pelo menos 2 sessões
-				                um kata
-				                    atendido por pelo menos 2 pessoas
-				                    um mais graduado
-				    kudo
-				        en.wikipedia.org > Wiki > Kudos <http://en.wikipedia.org/wiki/Kudos>
-				        dictionary.reference.com > Browse > Kudos <http://dictionary.reference.com/browse/kudos>
-	
-	
 	
 ========= changelog =====
 
