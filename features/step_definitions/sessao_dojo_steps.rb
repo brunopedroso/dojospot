@@ -52,6 +52,16 @@ end
 
 
 
+When /^I fill the proposal with "([^\"]*)", "([^\"]*)", "([^\"]*)", "([^\"]*)", and "([^\"]*)"$/ do |title, text, place, date, time|
+	fill_in "dojo_session[title]", :with => title
+	fill_in "dojo_session[text]", :with => text
+	fill_in "dojo_session[place]", :with => place
+	
+	date = calculate_relative_date(date)
+	
+	fill_in "dojo_session[date]", :with => date.to_s_br
+	fill_in "dojo_session[time]", :with => time
+end
 
 Quando /^eu preencho a proposta de sessão com "([^\"]*)", "([^\"]*)", "([^\"]*)", "([^\"]*)", e "([^\"]*)"$/ do |title, text, place, date, time|
 	
