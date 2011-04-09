@@ -1,5 +1,5 @@
 # language: pt
-Funcionalidade: Listar próximas sessões na tela inicial
+Funcionalidade: Listar próximas sessões
 
 	Para poder participar de sessões
 	Como um provável participante
