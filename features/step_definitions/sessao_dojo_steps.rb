@@ -1,5 +1,9 @@
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "helper"))
 
+Given /^there are no proposed sessions$/ do
+  DojoSession.find_proposed_sessions.should be_empty
+end
+
 Dado /^que não existem sessões marcadas$/ do
   DojoSession.find_proposed_sessions.should be_empty
 end
