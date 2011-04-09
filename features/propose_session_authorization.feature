@@ -8,7 +8,7 @@ Feature: Need authorization to propose sessions
 
 		Given I am not logged in
 		And I am on "next sessions page"
-		Then I should not see the "Propor nova sessão" link
+		Then I should not see the "Propose a new session" link
 
 	
 	Scenario: Cannot propose session without propose privileges
@@ -16,7 +16,7 @@ Feature: Need authorization to propose sessions
 		Given I am logged in as "bruno"
 		And that the user "bruno" does not have propose privileges
 		And I am on "next sessions page"
-		Then I should not see the "Propor nova sessão" link
+		Then I should not see the "Propose a new session" link
 		
 
 	Scenario: Should not give direct access to the new session form without login

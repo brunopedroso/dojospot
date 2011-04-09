@@ -10,7 +10,7 @@ describe 'home page' do
 	
 		it 'should show no-sessions message without proposed sessions' do 
 			render('/home/index')
-			response.should have_tag('p', 'Nenhuma sessão proposta no momento.')
+			response.should have_tag('p', 'No proposed sessions at the moment')
 		end
 
 		context 'link to propose session' do
@@ -64,7 +64,7 @@ describe 'home page' do
 			end
 				
 			it 'should not show the no-sessions message' do
-				response.should_not have_tag('p', 'Nenhuma sessão proposta no momento.')
+				response.should_not have_tag('p', 'No proposed sessions at the moment')
 			end
 					
 		end

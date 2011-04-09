@@ -1,8 +1,8 @@
 Feature: List past dojo sessions
 
 	In order to evaluate the kudos of the dojo
-	As a visitant
-	I want to see the list of past sessions
+	As a visitor
+	I want to see the list of all past sessions
 	
 	Scenario: Navigating from the home page
 		Given I am on 'the home page'
