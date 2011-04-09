@@ -45,6 +45,9 @@ module NavigationHelpers
 		when /Sobre coding-dojo?/
 			'/pages/sobre_coding_dojo'
 
+		when /About coding-dojo?/
+			'/pages/sobre_coding_dojo'
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
