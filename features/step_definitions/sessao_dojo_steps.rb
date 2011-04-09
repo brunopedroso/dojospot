@@ -15,6 +15,10 @@ Dado /^que existem as seguintes sessões marcadas:$/ do |table|
 	 Given %{the following sessions exist:}, table
 end
 
+Given /^there is a session scheduled for (.*)$/ do |date|
+	Dado %{que existe uma sessão com título "qualquer um" marcada #{date}}
+end
+
 Dado /^que existe uma sessão marcada (.*)$/ do |qndo|
 	Dado %{que existe uma sessão com título "qualquer um" marcada #{qndo}}
 end

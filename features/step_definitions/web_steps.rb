@@ -280,3 +280,20 @@ end
 Then /^show me the page$/ do
   save_and_open_page
 end
+
+
+Then /^I should see the "([^\"]*)" link$/ do |text|
+  if defined?(Spec::Rails::Matchers)
+    response.should have_tag('a', text)
+  else
+    assert_contain 'a', text
+  end
+end
+
+Then /^I should not see the "([^\"]*)" link$/ do |text|
+  if defined?(Spec::Rails::Matchers)
+    response.should_not have_tag('a', text)
+  else
+    assert_not_contain 'a', text
+  end
+end
