@@ -16,8 +16,14 @@ Dado /^que existem as seguintes sessões marcadas:$/ do |table|
 end
 
 Given /^there is a session scheduled for (.*)$/ do |date|
-	Dado %{que existe uma sessão com título "qualquer um" marcada #{date}}
+	Dado %{there is a session with title "any one" scheduled for #{date}}
 end
+
+Given /^there is a session with title "(.*)" scheduled for (.*)$/ do |title, date|
+	real_date = calculate_relative_date(date)
+	Factory.create :dojo_session, :title=> title, :date=>real_date  
+end
+
 
 Dado /^que existe uma sessão marcada (.*)$/ do |qndo|
 	Dado %{que existe uma sessão com título "qualquer um" marcada #{qndo}}
@@ -88,7 +94,7 @@ Então /^eu devo ver "([^\"]*)" na lista de nomes confirmados$/ do |username|
 	Then %{I should see "#{username}" in the confirmed users list}
 end
 
-Então /^I should see "([^\"]*)" in the confirmed users list$/ do |username|
+Then /^I should see "([^\"]*)" in the confirmed users list$/ do |username|
 	within("div#confirmations") do |div|
 			assert_contain "Confirmed"
   		assert_contain username
@@ -101,6 +107,14 @@ Então /^eu não devo ver "([^\"]*)" na lista de nomes confirmados$/ do |usernam
 	dojo.should_not contain(username)
 	dojo.should contain('Confirm my presence')
 end
+
+Then /^I should not see "([^\"]*)" in the confirmed users list$/ do |username|
+	doc = Nokogiri::HTML(response.body)
+	dojo = doc.search('div.box #confirmations')
+	dojo.should_not contain(username)
+	dojo.should contain('Confirm my presence')
+end
+
 
 #TODO: transformar em array
 Then /^I should see the titles (.*), (.*), (.*), (.*), (.*)$/ do |t1,t2,t3,t4,t5|

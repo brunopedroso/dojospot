@@ -31,6 +31,11 @@ Dado /^que eu não estou logado no sistema$/ do
   visit("/logout")
 end
 
+Given /^there is a user "([^\"]*)" with password "([^\"]*)"$/ do |user, pass|
+  Factory.create :user, :username=>user, :password=>pass
+end
+
+
 Dado /^que existe um usuário "([^\"]*)" com senha "([^\"]*)"$/ do |user, pass|
   Factory.create :user, :username=>user, :password=>pass
 end
