@@ -33,7 +33,13 @@ module NavigationHelpers
     when /página de login/
       '/login'
 
+    when /login page/
+      '/login'
+
     when /página de nova sessão/
+      '/dojo_sessions/new'
+
+    when /new session page/
       '/dojo_sessions/new'
 
 		when /Sobre coding-dojo?/
