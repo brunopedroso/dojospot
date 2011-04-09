@@ -8,23 +8,22 @@
 
 ========  (v 0.5) ========
 
-- reputação do perfil
-	- qtde sessões
-	- de quantas/quais sessoes ele participou
-	- quais sessoes ele propos
+- profile's reputation
+	- # of sessions
+	- which sessions he participated
+	- which sessions he proposed
 
-- reputação do site
-	- usuarios + ativos
-	- honra ao merito (maior qtde sessoes total)
+- dojo's reputations
+	- most active users
+	- honorary members (greater total # of sesisons)
 
-- (gravatar), site (link nas fotos)
-	- email no perfil pro gravatar
+- (gravatar), site (link in pictures)
+	- email in the profile (for gravatar)
 
-- registrar retrospectiva (log-in required)
-	- texto livre
-	- quem participou 
-		associa
-		só quem confirmou
+- register retrospective (log-in required)
+	- free stylized text
+	- presences (associates)
+		- only confirmed
 
 ========  (v 0.6) ========
 
@@ -33,13 +32,12 @@
 	- email
 	- twitter
 
-- os confirmados não devem editar o texto da sessão
-- comentários na sessão
-	- notifica os confirmados por email
+- confirmed users should not edit sessions
+- allow comments in sessions
+	- notifies confirmed users by mail
 
 
-
-========  (DÉBITO TÉCNICO) ========
+========  (Tech Debt) ========
 
  - padronize name history x past_sessions in stories
  - edit_profile action is not RESTful
@@ -52,17 +50,14 @@
  - a message 'login successful' in the flash, at the edit user page...
 
 =========================  (BACKLOG) ===========================
-=== NÀO FOI PRIORIZADO AINDA - ORDEM COMPLETAMENTE ALEATÓRIA ===
+=== Not prioritized at all !!								 ===
 ================================================================
-
-Backlog
 
 
 	- extract google analytics code to a separate file
 
-	- em registrar retrospectiva (log-in required)
-		- [ideia] : algumas classes prontas pra retro - tabela, carinhas
-
+	- in the retrospective retrospective
+		- [idea] : predefined css classes - table, smiles, ...
 
 
 	- links to content in the home page should be read automaticaly from the content file
@@ -81,46 +76,38 @@ Backlog
 	- tagcloud
 		- tags
 		
-	- datepicker
+	- datepicker in propose session
 		
 	
 	- Limit people for a session
 		- just shows a line separating the n first
 	
 
-	- limite no tamanho do nome da sessão (quebrando na tela)
+	- limit the length of sesison's title (breaks layout)
 
-	- posts de blog
-		+ comentário
+	- blog posts, with comments
 	
-	- tagcloud das sessoes q participou no perfil
+	- tagcloud of the attended sessions, in user profiles
 
+	- need at least one presence in order to propose? (trust)
 
-	- só pode propor quem tem pelo menos uma presença? (trust)
-
-	- sorteio de fotos:
+	- random picture in home
 		- http://www.flickr.com/photos/drhurn/1985687/
 		- http://www.flickr.com/photos/supersonicphotos/4226467205/
 		- http://www.flickr.com/photos/libraryman/213815586/
 	
-	- link de credito como um textinho sobre a foto (precisa de um fundo transparente)
+	- picture's credit as a bottom link
 	
-	- associar código/commit github com sessão
-	
-	- cadastrar sessões antigas (outras sessões, que não foram propostas pelo site)
-		- relatórios externos
-	        blog
-	        email em lista
-	        url qualquer
-	
+	- add link to session's code in github
+
 		
 	
 ========= changelog =====
 
 Features v0.3 - 08/ago/2010
 
-	√ aparece nome ao invés de username
-		√ editar perfil - só nome
+	√ show name instead of username
+		√ edit profile - just name
 		√ layout
 		√ name in the welcome message
 
