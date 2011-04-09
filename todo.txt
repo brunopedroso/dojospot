@@ -1,6 +1,42 @@
 ======== INBOX ==========
 
-========  (LAST PRIORIZATION) ========
+========  (v 0.4) ========
+
+- translate to english
+- deploy heroku
+- layout dojo-bsb, branches, etc
+
+========  (v 0.5) ========
+
+- reputação do perfil
+	- qtde sessões
+	- de quantas/quais sessoes ele participou
+	- quais sessoes ele propos
+
+- reputação do site
+	- usuarios + ativos
+	- honra ao merito (maior qtde sessoes total)
+
+- (gravatar), site (link nas fotos)
+	- email no perfil pro gravatar
+
+- registrar retrospectiva (log-in required)
+	- texto livre
+	- quem participou 
+		associa
+		só quem confirmou
+
+========  (v 0.6) ========
+
+- notifications
+	- rss
+	- email
+	- twitter
+
+- os confirmados não devem editar o texto da sessão
+- comentários na sessão
+	- notifica os confirmados por email
+
 
 
 ========  (DÉBITO TÉCNICO) ========
@@ -10,30 +46,23 @@
  - create tags for the 'stable' versions in git
  - helper for the box div
 
+
+======== BUGS =======
+
+ - a message 'login successful' in the flash, at the edit user page...
+
 =========================  (BACKLOG) ===========================
 === NÀO FOI PRIORIZADO AINDA - ORDEM COMPLETAMENTE ALEATÓRIA ===
 ================================================================
 
 Backlog
 
-	- (gravatar), site (link nas fotos)
-		- emai no perfil pro gravatar
-
-	- translate to english
 
 	- extract google analytics code to a separate file
 
-	- registrar retrospectiva (log-in required)
-		- quem participou 
-			associa
-			só quem confirmou
-			+ adicionar alguém q não havia confirmado
+	- em registrar retrospectiva (log-in required)
 		- [ideia] : algumas classes prontas pra retro - tabela, carinhas
 
-	- notifications
-		- rss
-		- email
-		- twitter
 
 
 	- links to content in the home page should be read automaticaly from the content file
@@ -51,25 +80,20 @@ Backlog
 
 	- tagcloud
 		- tags
-
+		
+	- datepicker
+		
 	
 	- Limit people for a session
 		- just shows a line separating the n first
 	
-	- os confirmados podem editar só o texto da sessão
 
 	- limite no tamanho do nome da sessão (quebrando na tela)
 
-	- comentários nas seções (antes ou depois)
-	
 	- posts de blog
 		+ comentário
 	
-	- perfil
-		- tagcloud das sessoes q participou
-		- qtde sessões
-		- de quantas/quais sessoes ele participou
-		- quais sessoes ele propos
+	- tagcloud das sessoes q participou no perfil
 
 
 	- só pode propor quem tem pelo menos uma presença? (trust)
