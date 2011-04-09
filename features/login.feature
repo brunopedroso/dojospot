@@ -1,38 +1,38 @@
-# language: pt
+Feature: Do login
 
-Funcionalidade: Fazer login
+	In order to interact with the system
+	As a registered user
+	I want to log in to the system
 
-	Para poder interagir com o sistema (propor sessões, confirmar presença, etc)
-	Como um usuário registrado
-	Eu quero apresentar minhas credenciais e ser reconhecido no sistema
+	Scenario: Log out link should not appear if not logged in
 
-	Cenário: Link de log-out não deve aparecer se eu não estiver logado
+		Given I am not logged in
+		And I am on "the home page"
+		Then I should not see the "Log out" link
 
-		Dado que eu não estou logado no sistema
-		E que eu estou na "página inicial"
-		Então eu não devo ver o link "Log out"
+	Scenario: Log-in link brings to the login page
 
-	Cenário: Link de log-in leva à página de login
+		Given I am not logged in
+		And I am on "the home page"
+		When I follow "Log in"
+		Then I should be on "login page"
+
+
+	Scenario: Correct log-in brings back to home page, showing username and log-out link
 	
-		Dado que eu não estou logado no sistema
-		E que eu estou na "página inicial"
-		Quando eu clico em "Log in"
-		Então eu devo estar na "página de login"
+		Given I am not logged in
+		And I am on "login page"
+		And there is a user "foo" with password "secret"		
+ 		And I fill in "login" with "foo"
+		And I fill in "password" with "secret"
+		And I press "Log in"
+		Then I should be on "the home page"
+		And I should see "foo"
+		Then I should see the "Log out" link
+		Then I should not see the "Log in" link
 
-	Cenário: Login correto volta pra home, mostrando nome do usuário e link de log-out
-
-		Dado que eu não estou logado no sistema
-		E que eu estou na "página de login"
-		E que existe um usuário "foo" com senha "secret"
-		Quando eu preencho "login" com "foo"
-		E eu preencho "password" com "secret"
-		E eu aperto "Log in"
-		Então eu devo estar na "página inicial"
-		E eu devo ver "foo"
-		E eu devo ver um link "Log out"
-		E eu não devo ver o link "Log in"
 		
-	Cenário: Login incorreto
-	Cenário: Criação de conta
-		# Não vou especificar esses, herdo as specs do nifty_auth
+	Scenario: Incorrect login
+	Scenario: Sign up
+		# Wont spec these. I'll Inherit from nifty-auth specs.
 		
