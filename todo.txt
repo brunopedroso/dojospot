@@ -2,8 +2,8 @@
 
 ========  (v 0.4) ========
 
-- translate to english
-- deploy heroku
+√ translate storires to english
+- deploy in heroku
 - layout dojo-bsb, branches, etc
 
 ========  (v 0.5) ========
