@@ -1,150 +1,115 @@
-a {
-	color:#dd6600;
-}
-
-body {
-	margin: 0;
-	font-family: arial;
-	font-size: 18px;
-	color: #555;
-/*	color: #BB6644;*/
-}
-
-h2 {
-	margin: 10px 5px;
-}
-
-h2 a {
-	color: #777;
-	text-decoration: none;
-}
-
-input {
-	font-size: 16px;
-}
-
-textarea {
-	font-size: 16px;
-}
-
-
-label {
-	font-size: 20px;
-}
-
-
-td {
-	padding: 5px;
-}
-
-blockquote {
-	margin: 0 20%;
-	font-style: italic;
-}
-
-div.box img {
-	margin: 10px 40px; 
-	border: 4px solid #555
-}
-
-#container {
-	width:900px;
-	margin:20px auto;
-	height:auto !important;
-	padding-bottom: 20px; /* A mesma altura do rodapé, o valor deve ser negativo */
-}
-
-#footer {
-	background:#fedfcd;
-	position: relative;
-	margin-top: -35px; /* A mesma altura do rodapé, o valor deve ser negativo */
-	height: 20px;
-	clear:both;
-	padding: 7px 20px;
-	color: #888;
-	font-size:15px;
-}
-
-html, body, #wrapper {height: 100%;}
-
-body > #wrapper {
-	height: auto; 
-	min-height: 100%;
-}
-
 #logon_menu {
-	text-align: right;
-	background: #fc710b;
-}
-
-#logon_menu a {
-	color:#fedfcd;
-}
+  text-align: right;
+  background: #176c6c;
+  color: #41a0a0; }
+  #logon_menu a {
+    color: #7fd9d9; }
 
 #header {
-	height:140px;
-	line-height:180px; /* alinha o titulo no meio do div, verticalmente */
-	background: #fc710b;
-	margin: 0;
-	text-align: right;
-}
-
-#header a {
-	text-decoration:none;
-	color: #fedfcd;
-	font-family: "Courier";
-	font-size: 70px;
-	position: relative;
-	margin-right: 7%;
-	z-index:10; 
-}
-
-#header img {
-	position: relative; 
-	float: left;
-	height: 135;
-	margin-top: 6px;
-	margin-left: 20px;
-}
-
-
+  height: 140px;
+  line-height: 180px;
+  background: #176c6c;
+  margin: 0;
+  text-align: center;
+  text-shadow: 4px 4px 4px #333333;
+  font-family: "Architects Daughter", arial, serif; }
+  #header a {
+    text-decoration: none;
+    font-size: 120px;
+    position: relative;
+    margin-left: 140px;
+    z-index: 10;
+    color: #7fd9d9; }
+  #header img {
+    position: relative;
+    float: left;
+    height: 135;
+    margin-top: 6px;
+    margin-left: 20px; }
 
 div.box {
-	background: #fedfcd;
-	padding: 10px 20px;
-	margin-bottom: 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-}
+  background: #7fd9d9;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px; }
+  div.box h1 {
+    margin: 10px 0; }
 
-div.box h1 {
-	margin: 10px 0;
-}
+#footer {
+  background: #9ed9d9;
+  position: relative;
+  margin-top: -35px;
+  /* A mesma altura do rodapé, o valor deve ser negativo */
+  height: 20px;
+  clear: both;
+  padding: 7px 20px;
+  color: #437b7b;
+  font-size: 15px; }
 
+a {
+  color: #176c6c; }
+
+body {
+  margin: 0;
+  font-family: arial;
+  font-size: 18px;
+  color: #437b7b; }
+
+/*  background-image: url('/images/brasilia.png') */
+/*  background-position:left */
+/*  background-repeat: no-repeat */
+h2 {
+  margin: 10px 5px; }
+  h2 a {
+    text-decoration: none; }
+
+input, textarea {
+  font-size: 16px; }
+
+label {
+  font-size: 20px; }
+
+td {
+  padding: 5px; }
+
+blockquote {
+  margin: 0 20%;
+  font-style: italic; }
+
+div.box img {
+  margin: 10px 40px;
+  border: 4px solid #437b7b; }
+
+#container {
+  width: 900px;
+  margin: 20px auto;
+  height: auto !important;
+  padding-bottom: 20px;
+  /* A mesma altura do rodapé, o valor deve ser negativo */ }
+
+html, body, #wrapper {
+  height: 100%; }
+
+body > #wrapper {
+  height: auto;
+  min-height: 100%; }
 
 .page_title {
-	position:relative;
-/*	left:20px;*/
-	color:#fc710b;
-}
+  position: relative;
+  /*	left:20px; */
+  color: #176c6c; }
 
 .small_link {
-	font-size: small;
-}
-
-.claro {
-	color: #ff9922;
-}
+  font-size: small; }
 
 .link_northeast {
-	position: relative;
-	float: right;
-	margin-top: 20px;
-}
+  position: relative;
+  float: right;
+  margin-top: 20px; }
 
 .picture_frame {
-	background: #fedfcd;
-	border: 10px solid #fedfcd;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-}
+  background: #7fd9d9;
+  border: 10px solid #7fd9d9;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px; }
