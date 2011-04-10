@@ -1,4 +1,5 @@
 Capfile
+.bundle
 config/deploy.rb
 log/*.log
 db/development.sqlite3
