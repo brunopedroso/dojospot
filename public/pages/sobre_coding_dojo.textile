@@ -29,8 +29,8 @@ Algumas referências sobre coding-dojo:
 * outros dojos no brasil:
 ** "SP":http://www.dojosp.org/
 ** "Floripa":http://dojofloripa.wordpress.com/
-** "Brasília":http://groups.google.com.br/group/dojo-brasilia
 ** "Rio":http://dojorio.wordpress.com/
+(tem vários outros por aí...)
 
 <br/>
 

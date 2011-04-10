@@ -7,7 +7,7 @@ h1. Seja bem vindo!
 p{font-style:italic; text-align:justify}. Não existe nenhum tipo de restrição técnica para participar. Basta ter interesse, respeito e humildade... Basta vir "com o coração aberto":http://en.wikipedia.org/wiki/Zen_Mind,_Beginner%27s_Mind que tudo dará certo.
 
 
-p{font-style:italic; text-align:justify}. Vale a pena antes ler um pouco a respeito de "TDD":http://en.wikipedia.org/wiki/Test-driven_development, de "CodingDojo":sobre_coding_dojo, e sobre os princípios do "DojoSEA":sobre_o_dojo_sea.
+p{font-style:italic; text-align:justify}. Vale a pena antes ler um pouco a respeito de "TDD":http://en.wikipedia.org/wiki/Test-driven_development, e de "CodingDojo":sobre_coding_dojo.
 
 <br/><br/><br/><br/><br/>
 
@@ -22,13 +22,6 @@ p(((. (Eternamente em construção!)
 p(((. Confirmar sua presença no site é fundamental pois demonstra comprometimento, gera confiança e evita problemas logísticos.
 
 <br/>
-
-* *A preferência é do pessoal "da casa"*
-
-p(((. Temos espaço e tempo limitados. Nos reservamos o direito de dar preferência de participação aos colaboradores diretos e amigos mais próximos, por razões óbvias. 
-
-<br/><br/>
-
 
 <a href="http://projeteliberdadecapoeira.com.br/eventos/" target="_blank"> !{width:300px; float: right}http://projeteliberdadecapoeira.files.wordpress.com/2008/06/roda-do-capoeira.jpg! </a>
 
@@ -61,14 +54,7 @@ bq. O importante não é a chegada, mas o caminho
 *Quando acontecem as sessões?*
 
 Não temos um dia certo... Na verdade temos, mas com freqüência mudamos isso. 
-O melhor é ficar ligado "no site":../dojo_sessions/.
+O melhor é ficar ligado "no site":../dojo_sessions/. Até que o site tenha melhores mecanismos de notificação ;-)
 
-Enquanto não temos RSS nem notificações por email, fique de olho também na "nossa lista de emails":http://groups.google.com/group/dojosea
-
-<br/>
-
-*Onde fica a SEA?*
-
-<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=pt-BR&amp;t=h&amp;msa=0&amp;msid=113789762603456247386.00048515e584deac8355c&amp;ll=-15.758554,-47.887688&amp;spn=0.028912,0.036478&amp;z=14&amp;output=embed"></iframe><br /><small>Visualizar <a href="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=pt-BR&amp;t=h&amp;msa=0&amp;msid=113789762603456247386.00048515e584deac8355c&amp;ll=-15.758554,-47.887688&amp;spn=0.028912,0.036478&amp;z=14&amp;source=embed" style="color:#0000FF;text-align:left">sea</a> em um mapa maior</small>
-
+Enquanto não temos RSS nem notificações por email, fique de olho também na "nossa lista de emails":http://groups.google.com.br/group/dojo-brasilia
 
