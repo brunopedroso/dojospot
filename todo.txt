@@ -4,7 +4,8 @@
 
 √ translate storires to english
 √ layout dojo-bsb
-- deploy in heroku
+√ deploy in heroku
+- analitics
 - branches, etc
 
 ========  (v 0.5) ========
