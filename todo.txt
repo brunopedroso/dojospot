@@ -5,8 +5,8 @@
 √ translate storires to english
 √ layout dojo-bsb
 √ deploy in heroku
-- branches, etc
-- colors + deploy of dojosea
+√ branches, etc
+√ colors + deploy of dojosea
 - analitics
 
 
