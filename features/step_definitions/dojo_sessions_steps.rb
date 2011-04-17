@@ -6,9 +6,14 @@ end
 
 
 Given /^the following sessions exist:$/ do |table|
-  table.hashes.each do |hash|
+  table.hashes.each do |hash|	
 		hash[:date] = calculate_relative_date(hash[:date]) if hash[:date]
-		Factory.create :dojo_session, hash
+		d = Factory.create :dojo_session, hash
+		
+		#FIXME I dont know why the factory is not assigning the date :-/
+		d.date=hash[:date] if hash[:date]
+		d.save
+		
 	end
 end
 
@@ -49,7 +54,10 @@ Then /^I should see the following session details:$/ do |table|
 		within("div") do |div|
 	  	response.should contain(hash[:title])
 			date_time_place = /.*#{I18n.l(calculate_relative_date(hash[:date]), :format=>"pretty")}.*#{hash[:time]}.*#{hash[:place]}.*/
-			response.should have_tag("span", date_time_place)
+			within("span") do |span|
+				assert_contain date_time_place
+			end
+			# div.should have_tag("span", date_time_place)
 		end
 	end
 end

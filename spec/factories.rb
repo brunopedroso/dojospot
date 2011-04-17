@@ -1,3 +1,4 @@
+require 'factory_girl'
 
 Factory.sequence :dojo_session_title do |n|
 	"Sessão de dojo número #{n}"

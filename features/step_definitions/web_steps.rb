@@ -250,9 +250,10 @@ Then /^the "([^\"]*)" checkbox should not be checked$/ do |label|
 end
 
 Then /^(?:|I )should be on (.+)$/ do |page_name|
+
+	path = path_to(page_name)
+
   if defined?(Spec::Rails::Matchers)
-	
-		path = path_to(page_name)
 		
 		if (path.instance_of?(Regexp))
     	URI.parse(current_url).path.should =~ path
@@ -262,7 +263,13 @@ Then /^(?:|I )should be on (.+)$/ do |page_name|
 			
 		end
   else
-    assert_equal path_to(page_name), URI.parse(current_url).path
+	
+		if (path.instance_of?(Regexp))
+			assert_match path, URI.parse(current_url).path
+		else
+			assert_equal path_to(page_name), URI.parse(current_url).path
+		end
+    
   end
 end
 
@@ -286,7 +293,8 @@ Then /^I should see the "([^\"]*)" link$/ do |text|
   if defined?(Spec::Rails::Matchers)
     response.should have_tag('a', text)
   else
-    assert_contain 'a', text
+    # assert_contain 'a', text
+		assert_have_selector('a', :content=>text) 
   end
 end
 
@@ -294,6 +302,6 @@ Then /^I should not see the "([^\"]*)" link$/ do |text|
   if defined?(Spec::Rails::Matchers)
     response.should_not have_tag('a', text)
   else
-    assert_not_contain 'a', text
+    assert_have_no_selector('a', :content=>text) 
   end
 end
