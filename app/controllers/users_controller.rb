@@ -21,11 +21,14 @@ class UsersController < ApplicationController
 	def update
 		@user = User.find(params[:id])
 		@user.update_attributes(params[:user])
-		@user.save
-		#notice: we don't handle the case where user can't be updated...
+		if @user.save
+			flash[:notice] = "Your profile has been successfully updated!"
+			redirect_to(edit_profile_path)
+		else
+			render :edit
+		end
 		
-		flash[:notice] = "Your profile has been successfully updated!"
-		redirect_to(edit_profile_path)
+		
 	end
 
 end

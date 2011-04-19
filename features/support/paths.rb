@@ -30,6 +30,10 @@ module NavigationHelpers
     when /the edit profile page/
 			'/edit_profile'
 
+    when /the update profile page/
+			/\/users\/\d+/
+
+
     when /página de login/
       '/login'
 

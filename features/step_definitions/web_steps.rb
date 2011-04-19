@@ -225,6 +225,14 @@ Then /^the "([^\"]*)" field should contain "([^\"]*)"$/ do |field, value|
   end
 end
 
+Then /^the "([^"]*)" field should be empty$/ do |field|
+  if defined?(Spec::Rails::Matchers)
+    field_labeled(field).value.should be_empty
+  else
+    assert(field_labeled(field).value.empty?)
+  end
+end
+
 Then /^the "([^\"]*)" field should not contain "([^\"]*)"$/ do |field, value|
   if defined?(Spec::Rails::Matchers)
     field_labeled(field).value.should_not =~ /#{value}/

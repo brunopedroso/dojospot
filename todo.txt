@@ -3,6 +3,14 @@
 
 ========  (v 0.5) ========
 
+- (gravatar), site (link in pictures)
+	- email in the profile (for gravatar)
+
+- register retrospective (log-in required)
+	- free stylized text
+	- presences (associates)
+		- only confirmed
+
 - profile's reputation
 	- # of sessions
 	- which sessions he participated
@@ -12,13 +20,6 @@
 	- most active users
 	- honorary members (greater total # of sesisons)
 
-- (gravatar), site (link in pictures)
-	- email in the profile (for gravatar)
-
-- register retrospective (log-in required)
-	- free stylized text
-	- presences (associates)
-		- only confirmed
 
 ========  (v 0.6) ========
 
@@ -49,18 +50,19 @@
 ================================================================
 
 
-	- extract google analytics code to a separate file
-
+	- retrospectives: add link to session's code in github
+		- use the github readme file
+	
 	- in the retrospective retrospective
 		- [idea] : predefined css classes - table, smiles, ...
+
+	- upgrade to rspec2
+	- extract google analytics code to a separate file
 
 
 	- links to content in the home page should be read automaticaly from the content file
 
 	- delete profile
-
-	- css wih sass
-	- run migration on deploy
 
 	- 3 last sessins on home
 	- separate sessions by month in history
@@ -71,6 +73,9 @@
 	- tagcloud
 		- tags
 		
+	- tagcloud of the attended sessions, in user profiles
+
+
 	- datepicker in propose session
 		
 	
@@ -82,8 +87,6 @@
 
 	- blog posts, with comments
 	
-	- tagcloud of the attended sessions, in user profiles
-
 	- need at least one presence in order to propose? (trust)
 
 	- random picture in home
@@ -93,9 +96,7 @@
 	
 	- picture's credit as a bottom link
 	
-	- add link to session's code in github
-
-		
+	
 	
 ========= changelog =====
 

@@ -1,3 +1,4 @@
+require 'digest/md5'
 
 Given /^the name field is empty$/ do
 	doc = Nokogiri::HTML(response.body)
@@ -7,4 +8,9 @@ end
 
 When /^I follow the pencil image link$/ do
   click_link "edit_profile_link"
+end
+
+Then /^I should see a gravatar picure for "([^"]*)"$/ do |email|
+	hash = Digest::MD5.hexdigest(email.downcase)
+  assert_have_selector('img', :src=>"http://www.gravatar.com/avatar/#{hash}.png")
 end

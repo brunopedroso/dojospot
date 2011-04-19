@@ -39,7 +39,7 @@ div.box {
 #footer {
   background: #9ed9d9;
   position: relative;
-  margin-top: -35px;
+  /* margin-top: -10px */
   /* A mesma altura do rodapé, o valor deve ser negativo */
   height: 20px;
   clear: both;
@@ -103,6 +103,11 @@ body > #wrapper {
 .small_link {
   font-size: small; }
 
+.field_tip {
+  text-align: right;
+  margin-top: 5px;
+  font-size: small; }
+
 .link_northeast {
   position: relative;
   float: right;
@@ -111,5 +116,13 @@ body > #wrapper {
 .picture_frame {
   background: #7fd9d9;
   border: 10px solid #7fd9d9;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px; }
+
+.errorExplanation {
+  background: #ffb773;
+  color: #a65100;
+  padding: 1px 10px;
+  margin-bottom: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px; }

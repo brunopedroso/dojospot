@@ -4,18 +4,30 @@
 
 <div class="box" style="width:380;margin:auto">
 	
-	<h2 style="margin-bottom:40px">Edit your profile</h2>
+	<h2 style="margin-bottom:20px">Edit your profile</h2>
 		
 	<% form_for(@user) do |form| %>
-	
+		
+		<%= error_messages_for :user, :header_message=>nil %>
+		
 		<div style="width:320px">
 			<label for="user_name">Your real name:</label>
 			<%=form.text_field "name"%>
 
-			<p class="claro" style="text-align:right;margin-top:5px">
+			<p class="field_tip">
 				(Will be used instead of username)
 			</p>
+			
+			<label for="user_email">Your email:</label>
+			<%=form.text_field "email"%>
+			
+			<p class="field_tip">
+				(For displaying your <a href="http://www.gravatar.com/">gravatar</a>)
+			</p>
+			
 		</div>
+
+		<%= image_tag(gravatarUrlFor(@user.email), :style=>"margin-left:0") %>
 
 		<p style="text-align:right; margin-right:20px; margin-top:40px">
 			<input type="submit" name="save" value="save"/>

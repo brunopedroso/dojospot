@@ -3,6 +3,9 @@ $color-dark: #437B7B
 $color-middle: #41A0A0
 $color-clear: #7FD9D9
 $color-most-clear: #9ED9D9
+$color-complement-dark: #A65100
+$color-complement-middle: #FF7C00
+$color-complement-clear: #FFB773
 
 
 #logon_menu
@@ -50,7 +53,7 @@ div.box
 #footer
   background: $color-most-clear
   position: relative
-  margin-top: -35px
+  /* margin-top: -10px
   /* A mesma altura do rodapé, o valor deve ser negativo
   height: 20px
   clear: both
@@ -121,6 +124,11 @@ body > #wrapper
 .small_link
   font-size: small
 
+.field_tip
+  text-align: right
+  margin-top: 5px
+  font-size: small
+
 .link_northeast
   position: relative
   float: right
@@ -129,5 +137,13 @@ body > #wrapper
 .picture_frame
   background: $color-clear
   border: 10px solid $color-clear
+  -moz-border-radius: 10px
+  -webkit-border-radius: 10px
+
+.errorExplanation
+  background: $color-complement-clear
+  color: $color-complement-dark
+  padding: 1px 10px
+  margin-bottom: 10px
   -moz-border-radius: 10px
   -webkit-border-radius: 10px

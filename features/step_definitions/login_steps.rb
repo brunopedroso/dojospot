@@ -19,6 +19,12 @@ Given /^I am logged in as "([^\"]*)"$/ do |username|
 	click_button('Log in')
 end
 
+Given /^the user "([^"]*)" has email "([^"]*)"$/ do |username, email|
+  u =  User.find_by_username(username)
+	u.email = email
+	u.save
+end
+
 Given /^there is a user "([^\"]*)" with password "([^\"]*)"$/ do |user, pass|
   Factory.create :user, :username=>user, :password=>pass
 end

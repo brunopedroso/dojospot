@@ -1,4 +1,4 @@
-Feature: Edit Profile
+Feature: Edit Profile Name
 
 	In order to see my name in the interface
 	As a user
@@ -16,7 +16,7 @@ Feature: Edit Profile
 		Then I should see "bruno" in the confirmed users list
 	
 	Scenario: Navigating from the home page
-		And I am logged in as "bruno"
+		Given I am logged in as "bruno"
 		And I am on the home page
 		When I follow the pencil image link
 		Then I should be on the edit profile page

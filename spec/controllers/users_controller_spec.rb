@@ -41,8 +41,8 @@ describe UsersController do
 		
 		before :each do
 			@attrs = Factory.attributes_for(:user, :id=>1)
-			user = User.new(@attrs)
-			User.stub!(:find).and_return(user)
+			@user = User.new(@attrs)
+			User.stub!(:find).and_return(@user)
 		end
 		
 		it "should render the edit template again" do
@@ -56,13 +56,33 @@ describe UsersController do
 		end
 		
 		it 'should update the user' do
-			user = mock_model(User)
-			User.should_receive(:find).with(@attrs[:id].to_s).and_return(user)
-			user.should_receive(:update_attributes).with(@attrs.stringify_keys)
-			user.should_receive(:save)
+			# user = mock_model(User)
+			User.should_receive(:find).with(@attrs[:id].to_s).and_return(@user)
+			@user.should_receive(:update_attributes).with(@attrs.stringify_keys)
+			@user.should_receive(:save)
 			put :update, :user=>@attrs, :id=>@attrs[:id]
 		end
+		
+		describe "with invalid user" do
+			
+			before :each do
+				@user.stub!(:valid?).and_return(false)
+			end
+			
+			it "should render the edit templage again" do
+				put :update, :user=>@attrs, :id=>@attrs[:id]
+				response.should render_template(:edit)
+			end
+
+			it "should have no flash notice" do
+				put :update, :user=>@attrs, :id=>@attrs[:id]
+				flash[:notice].should be_nil
+			end
+
+		end
+
 		
 	end
 	
 end
+
