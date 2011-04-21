@@ -163,8 +163,8 @@ describe 'dojo partial' do
 				hash1 = Digest::MD5.hexdigest(user1.email.downcase)
 				hash2 = Digest::MD5.hexdigest(user2.email.downcase)
 				
-				response.should have_tag('img[src=?]', "http://www.gravatar.com/avatar/#{hash1}.png")
-				response.should have_tag('img[src=?]', "http://www.gravatar.com/avatar/#{hash2}.png")
+				response.should have_tag('img[src=?]', /http\:\/\/www.gravatar.com\/avatar\/#{hash1}\.png.*/)
+				response.should have_tag('img[src=?]', /http\:\/\/www.gravatar.com\/avatar\/#{hash2}\.png.*/)
 			end
 			
 			

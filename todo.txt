@@ -5,7 +5,7 @@
 
 - gravatar:
 	√ email in the profile (for gravatar)
-	- pictures in sessions confirmation
+	√ pictures in sessions confirmation
 	- all users' page (random order)
 	- site field - link to user home page in pictures
 	
@@ -13,23 +13,27 @@
 	- link deliberate and practice http://www.google.com.br/search?hl=pt-BR&client=firefox-a&hs=nhE&rls=org.mozilla:pt-BR:official&sa=X&ei=ZCWwTY7dAYjk0QGH6LGFAQ&ved=0CCwQBSgA&q=deliberate+practice&spell=1&biw=1296&bih=672
 	
 	
+========  (v 0.6) ========
+	
 - register proponent
-- register retrospective (log-in required)
+- register retrospective 
+	(log-in required)
 	- free stylized text
 	- presences (associates)
 		- only confirmed
 
 - profile's reputation
 	- # of sessions
-	- which sessions he participated
-	- which sessions he proposed
+		- attended
+		- proposed
 
 - dojo's reputations
 	- most active users
 	- honorary members (greater total # of sesisons)
 
 
-========  (v 0.6) ========
+========  (v 0.7) ========
+
 
 - notifications
 	- rss
@@ -57,6 +61,8 @@
 === Not prioritized at all !!								 ===
 ================================================================
 
+
+	- internationalization
 
 	- retrospectives: add link to session's code in github
 		- use the github readme file

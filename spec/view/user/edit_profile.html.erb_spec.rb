@@ -65,7 +65,7 @@ describe 'edit profile page' do
 		@user.email = "test"
 		hash = Digest::MD5.hexdigest(@user.email)
 		render 'users/edit'
-		response.should have_tag('img[src=?]', "http://www.gravatar.com/avatar/#{hash}.png")
+		response.should have_tag('img[src=?]', /http\:\/\/www.gravatar.com\/avatar\/#{hash}\.png.*/)
 	end
 	
 	it 'should have an input field for email' do
