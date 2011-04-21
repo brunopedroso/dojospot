@@ -1,13 +1,15 @@
 
-<div class="box" style="width:400px; margin:auto">
+<div class="box" style="float:left">
 
 	<h1>All Users</h1>
 
 	<% for user in @users do %>
-	
-		<%= image_tag(gravatarUrlFor(user.email)) %>
-		<%= user.name_or_username %>
+		
+		<div id="name" style="text-align:center;float:left;margin:10px 0px">
+			<%= image_tag(gravatarUrlFor(user.email), :style=>'display:table') %>
+			<span><%= user.name_or_username %></span>
+		</div>
 	
 	<% end %>
-
+	
 </div>
