@@ -33,6 +33,8 @@ module NavigationHelpers
     when /the update profile page/
 			/\/users\/\d+/
 
+    when /all participants' page/
+			'/users'
 
     when /página de login/
       '/login'

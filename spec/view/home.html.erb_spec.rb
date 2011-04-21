@@ -92,5 +92,10 @@ describe 'home page' do
 		render('home/index')
 		response.should have_tag('a[href=?]', "/history", 'Sessions history')
 	end
+
+	it 'should have a link to the all participants page' do
+		render('home/index')
+		response.should have_tag('a[href=?]', "/users", 'Who?')
+	end
 	
 end
