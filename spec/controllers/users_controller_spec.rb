@@ -85,10 +85,19 @@ describe UsersController do
 	end
 
 	describe "index action" do
+
 	  it "should render index template" do
 	    get :index
 	    response.should render_template(:index)
 	  end
+
+	  it "should find all users" do
+			my_array = [Factory.create(:user),Factory.create(:user)]
+			User.should_receive(:find).with(:all).and_return(my_array)
+	    get :index
+			assigns[:users].should == my_array
+	  end
+
 	end
 	
 end

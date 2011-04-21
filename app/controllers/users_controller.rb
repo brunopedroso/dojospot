@@ -30,6 +30,7 @@ class UsersController < ApplicationController
 	end
 	
 	def index
+		@users=User.find(:all)
 	end
 
 end

@@ -22,7 +22,7 @@ Feature: Do login
 	
 		Given I am not logged in
 		And I am on "login page"
-		And there is a user "foo" with password "secret"		
+		And there is a user "foo" with password "secret"
  		And I fill in "login" with "foo"
 		And I fill in "password" with "secret"
 		And I press "Log in"

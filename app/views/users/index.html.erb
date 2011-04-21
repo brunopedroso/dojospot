@@ -3,4 +3,11 @@
 
 	<h1>All Users</h1>
 
+	<% for user in @users do %>
+	
+		<%= image_tag(gravatarUrlFor(user.email)) %>
+		<%= user.name_or_username %>
+	
+	<% end %>
+
 </div>
