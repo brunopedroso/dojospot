@@ -25,7 +25,7 @@ Feature: List next sessions
 
 		Given the following sessions exist:
 			|title		|date		|time	|place	|
-			|session 1	|today	|qq		|qq		|
+			|session 1	|today		|qq		|qq		|
 		And I am on "next sessions page"
 		Then I should see the following session details:
 			|title		|date		|time	|place	|

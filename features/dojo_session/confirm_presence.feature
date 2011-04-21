@@ -16,6 +16,7 @@ Feature: Confirm presence in a dojo session
 		And I press "Log in"
 		Then I should be on "next sessions page"
 		And I should see "foo" in the confirmed users list
+		# And I should see a gravatar picure for "foo"
 
 
 	Scenario: Confirm presence
@@ -27,6 +28,7 @@ Feature: Confirm presence in a dojo session
 		Then I should be on "next sessions page"
 		Then I should not see the "edit" link
 		And I should see "bruno" in the confirmed users list
+		# And I should see a gravatar picure for "bruno"
 
 
 	Scenario: Unconfirm presence
@@ -38,3 +40,4 @@ Feature: Confirm presence in a dojo session
 		When I follow "unconfirm"
 		Then I should be on "next sessions page"
 		And I should not see "bruno" in the confirmed users list
+		# And I should not see a gravatar picure for "bruno"
