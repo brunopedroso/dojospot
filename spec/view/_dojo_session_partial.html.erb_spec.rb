@@ -152,7 +152,22 @@ describe 'dojo partial' do
 				response.should have_tag('div[id=?] ol li', "dojo_session_#{@dojo_session.id}", :text=>/.*#{user2.username}.*/)
 				response.should have_tag('div[id=?] ol li', "dojo_session_#{@dojo_session.id}", :text=>/.*#{user3.username}.*/)
 			end
-	
+			
+			it 'should show the gravatar picture of the confirmed users' do
+				user1 = Factory.create(:user)
+				user2 = Factory.create(:user)
+				@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[user1, user2])
+				render_partial
+				
+				#TODO didnt like this here.. =/
+				hash1 = Digest::MD5.hexdigest(user1.email.downcase)
+				hash2 = Digest::MD5.hexdigest(user2.email.downcase)
+				
+				response.should have_tag('img[src=?]', "http://www.gravatar.com/avatar/#{hash1}.png")
+				response.should have_tag('img[src=?]', "http://www.gravatar.com/avatar/#{hash2}.png")
+			end
+			
+			
 			
 			it 'should show a link to unconfirm, if the current_user is already confirmed' do
 				@dojo_session = Factory.create(:dojo_session, :confirmed_users=>[@user])

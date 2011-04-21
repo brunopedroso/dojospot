@@ -9,6 +9,7 @@ Feature: Confirm presence in a dojo session
 		Given I am not logged in
 		And there is a session scheduled for tomorow
 		And there is a user "foo" with password "secret"
+		And the user "foo" has email "foo@example.com"
 		And I am on "next sessions page"
 		When I follow "Confirm my presence"
 		And I fill in "login" with "foo"
@@ -16,28 +17,30 @@ Feature: Confirm presence in a dojo session
 		And I press "Log in"
 		Then I should be on "next sessions page"
 		And I should see "foo" in the confirmed users list
-		# And I should see a gravatar picure for "foo"
+		And I should see a gravatar picure for "foo@example.com"
 
 
 	Scenario: Confirm presence
 	
 		Given I am logged in as "bruno"
+		And the user "bruno" has email "bruno@example.com"
 		And there is a session scheduled for tomorow
 		And I am on "next sessions page"
 		When I follow "Confirm my presence"
 		Then I should be on "next sessions page"
 		Then I should not see the "edit" link
 		And I should see "bruno" in the confirmed users list
-		# And I should see a gravatar picure for "bruno"
+		And I should see a gravatar picure for "bruno@example.com"
 
 
 	Scenario: Unconfirm presence
 	
 		Given I am logged in as "bruno"
+		And the user "bruno" has email "bruno@example.com"
 		And there is a session with title "my session" scheduled for tomorow
 		And I am confirmed in the session "my session"
 		And I am on "next sessions page"
 		When I follow "unconfirm"
 		Then I should be on "next sessions page"
 		And I should not see "bruno" in the confirmed users list
-		# And I should not see a gravatar picure for "bruno"
+		And I should not see a gravatar picure for "bruno@example.com"
