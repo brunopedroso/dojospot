@@ -95,7 +95,7 @@ describe 'home page' do
 
 	it 'should have a link to the all participants page' do
 		render('home/index')
-		response.should have_tag('a[href=?]', "/users", 'Who?')
+		response.should have_tag('a[href=?]', "/users", 'Who we are?')
 	end
 	
 end

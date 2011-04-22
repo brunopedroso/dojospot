@@ -7,7 +7,7 @@ Feature: All participants page
 	Scenario: Navigate from home
 	
 		Given I am on "the home page"
-		When I follow "Who?"
+		When I follow "Who we are?"
 		Then I should be on "all participants' page"
 
 	Scenario: Presents gravatar picutres and names
