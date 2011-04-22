@@ -3,3 +3,7 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    attributes:
+      user:
+        page_url: "Personal page URL"

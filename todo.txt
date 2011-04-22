@@ -6,7 +6,7 @@
 - gravatar:
 	√ email in the profile (for gravatar)
 	√ pictures in sessions confirmation
-	- all users' page (random order)
+	√ all users' page (random order)
 	- site field - link to user home page in pictures
 	
 	- small acts badge http://smallactsmanifesto.org/community-badges/

@@ -25,6 +25,12 @@ Given /^the user "([^"]*)" has email "([^"]*)"$/ do |username, email|
 	u.save
 end
 
+Given /^the user "([^"]*)" has page_url "([^"]*)"$/ do |username, page_url|
+  u =  User.find_by_username(username)
+	u.page_url = page_url
+	u.save
+end
+
 Given /^there is a user "([^\"]*)" with password "([^\"]*)"$/ do |user, pass|
   Factory.create :user, :username=>user, :password=>pass
 end

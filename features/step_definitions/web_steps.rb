@@ -313,3 +313,9 @@ Then /^I should not see the "([^\"]*)" link$/ do |text|
     assert_have_no_selector('a', :content=>text) 
   end
 end
+
+
+Then /^I should see the "([^"]*)" link pointing to "([^"]*)"$/ do |text, href|
+  assert_have_selector('a', :content=>text, :href=>href) 
+end
+

@@ -25,9 +25,14 @@
 				(For displaying your <a href="http://www.gravatar.com/">gravatar</a>)
 			</p>
 			
+			<%= image_tag(gravatarUrlFor(@user.email), :style=>"margin-left:0") %>
+			
+			<label for="user_page_url">Personal page URL:</label>
+			<%=form.text_field "page_url"%>
+			
 		</div>
 
-		<%= image_tag(gravatarUrlFor(@user.email), :style=>"margin-left:0") %>
+		
 
 		<p style="text-align:right; margin-right:20px; margin-top:40px">
 			<input type="submit" name="save" value="save"/>

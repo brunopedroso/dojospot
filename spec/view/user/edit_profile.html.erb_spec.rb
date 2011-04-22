@@ -45,6 +45,7 @@ describe 'edit profile page' do
 		@user = mock_model(User)
 		@user.stub!(:name).and_return('a name')
 		@user.stub!(:email).and_return('an email')
+		@user.stub!(:page_url).and_return('')
 		@user.stub!(:errors).and_return(error)
 		
 		assigns[:user] = @user
@@ -72,6 +73,12 @@ describe 'edit profile page' do
 		render 'users/edit'
 		response.should have_tag('input[type=?][name=?]', 
 															'text', 'user[email]')
+	end
+
+	it 'should have an input field for personal page url' do
+		render 'users/edit'
+		response.should have_tag('input[type=?][name=?]', 
+															'text', 'user[page_url]')
 	end
 	
 	

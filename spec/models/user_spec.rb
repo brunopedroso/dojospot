@@ -106,4 +106,33 @@ describe User do
 		other.name.should == name
 	end
 
+	it 'should store the page_url in the database' do
+		user = new_user
+		user.page_url = "http://myurl.com"
+		user.save!
+		other = User.find user.id
+		other.page_url.should == user.page_url
+	end
+
+  it "should require well formed url" do
+    new_user(:page_url => 'invalid url').should have(1).error_on(:page_url)
+		new_user(:page_url => 'invalid_url').should have(1).error_on(:page_url)
+		new_user(:page_url => 'function(){any_malicious_code()}').should have(1).error_on(:page_url)
+		
+		#need to fill protocol http or https
+		new_user(:page_url => 'www.valid_url.com?any=thing').should have(1).error_on(:page_url)
+		
+		new_user(:page_url => 'http://valid_url.com?any=thing').should have(0).errors
+		new_user(:page_url => 'https://user@valid_url.com:8080?any=thing').should have(0).errors
+  end
+	
+	it 'should store the page_url in the database with mass assignment' do
+		user = Factory.create(:user)
+		page_url = "http://qwe.com"
+		user.update_attributes!({:page_url=>page_url})
+		user.save
+		other = User.find user.id
+		other.page_url.should == page_url
+	end
+
 end

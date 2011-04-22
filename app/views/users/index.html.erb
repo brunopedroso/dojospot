@@ -6,8 +6,8 @@
 	<% for user in @users do %>
 		
 		<div id="name" style="text-align:center;float:left;margin:10px 0px">
-			<%= image_tag(gravatarUrlFor(user.email), :style=>'display:table') %>
-			<span><%= user.name_or_username %></span>
+			<%= link_to_page_url_if_needed(user, image_tag(gravatarUrlFor(user.email), :style=>'display:table')) %>
+			<span><%= link_to_page_url_if_needed(user, user.name_or_username) %></span>
 		</div>
 	
 	<% end %>
