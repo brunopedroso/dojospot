@@ -1,7 +1,7 @@
 h1. O que é Coding Dojo?
 
 
-bq<>. "A Coding Dojo is a meeting where a bunch of coders get together to work on a programming challenge. They are there have fun and to engage in "DeliberatePractice":http://codingdojo.org/cgi-bin/wiki.pl?DeliberatePractice in order to improve their skills."	"codingdojo.org":http://codingdojo.org/cgi-bin/wiki.pl?WhatIsCodingDojo
+bq<>. "A Coding Dojo is a meeting where a bunch of coders get together to work on a programming challenge. They are there have fun and to engage in "Deliberate":http://codingdojo.org/cgi-bin/wiki.pl?DeliberatePractice "Practice":http://www.google.com.br/search?hl=pt-BR&client=firefox-a&hs=nhE&rls=org.mozilla:pt-BR:official&sa=X&ei=ZCWwTY7dAYjk0QGH6LGFAQ&ved=0CCwQBSgA&q=deliberate+practice&spell=1&biw=1296&bih=672 in order to improve their skills."	"codingdojo.org":http://codingdojo.org/cgi-bin/wiki.pl?WhatIsCodingDojo
 
 <br/>
 
