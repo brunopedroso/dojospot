@@ -101,7 +101,7 @@
 	
 ========= changelog =====
 
-Features v0.3 - 08/ago/2010
+========  (v 0.3) ========
 
 	√ show name instead of username
 		√ edit profile - just name
@@ -112,6 +112,9 @@ Features v0.3 - 08/ago/2010
 	
 	√ powered by and contact information at the footer of the page
 	
+========  (v 0.3.1) ========
+	last versions deployed in dojo-sea before replication to dojo-brasilia
+	
 ========  (v 0.4) ========
 
 	√ translate storires to english
@@ -120,8 +123,6 @@ Features v0.3 - 08/ago/2010
 	√ branches, etc
 	√ colors + deploy of dojosea
 	√ analitics
-
-
 
 ========  (v 0.5) ========
 
