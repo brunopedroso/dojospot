@@ -4,9 +4,6 @@
 	
 ========  (v 0.6) ========
 	
-- internationalization
-	- cucumber in en
-
 - register proponent
 - register retrospective 
 	(log-in required)
@@ -141,4 +138,7 @@ Features v0.3 - 08/ago/2010
 
 	√ links open in another window.
 
+========  (v 0.5.2) ========
 
+	√ internationalization
+		√ cucumber and rspec run in english
