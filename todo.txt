@@ -4,6 +4,9 @@
 	
 ========  (v 0.6) ========
 	
+- internationalization
+	- cucumber in en
+
 - register proponent
 - register retrospective 
 	(log-in required)
@@ -50,8 +53,6 @@
 === Not prioritized at all !!								 ===
 ================================================================
 
-
-	- internationalization
 
 	- retrospectives: add link to session's code in github
 		- use the github readme file
@@ -135,3 +136,9 @@ Features v0.3 - 08/ago/2010
 
 		√ small acts badge http://smallactsmanifesto.org/community-badges/
 		√ link deliberate and practice http://www.google.com.br/search?hl=pt-BR&client=firefox-a&hs=nhE&rls=org.mozilla:pt-BR:official&sa=X&ei=ZCWwTY7dAYjk0QGH6LGFAQ&ved=0CCwQBSgA&q=deliberate+practice&spell=1&biw=1296&bih=672
+
+========  (v 0.5.1) ========
+
+	√ links open in another window.
+
+

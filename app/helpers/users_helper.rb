@@ -12,7 +12,7 @@ module UsersHelper
 		if user.page_url.blank?
 			text
 		else
-			link_to text, user.page_url
+			link_to(text, user.page_url, :target=>'_blank')
 		end
 	end
 	
