@@ -1,4 +1,4 @@
-<%= link_to_function '<< Back', 'history.back()' %>
+<%= link_to_function t('messages.back'), 'history.back()' %>
 <div class="box" style="margin-top:5px;" id="dojo_session_<%=@dojo_session.id%>">
 
 	<%= render :partial=> 'dojo_session', :object=> @dojo_session %>

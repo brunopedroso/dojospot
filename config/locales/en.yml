@@ -47,6 +47,7 @@ en:
     cancel: "Cancel"
     you: "you"
     propose_a_new_session: "Propose a new session"
+    no_proposed_sessions: "No proposed sessions at the moment"
     confirmed_so_far: "Confirmed so far"
     unconfirm: "unconfirm"
     confirm_my_presence: "Confirm my presence!"

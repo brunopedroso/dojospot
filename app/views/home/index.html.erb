@@ -64,7 +64,7 @@
 					</div>
 
 				<% else %>
-					<p>No proposed sessions at the moment</p>
+					<p><%= t('messages.no_proposed_sessions') %></p>
 
 					<% if logged_in? && current_user.has_propose_priv? %>
 						<div style="text-align:right; margin-right:10px">

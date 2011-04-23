@@ -165,6 +165,7 @@ pt-BR:
       cancel: "Cancelar"
       you: "você"
       propose_a_new_session: "Proponha uma sessão"
+      no_proposed_sessions: "Nenhuma sessão proposta no momento"
       confirmed_so_far: "Confirmados até agora"
       unconfirm: "desconfirmar"
       confirm_my_presence: "Confirmar minha preseça!"
