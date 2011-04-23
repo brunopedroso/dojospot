@@ -28,5 +28,5 @@ Feature: Edit Profile Gravatar
 		When I fill in "user[email]" with "anInvalidEmail"
 		And I press "save"
 		Then I should be on the update profile page
-		Then I should see "Email não é válido"
+		Then I should see "Email is invalid"
 		And the "Your Email:" field should contain "anInvalidEmail"

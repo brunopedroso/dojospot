@@ -43,7 +43,7 @@ When /^I fill the proposal with "([^\"]*)", "([^\"]*)", "([^\"]*)", "([^\"]*)", 
 	
 	date = calculate_relative_date(date)
 	
-	fill_in "dojo_session[date]", :with => date.to_s_br
+	fill_in "dojo_session[date]", :with => date.to_s
 	fill_in "dojo_session[time]", :with => time
 end
 
