@@ -21,8 +21,8 @@
 			<ul style="list-style-type: none">
 				<li><%= link_to "Sobre Coding Dojo", page_path('sobre_coding_dojo') %></li>
 				<li><%= link_to "Como participar?", page_path('como_participar') %></li>
-				<li><%= link_to "Sessions history", history_index_path %></li>
-				<li><%= link_to "Who we are?", users_path %></li>
+				<li><%= link_to t('messages.sessions_history'), history_index_path %></li>
+				<li><%= link_to t('messages.who_we_are'), users_path %></li>
 			</ul>
 			
 		</td>
@@ -37,7 +37,7 @@
 		
 			<div class="box" id="next_sessions" style="margin-bottom: 5px">
 
-				<h2>Next sessions</h2>	
+				<h2><%= t('messages.next_sessions')%></h2>	
 
 				<% unless @dojo_sessions.empty? %>
 
@@ -60,7 +60,7 @@
 					</ul>
 
 					<div style="text-align: right">
-						<%= link_to("more details >>", dojo_sessions_path) %>
+						<%= link_to(t('messages.more_details'), dojo_sessions_path) %>
 					</div>
 
 				<% else %>

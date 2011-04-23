@@ -30,11 +30,11 @@
 			
 			<div id="logon_menu">
 				<% if logged_in? %>
-					Welcome, <b> <%= current_user.name_or_username %> </b>
+					<%= t('messages.welcome') %>, <b> <%= current_user.name_or_username %> </b>
 					<%= link_to image_tag("edit-pencil.gif",{:border=>0, :alt=>'edit profile'}), edit_profile_path, :id=>'edit_profile_link' %> /
-					<%= link_to "Log out", logout_path%>
+					<%= link_to t('messages.logout'), logout_path%>
 				<% else %>
-					<%= link_to "Log in", login_path%>
+					<%= link_to t('messages.login'), login_path%>
 				<% end %>
 				&nbsp;
 			</div>
@@ -45,6 +45,11 @@
 			</div>
 
 			<div id="container">
+				
+				<div style="text-align:center; margin-bottom:10px">
+					<%=flash[:notice]%>	
+				</div>
+				
 				<%= yield %>
 			</div>
 
@@ -52,7 +57,7 @@
 		
 		<div id="footer">
 			<span style="text-align:left"><a href="http://smallactsmanifesto.org" target="_blank" title="Small Acts Manifesto"><img src="http://smallactsmanifesto.org/media/images/smallacts-badge-80x15-blue.png" style="border: none;" alt="Small Acts Manifesto" /></a></span>
-			<span style="float:right">Host your own coding dojo: <a target="_blank" href="http://github.com/brunopedroso/dojospot">DojoSpot</a></span>
+			<span style="float:right"><%= t('messages.host_your_own_coding_dojo') %>: <a target="_blank" href="http://github.com/brunopedroso/dojospot">DojoSpot</a></span>
 		</div>
 
 	

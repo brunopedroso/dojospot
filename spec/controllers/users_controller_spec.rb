@@ -52,7 +52,7 @@ describe UsersController do
 		
 		it "should show a success message" do
 			put :update, :user=>@attrs, :id=>@attrs[:id]
-			flash[:notice].should == "Your profile has been successfully updated!"
+			flash[:notice].should == "Profile successfully updated!"
 		end
 		
 		it 'should update the user' do

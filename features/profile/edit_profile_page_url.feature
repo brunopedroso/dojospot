@@ -19,7 +19,7 @@ Feature: Edit Profile Page Url
 		And I fill in "user[page_url]" with "invalid url"
 		And I press "save"
 		Then I should be on the update profile page
-		And I should see "Personal page URL is invalid"
+		And I should see "Personal Page URL is invalid"
 		And the "Personal page URL:" field should contain "invalid url"
 		
 	

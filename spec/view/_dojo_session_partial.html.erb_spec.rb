@@ -56,7 +56,7 @@ describe 'dojo partial' do
 				session[:user_id] = user.id
 			
 				render_partial
-				response.should have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/edit", 'edit')
+				response.should have_tag('a[href=?]', "/dojo_sessions/#{@dojo_session.id}/edit", 'Edit')
 			end
 			
 			it 'should not show a link to edit if i am NOT a confirmed user' do

@@ -3,36 +3,36 @@
 
 	<table border="0" cellspacing="5" cellpadding="5">
 		<tr>
-			<td align="right"><%= f.label :title, 'Title' %>:</td>
+			<td align="right"><%= f.label t('activerecord.attributes.dojo_session.title') %>:</td>
 			<td><%= f.text_field 'title', :size=>45 %></td>
 		</tr>
 
 		<tr>
-			<td align="right" valign="top"><%= f.label :text, 'Text' %>:</td>
+			<td align="right" valign="top"><%= f.label t('activerecord.attributes.dojo_session.text') %>:</td>
 			<td>
 				<%= f.text_area 'text', :cols=>70, :rows=>20 %><br/>
-				<span class="claro">(Use <a target="_blank" href="http://redcloth.org/hobix.com/textile/">textile formatting</a>)</span>
+				<span class="claro"><%= t('activerecord.attributes.dojo_session.textile_format_tip') %></span>
 			</td>
 		</tr>
 
 		<tr>
-			<td align="right"><%= f.label :text, 'Place' %>:</td>
+			<td align="right"><%= f.label t('activerecord.attributes.dojo_session.place') %>:</td>
 			<td><%= f.text_field 'place', :size=>45 %></td>
 		</tr>
 
 		<tr>
-			<td align="right"><%= f.label :text, 'Date' %>:</td>
+			<td align="right"><%= f.label t('activerecord.attributes.dojo_session.date') %>:</td>
 			<td>
 				<%= f.text_field 'date', :size=>10 %>
-				<span class="claro">(Use dd/mm/yyyy format)</span>
+				<span class="claro"><%= t('activerecord.attributes.dojo_session.date_format_tip') %></span>
 			</td>
 		</tr>
 
 		<tr>
-			<td align="right"><%= f.label :text, 'Time' %>:</td>
+			<td align="right"><%= f.label t('activerecord.attributes.dojo_session.time') %>:</td>
 			<td>
 				<%= f.text_field 'time', :size=>10 %>
-				<span class="claro">(Free text)</span>
+				<span class="claro"><%= t('activerecord.attributes.dojo_session.time_format_tip') %></span>
 			</td>
 		</tr>
 

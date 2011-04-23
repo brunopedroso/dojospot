@@ -18,7 +18,7 @@ describe 'edit profile page' do
 	it 'should have a save button' do
 		render 'users/edit'
 		response.should have_tag('input[type=?][name=?][value=?]', 
-															'submit', 'save', 'save')
+															'submit', 'save', 'Save')
 	end
 	
 	it 'should have a form that puts to /user/' do
@@ -30,11 +30,6 @@ describe 'edit profile page' do
 		end
 	end
 	
-	it 'should display the flash[:notice]' do
-		flash[:notice] = "any message"
-		render 'users/edit'
-		response.should include_text flash[:notice]
-	end
 
 	it 'should display validation errors' do
 

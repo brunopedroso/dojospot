@@ -46,5 +46,5 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   
 	#TODO there must be a better way to do that...
-	config.i18n.default_locale = "pt-BR" unless ENV['RAILS_ENV'] == 'cucumber'
+	config.i18n.default_locale = "pt-BR" unless (ENV['RAILS_ENV'] == 'cucumber' or ENV['RAILS_ENV'] == 'test')
 end

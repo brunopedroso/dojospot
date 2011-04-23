@@ -29,4 +29,4 @@ Feature: Edit Profile Gravatar
 		And I press "save"
 		Then I should be on the update profile page
 		Then I should see "Email is invalid"
-		And the "Your Email:" field should contain "anInvalidEmail"
+		And the "Email:" field should contain "anInvalidEmail"

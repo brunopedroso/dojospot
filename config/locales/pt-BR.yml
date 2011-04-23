@@ -129,8 +129,54 @@ pt-BR:
         less_than_or_equal_to: "precisa ser menor ou igual a {{count}}"
         odd: "precisa ser ímpar"
         even: "precisa ser par"
-        
-        
+      
     attributes:
+      dojo_session:
+        title: "Título"
+        text: "Texto"
+        place: "Local"
+        date: "Data"
+        time: "Horáro"
+        date_format_tip: "(Use o formato dd/mm/yyyy)"
+        time_format_tip: "(Texto livre)"
+        textile_format_tip: '(Use <a target="_blank" href="http://redcloth.org/hobix.com/textile/">formatação textile</a>)'
       user:
-        page_url: "Página pessoal"
+        username: "Nome de usuário"
+        password: "Senha"
+        password_again: "Senha de novo"
+        name: "Nome"
+        name_tip: "Será usado no lugar do username"
+        email: "Email"
+        email_tip: 'Para mostrar o seu <a href="http://www.gravatar.com/">gravatar</a>'
+        page_url: "URL da sua página pessoal"
+
+  messages:
+      welcome: "Bem vindo"
+      login: "log in"
+      logout: "sair"
+      sessions_history: "Sessões anteriores"
+      who_we_are: "Quem somos nós?"
+      next_sessions: "Próximas sessões"
+      more_details: "mais detalhes >>"
+      host_your_own_coding_dojo: "Hospede seu próprio coding dojo"
+      back: "<< Voltar"
+      edit: "Editar"
+      save: "Salvar"
+      cancel: "Cancelar"
+      you: "você"
+      propose_a_new_session: "Proponha uma sessão"
+      confirmed_so_far: "Confirmados até agora"
+      unconfirm: "desconfirmar"
+      confirm_my_presence: "Confirmar minha preseça!"
+      nobody_confirmed_yet: "Ninguém confirmado ainda..."
+      edit_your_profile: "Seu Perfil"
+      profile_successfully_updated: "Seu perfil foi atualizado com sucesso!"
+      thanks_for_signup: "Cadastro feito! Você já está logado."
+      login_title: "Log in"
+      login_ok: "Você está logado"
+      login_nok: "Login ou senha inválidos"
+      logoff: "Até logo."
+      dont_have_account: "Ainda não tem uma conta?"
+      already_have_account: "Já tem uma conta?"
+      create_an_account: "crie uma!"
+      all_users: "Todos os participantes"

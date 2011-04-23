@@ -1,5 +1,5 @@
 
-<h2 class="page_title"> Next sessions </h2>
+<h2 class="page_title"><%= t('messages.next_sessions') %></h2>
 
 <% unless @dojo_sessions.empty? %>
 
@@ -15,8 +15,8 @@
 
 <% if logged_in? && current_user.has_propose_priv? %>
 	<div style="text-align:right; margin-right:10px">
-		<%= link_to "Propose a new session", new_dojo_session_path %>
+		<%= link_to t('messages.propose_a_new_session'), new_dojo_session_path %>
 	</div>
 <% end%>
 
-<%= link_to '<< Back', root_path %>
+<%= link_to t('messages.back'), root_path %>

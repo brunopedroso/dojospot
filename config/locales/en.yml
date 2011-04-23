@@ -13,6 +13,52 @@ en:
 
   activerecord:
     attributes:
+      dojo_session:
+        title: "Title"
+        text: "Text"
+        place: "Place"
+        date: "Date"
+        time: "Time"
+        date_format_tip: "(Use mm/dd/yyyy format)"
+        time_format_tip: "(Free text)"
+        textile_format_tip: '(Use <a target="_blank" href="http://redcloth.org/hobix.com/textile/">textile formatting</a>)'
       user:
-        page_url: "Personal page URL"
-
+        username: "Username"
+        password: "Password"
+        password_again: "Password again"
+        name: "Name"
+        name_tip: "Will be used instead of username"
+        email: "Email"
+        email_tip: 'For displaying your <a href="http://www.gravatar.com/">gravatar</a>'
+        page_url: "Personal Page URL"
+        
+  messages:
+    welcome: "Welcome"
+    login: "Log in"
+    logout: "Log out"
+    sessions_history: "Past sessions"
+    who_we_are: "Who we are?"
+    next_sessions: "Next sessions"
+    more_details: "more details >>"
+    host_your_own_coding_dojo: "Host your own coding dojo"
+    back: "<< Back"
+    edit: "Edit"
+    save: "Save"
+    cancel: "Cancel"
+    you: "you"
+    propose_a_new_session: "Propose a new session"
+    confirmed_so_far: "Confirmed so far"
+    unconfirm: "unconfirm"
+    confirm_my_presence: "Confirm my presence!"
+    nobody_confirmed_yet: "Nobody confirmed yet..."
+    edit_your_profile: "You Profile"
+    profile_successfully_updated: "Profile successfully updated!"
+    thanks_for_signup: "Sign up successfull! You are logged in."
+    login_title: "Log in"
+    login_ok: "You are logged in"
+    login_nok: "Invalid login or password"
+    logoff: "Bye."
+    dont_have_account: "Don't have an account?"
+    already_have_account: "Already have an account?"
+    create_an_account: "Create one!"
+    all_users: "All participants"

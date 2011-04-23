@@ -2,7 +2,7 @@
 <div class="box" id="dojo_session_<%=dojo_session.id%>">
 
 	<% if logged_in? && dojo_session.confirmed_users.include?(current_user) && current_user.has_propose_priv? %>
-		<%= link_to 'edit', edit_dojo_session_path(dojo_session), :class => 'link_northeast', :id=>'edit_dojo_session' %>
+		<%= link_to t('messages.edit'), edit_dojo_session_path(dojo_session), :class => 'link_northeast', :id=>'edit_dojo_session' %>
 	<% end %>
 
 	<h1 style="margin-bottom: 5px;"><%= dojo_session.title %></h1>
@@ -21,11 +21,11 @@
 
 			<% if dojo_session.confirmed_users.empty? %>
 	
-				<p>Nobody confirmed yet</p>
+				<p><%= t('messages.nobody_confirmed_yet') %></p>
 		
 			<% else %>
 
-				<span><b>Confirmed so far:</b></span>
+				<span><b><%= t('messages.confirmed_so_far') %>:</b></span>
 				<ol style="margin-top:5px">
 					<% for user in dojo_session.confirmed_users do %>
 						<li>
@@ -34,8 +34,8 @@
 							<%= user.name_or_username %>
 					
 							<% if user == current_user %>
-								<span class="claro">(you) &nbsp; </span>
-								<a class="small_link" href="<%= unconfirm_presence_dojo_session_path(dojo_session.id) %>">unconfirm</a>
+								<span class="claro">(<%= t('messages.you') %>) &nbsp; </span>
+								<a class="small_link" href="<%= unconfirm_presence_dojo_session_path(dojo_session.id) %>"><%= t('messages.unconfirm') %></a>
 							<% end %>
 					
 						</li>
@@ -46,7 +46,7 @@
 
 			<% if !dojo_session.confirmed_users.include?(current_user) %>
 				<ul><li>
-				<a href="<%= confirm_presence_dojo_session_path(dojo_session.id)%>">Confirm my presence!</a>
+				<a href="<%= confirm_presence_dojo_session_path(dojo_session.id)%>"><%= t('messages.confirm_my_presence') %></a>
 				</li></ul>
 			<% end %>
 	

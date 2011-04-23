@@ -6,7 +6,7 @@ Feature: List past dojo sessions
 	
 	Scenario: Navigating from the home page
 		Given I am on 'the home page'
-		When I follow "sessions history"
+		When I follow "Past sessions"
 		Then I should be on 'the past sessions listing'
 
 	Scenario: Show all past sessions

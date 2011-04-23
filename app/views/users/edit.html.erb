@@ -1,42 +1,40 @@
-<div style="text-align:center; margin-bottom:10px">
-	<%=flash[:notice]%>	
-</div>
 
 <div class="box" style="width:380;margin:auto">
 	
-	<h2 style="margin-bottom:20px">Edit your profile</h2>
-		
+	<h2 style="margin-bottom:20px"><%= t('messages.edit_your_profile') %></h2>
+
 	<% form_for(@user) do |form| %>
-		
+	
 		<%= error_messages_for :user, :header_message=>nil %>
+
+		<div style="width:320px;position:relative;left:20px">
 		
-		<div style="width:320px">
-			<label for="user_name">Your real name:</label>
-			<%=form.text_field "name"%>
+			<label for="user_name"><%= t('activerecord.attributes.user.name') %>:</label>
+			<%=form.text_field "name"%>				
+			<p class="field_tip">
+				(<%= t('activerecord.attributes.user.name_tip') %>)
+			</p>
+
+			<p>
+				<label for="user_page_url"><%= t('activerecord.attributes.user.page_url') %>:</label>
+				<%=form.text_field "page_url"%>
+			</p>
+			
+			<label for="user_email"><%= t('activerecord.attributes.user.email') %>:</label>
+			<%=form.text_field "email"%>
 
 			<p class="field_tip">
-				(Will be used instead of username)
+				(<%= t('activerecord.attributes.user.email_tip') %>)
 			</p>
 			
-			<label for="user_email">Your email:</label>
-			<%=form.text_field "email"%>
-			
-			<p class="field_tip">
-				(For displaying your <a href="http://www.gravatar.com/">gravatar</a>)
-			</p>
-			
-			<%= image_tag(gravatarUrlFor(@user.email), :style=>"margin-left:0") %>
-			
-			<label for="user_page_url">Personal page URL:</label>
-			<%=form.text_field "page_url"%>
-			
+			<%= image_tag(gravatarUrlFor(@user.email), :style=>"margin:0px") %>
+		
 		</div>
 
-		
-
-		<p style="text-align:right; margin-right:20px; margin-top:40px">
-			<input type="submit" name="save" value="save"/>
+		<p style="text-align:right; margin-right:20px">
+			<input type="submit" name="save" value="<%= t('messages.save') %>"/>
 		</p>			
-	
+
 	<% end %>
+
 </div>

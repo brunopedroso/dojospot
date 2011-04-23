@@ -31,7 +31,7 @@ Feature: Edit Profile Name
 		When I fill in "user[name]" with "Bruno Pedroso"
 		And I press "save"
 		Then I should be on the edit profile page
-		And the "Your real name:" field should contain "Bruno Pedroso"
+		And the "Name:" field should contain "Bruno Pedroso"
 	
 	Scenario: Editing the name causes it to appear instead of username
 		Given the following sessions exist:

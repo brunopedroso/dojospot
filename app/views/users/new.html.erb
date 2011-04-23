@@ -3,24 +3,24 @@
 
 	<h1 id="sign_up">Creating an account</h1>
 
-	<p class="claro">Already have an account? <%= link_to "Log in", login_path %>.</p>
+	<p class="claro"><%= t('messages.already_have_account') %> <%= link_to t('messages.login'), login_path %>.</p>
 
 	<% form_for @user do |f| %>
 	  <%= f.error_messages %>
 	  <p>
-	    <%= f.label :username %><br />
+	    <%= f.label t('activerecord.attributes.user.username') %><br />
 	    <%= f.text_field :username, :size => 10  %>
 	  </p>
 	  <p>
-	    <%= f.label :password, "Password" %><br />
+	    <%= f.label t('activerecord.attributes.user.password') %><br />
 	    <%= f.password_field :password, :size => 10 %>
 	  </p>
 	  <p>
-	    <%= f.label :password_confirmation, "Password again" %><br />
+	    <%= f.label t('activerecord.attributes.user.password_again') %><br />
 	    <%= f.password_field :password_confirmation, :size => 10 %>
 	  </p>
 	  <p style="text-align: right; margin: 30px 20px 0 0">
-		<input type="button" onClick="history.back()" value="Cancel"/> <%= f.submit "Register" %>
+		<input type="button" onClick="history.back()" value="<%=t('messages.cancel')%>"/> <%= f.submit t('messages.save') %>
 	</p>
 	 
 	<% end %>

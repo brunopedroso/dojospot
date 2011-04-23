@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       session[:user_id] = @user.id
-      flash[:notice] = "Thank you for signing up! You are now logged in."
+      flash[:notice] = t('messages.thanks_for_signup')
       redirect_to root_url
     else
       render :action => 'new'
@@ -22,7 +22,7 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 		@user.update_attributes(params[:user])		
 		if @user.save
-			flash[:notice] = "Your profile has been successfully updated!"
+			flash[:notice] = t('messages.profile_successfully_updated')
 			redirect_to(edit_profile_path)
 		else
 			render :edit

@@ -56,7 +56,13 @@ describe 'application layout' do
 				end
 				
 			end
-			
-
 	end
+	
+	it 'should display the flash[:notice]' do
+		flash[:notice] = "any message"
+		render 'layouts/application'
+		response.should include_text flash[:notice]
+	end
+	
+	
 end

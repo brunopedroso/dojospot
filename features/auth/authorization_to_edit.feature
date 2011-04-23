@@ -9,7 +9,7 @@ Feature: Needs authorization to edit session
 		Given I am not logged in
 		And there is a session scheduled for tomorow
 		And I am on "next sessions page"
-		Then I should not see the "edit" link
+		Then I should not see the "Edit" link
 
 
 	Scenario: Cannot edit if not confirmed in the session
@@ -17,7 +17,7 @@ Feature: Needs authorization to edit session
 		Given I am logged in
 		And there is a session scheduled for tomorow
 		And I am on "next sessions page"
-		Then I should not see the "edit" link
+		Then I should not see the "Edit" link
 
 	
 	Scenario: User can edit if he is confirmed in the session
@@ -27,7 +27,7 @@ Feature: Needs authorization to edit session
 		And there is a session scheduled for tomorow
 		And I am on "next sessions page"
 		When I follow "Confirm my presence"
-		Then I should see the "edit" link
+		Then I should see the "Edit" link
 	
 
 	Scenario: Cannot edit without propose privileges
@@ -37,4 +37,4 @@ Feature: Needs authorization to edit session
 		And there is a session scheduled for tomorow
 		And I am on "next sessions page"
 		When I follow "Confirm my presence"
-		Then I should not see the "edit" link
+		Then I should not see the "Edit" link
