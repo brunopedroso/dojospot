@@ -1,8 +1,12 @@
 ======== INBOX ==========
 
+- link for the just created session
+- forgot password
+- propose a new session no dojospot (translate)
 
-	
 ========  (v 0.6) ========
+
+- after propose, redirect to show, not index
 
 - link to dojospot.org
 	
