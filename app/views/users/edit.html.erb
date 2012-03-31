@@ -3,9 +3,14 @@
 	
 	<h2 style="margin-bottom:20px"><%= t('messages.edit_your_profile') %></h2>
 
-	<% form_for(@user) do |form| %>
+	<%= form_for(@user) do |form| %>
 	
-		<%= error_messages_for :user, :header_message=>nil %>
+		<% if @user.errors.any? %>
+	    <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+	  <% end %>
+	  
 
 		<div style="width:320px;position:relative;left:20px">
 		
@@ -24,7 +29,7 @@
 			<%=form.text_field "email"%>
 
 			<p class="field_tip">
-				(<%= t('activerecord.attributes.user.email_tip') %>)
+				(<%= t('activerecord.attributes.user.email_tip').html_safe %>)
 			</p>
 			
 			<%= image_tag(gravatarUrlFor(@user.email), :style=>"margin:0px") %>

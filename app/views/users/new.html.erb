@@ -5,8 +5,14 @@
 
 	<p class="claro"><%= t('messages.already_have_account') %> <%= link_to t('messages.login'), login_path %>.</p>
 
-	<% form_for @user do |f| %>
-	  <%= f.error_messages %>
+	<%= form_for @user do |f| %>
+	  
+	  <% if @user.errors.any? %>
+	    <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+	  <% end %>
+	  
 	  <p>
 	    <%= f.label t('activerecord.attributes.user.username') %><br />
 	    <%= f.text_field :username, :size => 10  %>

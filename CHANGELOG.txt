@@ -1,4 +1,0 @@
-Features v0.2 (04/jun/2010):
-	past sessions
-	session detail page
-	propor sessão na capa, qndo não tem sessão proposta

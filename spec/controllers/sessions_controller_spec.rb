@@ -2,7 +2,7 @@ require File.dirname(__FILE__) + '/../spec_helper'
  
 describe SessionsController do
 
-  integrate_views
+  render_views
 
 
 	context 'new action' do

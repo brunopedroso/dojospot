@@ -1,5 +1,5 @@
 
-<% form_for(@dojo_session) do |f| %>
+<%= form_for(@dojo_session) do |f| %>
 
 	<table border="0" cellspacing="5" cellpadding="5">
 		<tr>
@@ -11,7 +11,7 @@
 			<td align="right" valign="top"><%= f.label t('activerecord.attributes.dojo_session.text') %>:</td>
 			<td>
 				<%= f.text_area 'text', :cols=>70, :rows=>20 %><br/>
-				<span class="claro"><%= t('activerecord.attributes.dojo_session.textile_format_tip') %></span>
+				<span class="claro"><%= t('activerecord.attributes.dojo_session.textile_format_tip').html_safe %></span>
 			</td>
 		</tr>
 

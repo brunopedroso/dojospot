@@ -9,7 +9,7 @@
 		});
 	</script>
 
-	<% form_tag sessions_path do %>
+	<%= form_tag sessions_path do %>
 	  <p>
 	    <%= label_tag t('activerecord.attributes.user.username') %><br />
 	    <%= text_field_tag :login, params[:login] %>

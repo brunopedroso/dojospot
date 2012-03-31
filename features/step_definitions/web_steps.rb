@@ -28,7 +28,10 @@ When /^(?:|I )follow "([^\"]*)"$/ do |link|
 end
 
 When /^(?:|I )follow "([^\"]*)" within "([^\"]*)"$/ do |link, parent|
-  click_link_within(parent, link)
+  within parent do
+    click_link link
+  end
+  #click_link_within(parent, link)
 end
 
 When /^(?:|I )fill in "([^\"]*)" with "([^\"]*)"$/ do |field, value|
@@ -140,21 +143,23 @@ When /^(?:|I )attach the file "([^\"]*)" to "([^\"]*)"$/ do |path, field|
 end
 
 Then /^(?:|I )should see "([^\"]*)"$/ do |text|
-  if defined?(Spec::Rails::Matchers)
-    response.should contain(text)
-  else
-    assert_contain text
-  end
+  page.should have_content(text)
+  #if defined?(Spec::Rails::Matchers)
+  #  page.should contain(text)
+  #else
+  #  assert_contain text
+  #end
 end
 
 Then /^(?:|I )should see "([^\"]*)" within "([^\"]*)"$/ do |text, selector|
   within(selector) do |content|
-    if defined?(Spec::Rails::Matchers)
-      content.should contain(text)
-    else
-      hc = Webrat::Matchers::HasContent.new(text)
-      assert hc.matches?(content), hc.failure_message
-    end
+    page.should have_content(text)
+    #if defined?(Spec::Rails::Matchers)
+    #  content.should contain(text)
+    #else
+    #  hc = Webrat::Matchers::HasContent.new(text)
+    #  assert hc.matches?(content), hc.failure_message
+    #end
   end
 end
 
@@ -310,7 +315,7 @@ Then /^I should not see the "([^\"]*)" link$/ do |text|
   if defined?(Spec::Rails::Matchers)
     response.should_not have_tag('a', text)
   else
-    assert_have_no_selector('a', :content=>text) 
+    page.should_not have_selector('a', :text=>text) 
   end
 end
 

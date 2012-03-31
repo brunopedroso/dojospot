@@ -3,7 +3,7 @@ require 'mocha'
  
 describe UsersController do
   fixtures :all
-  integrate_views
+  render_views
   
 	describe "new action" do
 	  it "should render new template" do
@@ -13,14 +13,16 @@ describe UsersController do
 	end
 
  	describe "create action" do
-	  it "create action should render new template when model is invalid" do
+	  it "should render new template when model is invalid" do
 	    User.any_instance.stubs(:valid?).returns(false)
 	    post :create
 	    response.should render_template(:new)
 	  end
   
-	  it "create action should redirect when model is valid" do
-	    User.any_instance.stubs(:valid?).returns(true)
+	  it "should redirect when model is valid" do
+	    u = mock_model(User)
+	    User.stub!(:new).and_return(u)
+	    u.stub!(:save).and_return(true)
 	    post :create
 	    response.should redirect_to(root_url)
 	    session['user_id'].should == assigns['user'].id
@@ -40,27 +42,28 @@ describe UsersController do
 	describe "update action" do
 		
 		before :each do
-			@attrs = Factory.attributes_for(:user, :id=>1)
+			@attrs = Factory.attributes_for(:user)
 			@user = User.new(@attrs)
+			@user.id = 1
 			User.stub!(:find).and_return(@user)
+  		session[:user_id] = @user.id
 		end
 		
 		it "should render the edit template again" do
-			put :update, :user=>@attrs, :id=>@attrs[:id]
+			put :update, :user=>@attrs, :id=>@user.id
 			response.should redirect_to(edit_profile_path)
 		end
 		
 		it "should show a success message" do
-			put :update, :user=>@attrs, :id=>@attrs[:id]
+			put :update, :user=>@attrs, :id=>@user.id
 			flash[:notice].should == "Profile successfully updated!"
 		end
 		
 		it 'should update the user' do
 			# user = mock_model(User)
-			User.should_receive(:find).with(@attrs[:id].to_s).and_return(@user)
+			User.should_receive(:find).with(@user.id).and_return(@user)
 			@user.should_receive(:update_attributes).with(@attrs.stringify_keys)
-			@user.should_receive(:save)
-			put :update, :user=>@attrs, :id=>@attrs[:id]
+			put :update, :user=>@attrs, :id=>@user.id
 		end
 		
 		describe "with invalid user" do
@@ -70,12 +73,12 @@ describe UsersController do
 			end
 			
 			it "should render the edit templage again" do
-				put :update, :user=>@attrs, :id=>@attrs[:id]
+				put :update, :user=>@attrs, :id=>@user.id
 				response.should render_template(:edit)
 			end
 
 			it "should have no flash notice" do
-				put :update, :user=>@attrs, :id=>@attrs[:id]
+				put :update, :user=>@attrs, :id=>@user.id
 				flash[:notice].should be_nil
 			end
 
@@ -85,6 +88,15 @@ describe UsersController do
 	end
 
 	describe "index action" do
+	  
+	  before :each do
+	    @attrs = Factory.attributes_for(:user)
+			@user = User.new(@attrs)
+			@user.id = 1
+			User.stub!(:all).and_return([@user])
+			User.stub!(:find).and_return(@user)
+  		session[:user_id] = @user.id
+    end
 
 	  it "should render index template" do
 	    get :index
@@ -93,7 +105,7 @@ describe UsersController do
 
 	  it "should find all users" do
 			my_array = [Factory.create(:user),Factory.create(:user)]
-			User.should_receive(:find).with(:all).and_return(my_array)
+			User.should_receive(:all).and_return(my_array)
 	    get :index
 			assigns[:users].should == my_array
 	  end

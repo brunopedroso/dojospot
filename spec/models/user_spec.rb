@@ -18,7 +18,9 @@ describe User do
   end
   
   it "should require username" do
-    new_user(:username => '').should have(1).error_on(:username)
+    u = User.new
+    u.username = ''
+    u.should have(1).error_on(:username)
   end
   
   it "should require password" do

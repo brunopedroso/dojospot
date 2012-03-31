@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe DojoSession do
 
-	should_have_and_belong_to_many :confirmed_users, :class_name=>"User", :uniq=>true
+	it { should have_and_belong_to_many :confirmed_users }
 
 	describe 'find_proposed_sessions' do
 		

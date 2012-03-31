@@ -1,3 +1,4 @@
+# encoding: utf-8
 def calculate_relative_date(date_string) 
 	if date_string
 		date_string.strip!

@@ -20,7 +20,7 @@ describe PagesController do
 		get :show, :id=>'o_que_eh_coding_dojo'
 		
 		assigns[:page].should == textoProcessado
-		response.should render_template('show.html')
+		response.should render_template('show')
 		
 	end
 	

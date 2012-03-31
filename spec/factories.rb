@@ -1,3 +1,4 @@
+# encoding: utf-8
 require 'factory_girl'
 
 Factory.sequence :dojo_session_title do |n|
