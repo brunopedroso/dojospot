@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-DojospotRails3::Application.load_tasks
+Dojospot::Application.load_tasks

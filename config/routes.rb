@@ -1,4 +1,4 @@
-DojospotRails3::Application.routes.draw do
+Dojospot::Application.routes.draw do
   
   root :to => 'home#index' 
   
