@@ -1,6 +1,5 @@
 Capfile
 .bundle
-config/newrelic.yml
 log/*.log
 db/development.sqlite3
 db/schema.rb
