@@ -9,7 +9,7 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-module DojospotRails3
+module Dojospot
   class Application < Rails::Application
     config.autoload_paths << "#{config.root}/lib"    # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
