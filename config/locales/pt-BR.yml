@@ -213,7 +213,7 @@ pt-BR:
         place: "Local"
         date: "Data"
         time: "Horáro"
-        date_format_tip: "(Use o formato dd/mm/yyyy)"
+        date_format_tip: "(Use o formato yyyy-mm-dd)" #"(Use o formato dd/mm/yyyy)"
         time_format_tip: "(Texto livre)"
         textile_format_tip: '(Use <a target="_blank" href="http://redcloth.org/hobix.com/textile/">formatação textile</a>)'
       user:
